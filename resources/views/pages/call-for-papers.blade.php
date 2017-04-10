@@ -96,8 +96,7 @@
 		<ul>
 			<li><strong>Abstracts due:</strong> 31 March 2017 (for resubmissions)
 			<style>p.indent{ padding-left: 8.5em }</style>
-			</br> <p class="indent">31 May 2017 (for new abstracts)</p></li>
-
+			</br> <p class="indent" style="display:inline">31 May 2017 (for new abstracts)</p></li>
 			<li><strong>Notification of acceptance:</strong> May 2017</li>
 			<li><strong>Full papers due:</strong> July 2017</li>
 		</ul>
