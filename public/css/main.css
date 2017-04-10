@@ -1,0 +1,153 @@
+html,body{
+	height:100%;
+}
+
+body{
+	font-family: Verdana,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 10pt;
+	background-color: #FCFCFC;
+}
+
+.content{
+	padding-left: 35px;
+	padding-right: 8px;
+	background-color: #006EB6;
+}
+
+@media (max-width: 990px) {
+	.content{
+		padding-left: 7px;
+		padding-right: 8px;
+	}	
+}
+
+.bg-white{
+	background-color: #fff;
+}
+
+.no-padding{
+	padding:0px;
+}
+
+.padding{
+	padding:10px 30px;
+}
+
+.fullwidth{
+	width: 100%;
+}
+
+.gradient-orange{
+	border: none;
+	background-color: #F8951E; 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#F8951E)); /* Safari 5.1, Chrome 10+ */ 
+	background: -webkit-linear-gradient(top, #F8951E, #fff); /* Firefox 3.6+ */ 
+	background: -moz-linear-gradient(top, #F8951E, #fff); /* IE 10 */ 
+	background: -ms-linear-gradient(top, #F8951E, #fff); /* Opera 11.10+ */ 
+	background: -o-linear-gradient(top, #F8951E, #fff);
+	border-color: #080808;/
+  	height: 40vh;
+}
+
+.bg-gray{
+	background-color: #cecece;
+}
+
+.bg-gray1{
+	background-color: #dedede;
+}
+
+.bg-white{
+	background-color: #fff;
+}
+
+.bg-parallax1 {
+	background: url(../images/bg1.jpg) 50% 0 repeat fixed;
+}
+
+#rightpanel{
+	height: 187.7vh;
+	padding: 10px;
+	background-color: #A6C4D7;
+	color: #000;
+}
+
+#rightpanel .sponsors div{
+	margin: 5px 0px;
+}
+
+#rightpanel h1,#rightpanel h2,#rightpanel h3,#rightpanel h4,#rightpanel h5,#rightpanel h6 {
+	/*color: #000;*/
+}
+
+.page-content{
+	margin-left: -27px;
+	min-height: 70vh;
+}
+
+@media (max-width: 990px) {
+	#rightpanel{
+		height: 100%;
+	}
+
+	.page-content{
+		margin-left: 0px;
+	}
+}
+
+footer{
+	background-color: #333;
+	text-align: center;
+	color: #fff;
+	padding: 10px 0px;
+}
+
+.text-white{
+	color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #064C7D;
+}
+
+.footer2 {
+	background-color: #064C7D;
+	color: #fff;
+	padding:10px 30px;
+	padding-top: 50px;
+}
+
+.footer2.h1, .footer2.h2, .footer2.h3, .footer2.h4, .footer2.h5, .footer2.h6 {
+	color: #fff !important;
+}
+
+.footer2 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/*
+==========================
+Carousel
+==========================
+*/
+
+.carousel-indicators .active{
+	background-color: #006EB6;
+}
+
+.carousel-indicators li {
+	border: 1px solid #006EB6;
+}
+
+/*
+===========================
+Media Query
+===========================
+*/
+
+@media screen and (min-width: 768px) {
+	.carousel-indicators {
+		bottom: 10px;
+	}
+}
