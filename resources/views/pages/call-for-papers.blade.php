@@ -25,13 +25,13 @@
 		<p>
 			An old Philippine proverb says,<i> Sino man ang hindi marunong lumingon sa kanyang pinanggalingan, ay hindi makakarating sa kanyang paroroonan.</i> (He who does not think back on his past, will not arrive at his destination.)
 		</p>
-		<p>We invoke this ancient Asian wisdom to warn, as we lunge headlong into today’s fastchanging world, that non-Asian communication theories, sophisticated gadgets and apps are not the panacea to the world’s problems. The solutions are in us. </p>
+		<p>We invoke this ancient Asian wisdom to warn, as we lunge headlong into today’s fast-changing world, that non-Asian communication theories, sophisticated gadgets and apps are not the panacea to the world’s problems. The solutions are in us. </p>
 		<p>We in AMIC and in Asia need to rediscover our roots, somehow buried under our feet as we run mindlessly forward. We have imbibed non-Asian ways, and adopted foreign communication theories, methodologies and practices as we studied abroad, and brought them back to Asia to teach to our young students who would one day become our disciples. </p>
-		<p>We preach that communication and culture are inextricably linked. But have we studied or developed Asian theories of communication based on Asian culture? Very little. In this coming 2016 AMIC annual conference, we pause and look back to where we came from. </p>
+		<p>We preach that communication and culture are inextricably linked. But have we studied or developed Asian theories of communication based on Asian culture? Very little. In this coming 2017 AMIC annual conference, we pause and look back to where we came from. </p>
 		<p>We need to rediscover our “Asianess” amidst a resurging Asia. The Asian Development Bank has reported that if Asia continues its current growth trajectory, by 2050 it will regain the dominant economic position it held some 300 years ago, before the industrial revolution. In this scenario Asia’s gross domestic product (GDP) will reach $174 trillion (or half of the global GDP) from $17 trillion in 2010. </p>
 		<p>A resurging Asia must also be seen in terms of new challenges characterized by inequalities, conflicts, climate change, unsustainable practices, and corruption. Beyond the tools of mass communication, are there distinct Asian communication strategies which can effectively address these challenges that threaten the resurgence of Asia? </p>
 		<p>Let us rediscover our Asian past so that we can confidently move into our future. </p>
-
+		<br>
 		<h4>CONFERENCE CLUSTERS AND STREAMS</h4>
 		<p><i>Cluster on Asian Philosophies, Theories, and Paradigms</i></p>
 		<ul>
@@ -102,9 +102,8 @@
 			<li><strong>Full papers due:</strong> July 2017</li>
 		</ul>
 
-		<p>Abstracts and papers should be submitted via e-mail (<font color="blue"><u>conference@amic.asia</u></font>).</p>
-		<p>Please do not send abstracts/papers to the personal e-mail addresses of conference organizers.</p>
-
+		<p>Abstracts and papers should be submitted via e-mail (<font color="blue"><u>conference@amic.asia</u></font>). <br> Please do not send abstracts/papers to the personal e-mail addresses of conference organizers.</p>
+		<br>
 		<h4>ABSTRACTS SUBMITTED FOR THE CANCELLED 2016 CONFERENCE</h4>
 		<p>Abstracts submitted in the cancelled 2016 conference can be considered submitted for review and possible presentation in the 2017 conference, but a letter of intent from the abstract writer is needed. The letter should be emailed to conference organizers (<font color="blue"><u>conference@amic.asia</u></font>) on or before <u>31 March 2017.</u> </p>
 
@@ -120,7 +119,7 @@
 			<li>paper abstract (500 words)</li>
 		</ul>
 		<h4>FORMAT FOR PAPERS</h4>
-		If your abstract is approved for presentation, you will be required to submit the full paper prior to the conference. The full paper should adhere to the following requirements:
+		<p>If your abstract is approved for presentation, you will be required to submit the full paper prior to the conference. The full paper should adhere to the following requirements:</p>
 		<ul>
 		<li>should be written in English.</li>
 		<li>be of 5,000-8,000 words in length.</li>

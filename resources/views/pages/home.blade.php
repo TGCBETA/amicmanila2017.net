@@ -142,9 +142,9 @@
 					<h3 class="text-danger"><i class="fa fa-warning"></i> ATTENTION!!</h3>
 					<p><strong><h2>AMIC 25th Conference Call for Papers</h2></strong></p>
 
-					<p>AMIC is now preparing for the 25th AMIC International Conference to be held in Manila on 27-29 September 2017. We are readopting our 2016 conference theme,<i> Rethinking Communication in a Resurgent Asia.</i></p>
+					<p>AMIC is now preparing for the 25th AMIC International Conference to be held in Manila on <br> 27-29 September 2017. We are readopting our 2016 conference theme,<i> Rethinking Communication in a Resurgent Asia.</i></p>
 
-					<p>We have attached the Call for Papers for the AMIC Manila 2017 Conference. Please invite your colleagues to submit abstracts of conference papers if they are interested to present. Deadline for submission of new abstracts to our Conference Secretariat is on 31 May 2017.</p>
+					<p>We have attached the Call for Papers for the AMIC Manila 2017 Conference. Please invite your colleagues to submit abstracts of conference papers if they are interested to present. Deadline for submission of new abstracts to our Conference Secretariat is on<font color="red"> 31 May 2017.</font></p>
 					<p>Please click <a href="{{ route('get-page', ['call-for-papers']) }}">here</a> for more details.</p>
 
 					<p>Very truly yours,</p>
