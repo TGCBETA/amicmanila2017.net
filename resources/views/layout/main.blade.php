@@ -14,8 +14,8 @@
 </head>
 <body>
 	<div class="container">
-		<img src="{{ asset('images/header_web.png') }}?{{ time() }}" class="img-responsive hidden-xs hidden-sm" />
-		<img src="{{ asset('images/header_mobile_amicbanner_event.png') }}?{{ time() }}" class="img-responsive hidden-lg hidden-md" />
+		<a href="{{ url('/') }}"><img src="{{ asset('images/header_web.png') }}?{{ time() }}" class="img-responsive hidden-xs hidden-sm" /></a>
+		<a href="{{ url('/') }}"><img src="{{ asset('images/header_mobile_amicbanner_event.png') }}?{{ time() }}" class="img-responsive hidden-lg hidden-md" /></a>
 		<nav class="navbar navbar-inverse-blue">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
