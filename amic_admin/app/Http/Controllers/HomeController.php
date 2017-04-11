@@ -30,7 +30,21 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		$reg_s = \DB::table('registrations')->get();
+		$reg_m = \DB::table('group_registrations')->get();
+		$cnt_single=0;
+		$cnt_multiple=0;
+		foreach ($reg_s as $s)
+		{
+			$cnt_single=$cnt_single+1;
+		}
+
+		foreach ($reg_m as $m)
+		{
+			$cnt_multiple=$cnt_multiple+1;
+		}
+		return view('home', ['cnt_single' => $cnt_single], ['cnt_multiple' => $cnt_multiple]);
+		//return view('home');
 	}
 
 }

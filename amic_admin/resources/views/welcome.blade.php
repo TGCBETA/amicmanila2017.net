@@ -1,9 +1,9 @@
 <html>
 	<head>
-		<title>Laravel</title>
+		<title>ADMINISTRATOR</title>
 		
 		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-
+ 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<style>
 			body {
 				margin: 0;
@@ -40,8 +40,9 @@
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
+				
+				<a href="{{ url('/auth/login') }}"><div class="title"><i class="fa fa-cogs" aria-hidden="true" title="Click Me!"></i></div></a>
+				<b><div class="quote"><font color="black" size="20"> Admin Panel! </font></div></b>
 			</div>
 		</div>
 	</body>
