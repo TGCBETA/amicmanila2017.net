@@ -39,6 +39,7 @@
   
   <link rel="stylesheet" href="{{ asset('/resources/dist/table_css/jquery.dataTables.min.css') }}">
   <link rel="stylesheet" href="{{ asset('/resources/dist/table_css/buttons.dataTables.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/resources/loading/css/loading.css') }}">
  
 
 
@@ -231,6 +232,7 @@
 	<script src="{{ asset('/resources/export_js/vfs_fonts.js') }}"></script>
 	<script src="{{ asset('/resources/export_js/buttons.html5.min.js') }}"></script>
 	<script src="{{ asset('/resources/export_js/buttons.print.min.js') }}"></script>
+	<script src="{{ asset('/resources/loading/js/pace.min.js') }}"></script>
     <script>
         $(document).ready(function() {
 			$('#example1').DataTable( {

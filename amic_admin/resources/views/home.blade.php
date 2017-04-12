@@ -30,7 +30,7 @@
 												<div>Registration<br>Bank</div>
 											</div>
 										<div class="icon">
-											<i class="ion ion-stats-bars"></i>
+											<i class="fa fa-cog fa-spin fa-1x fa-fw"></i>
 										</div>
 										<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
 									</div>
@@ -45,7 +45,7 @@
 													<div>Paid<br>Status</div>
 												</div>
 													<div class="icon">
-														<i class="ion ion-stats-bars"></i>
+														<i class="fa fa-cog fa-spin fa-1x fa-fw"></i>
 													</div>
 											<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
 										</div>
