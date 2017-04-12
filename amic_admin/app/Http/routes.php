@@ -20,6 +20,12 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+Route::get('/payments/excel', 
+[
+  'as' => 'admin.invoices.excel',
+  'uses' => 'PaymentsController@excel'
+]);
+
 /* Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister'); */

@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
 	<title>Amic Manila 2017 - ADMIN</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
 	<!-- <link href="{{ asset('/css/app.css') }}" rel="stylesheet"> -->
 
-	<!-- Fonts -->
-	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	<!-- Fonts 
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'> -->
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,100 +19,227 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
+	<!--! Old
 	<link href="{{ asset('/resources/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
     <link href="{{ asset('/resources/vendor/metisMenu/metisMenu.min.css') }}" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="{{ asset('/resources/dist/css/sb-admin-2.css') }}" rel="stylesheet">
+    <link href="{{ asset('/resources/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"> -->
 
-    <!-- Custom Fonts -->
-    <link href="{{ asset('/resources/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{{ asset('/resources/bootstrap/css/bootstrap.min.css') }}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ asset('/resources/dist/css/AdminLTE.min.css') }}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{{ asset('/resources/plugins/iCheck/square/blue.css') }}">
+  <link rel="stylesheet" href="{{ asset('/resources/dist/css/skins/_all-skins.min.css') }}">
+  <!-- <link rel="stylesheet" href="{{ asset('/resources/plugins/datatables/dataTables.bootstrap.css') }}"> -->
+  
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+ 
+
+
 </head>
-<body>
-	<div class="wrapper">
-	
-					@if (Auth::guest())
-					<nav class="navbar navbar-default">
-						<div class="container-fluid">
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-									<span class="sr-only">Toggle Navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-								<a class="navbar-brand" href="{{ url('../public') }}">AMIC Manila 2017</a>
-							</div>
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav navbar-right">
+	@if (Auth::guest())
+	<body class="hold-transition login-page">
+		<nav class="navbar navbar-default">
+							<div class="container-fluid">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+										<span class="sr-only">Toggle Navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand" href="{{ url('../public') }}">AMIC Manila 2017</a>
+								</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav navbar-right">
 
-						<li><a href="{{ url('/password/email') }}">Forgot Your Password?</a></li>
-						<!-- <li><a href="{{ url('/auth/register') }}">Register</a></li> -->
-							</ul>
-						</div>
-					</div>
-					</nav>
-					@yield('content')
-					@else
-					
-					<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-						<div class="navbar-header">
-								<button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="true">
-										<span class="sr-only">Toggle navigation</span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-								</button>
-								<a class="navbar-brand" href="{{ url('/home') }}" role="button" ><i class="fa fa-lock fa-5"><b> AMIC MANILA 2017 </b></i></a>
-							</div>
-
-								<ul class="nav navbar-top-links navbar-right">
-									&nbsp Welcome, <b> {{ Auth::user()->name }} !  &nbsp |</b>
-									<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+							<li><a href="{{ url('/password/email') }}">Forgot Your Password?</a></li>
+							<!-- <li><a href="{{ url('/auth/register') }}">Register</a></li> -->
 								</ul>
+							</div>
+						</div>
+			</nav>
+		@yield('content')
+	@else
+	<body class="hold-transition skin-blue sidebar-mini">
+	<header class="main-header">
 
-							<div class="navbar-default sidebar" role="navigation">
-					
-						<div class="sidebar-nav navbar-collapse">
-							<ul class="nav" id="side-menu">
-							
-								<li>
-									<a href="{{ url('home') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-								</li>
-									</li>
-							</ul>
-						</div>			
-					</nav>
+		<!-- Logo -->
+		<a href="{{ url('home') }}" class="logo">
+		<!-- mini logo for sidebar mini 50x50 pixels -->
+		<span class="logo-mini"><b>AMIC</b></span>
+		<!-- logo for regular state and mobile devices -->
+		<span class="logo-lg"><b>AMIC </b> MNL</span>
+		</a>
 
-					 	<div id="page-wrapper">
-							@yield('content')
-						</div>	
-					@endif
+		<!-- Header Navbar: style can be found in header.less -->
+		<nav class="navbar navbar-static-top">
+		<!-- Sidebar toggle button-->
+		<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+			<span class="sr-only">Toggle navigation</span>
+		</a>
+		<!-- Navbar Right Menu -->
+		<div class="navbar-custom-menu">
+			<ul class="nav navbar-nav">
+			
+			<!-- User Account: style can be found in dropdown.less -->
+			<li class="dropdown user user-menu">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				<i class="fa fa-user" aria-hidden="true" alt="User Image" class="user-image"></i>
+				<span class="hidden-xs"> {{ Auth::user()->name }} </span>
+				</a>
+				<ul class="dropdown-menu">
+				<!-- User image -->
+				<li class="user-header">
+				<img src="{{ asset('\resources\dist\img\avatar5.png') }}" class="img-circle" alt="User Image">
+					<p>
+					<font color="black"> {{ Auth::user()->name }} <br>
+					<small>Administrator</small> </font>
+					</p>
+				</li>
+				<!-- Menu Footer-->
+				<li class="user-footer">
+					<div class="pull-left">
+					<a href="#" class="btn btn-default btn-flat">Profile</a>
+					</div>
+					<div class="pull-right">
+					<a href="{{ url('/auth/logout') }}" class="btn btn-default btn-flat">Sign out</a>
+					</div>
+				</li>
+				</ul>
+			</li>
+			
+			</ul>
+		</div>
+
+		</nav>
+  </header>
+
+  <!-- Main Header -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="{{ asset('\resources\dist\img\avatar5.png') }}" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>{{ Auth::user()->name }}</p>
+          <i class="fa fa-wrench" aria-hidden="true"></i> Administrator
+        </div>
+      </div>
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+          </ul>
+        </li>
+        <li class="header">LABELS</li>
+        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  	<div class="content-wrapper">
+		@yield('content')
+		</div>
 	
-	
+	<footer class="main-footer">
+		<div class="pull-right hidden-xs">
+		</div>
+		<strong>Copyright &copy; 2017 <a href="http://www.amicmanila2017.net">AmicManila2017</a>.</strong> All rights
+		reserved.
+  	</footer>
+
+	<div class="control-sidebar-bg"></div>
+
 	</div>
-
+	@endif
 	
-
-	<!-- Scripts -->
+	<!-- Scripts old
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	<script src="{{ asset('/resources/vendor/jquery/jquery.min.js') }}"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="{{ asset('/resources/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
     <script src="{{ asset('/resources/vendor/metisMenu/metisMenu.min.js') }}"></script>
-
-    <!-- Morris Charts JavaScript -->
     <script src="{{ asset('/resources/vendor/raphael/raphael.min.js') }}"></script>
     <script src="{{ asset('/resources/vendor/morrisjs/morris.min.js') }}"></script>
-    <!-- <script src="../data/morris-data.js"></script> -->
+    <script src="{{ asset('/resources/dist/js/sb-admin-2.js') }}"></script>  -->
 
-    <!-- Custom Theme JavaScript -->
-    <script src="{{ asset('/resources/dist/js/sb-admin-2.js') }}"></script>
+	<!-- iCheck -->
+
+	<script src="{{ asset('/resources/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
+	<!-- Bootstrap 3.3.6 -->
+	<script src="{{ asset('/resources/bootstrap/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('/resources/plugins/iCheck/icheck.min.js') }}"></script>
+	<script>
+		$(function () {
+			$('input').iCheck({
+			checkboxClass: 'icheckbox_square-blue',
+			radioClass: 'iradio_square-blue',
+			increaseArea: '20%' // optional
+			});
+		});
+	</script>
+
+	
+	<!-- FastClick -->
+	<script src="{{ asset('/resources/plugins/fastclick/fastclick.js') }}"></script>
+	<!-- AdminLTE App -->
+	<script src="{{ asset('/resources/dist/js/app.min.js') }}"></script>
+	<!-- Sparkline -->
+	<script src="{{ asset('/resources/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
+	<!-- jvectormap -->
+	<script src="{{ asset('/resources/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
+	<script src="{{ asset('/resources/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
+	<!-- SlimScroll 1.3.0 -->
+	<script src="{{ asset('/resources/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
+	<!-- ChartJS 1.0.1 -->
+	<script src="{{ asset('/resources/plugins/chartjs/Chart.min.js') }}"></script>
+	<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+	<!-- <script src="{{ asset('/resources/dist/js/pages/dashboard2.js') }}"></script> -->
+	<!-- AdminLTE for demo purposes -->
+	<script src="{{ asset('/resources/dist/js/demo.js') }}"></script>
+
+	<script src="{{ asset('/resources/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+	<script src="{{ asset('/resources/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
+	
+	
+	<script src="{{ asset('/resources/export_js/dataTables.buttons.min.js') }}"></script>
+	<script src="{{ asset('/resources/export_js/buttons.flash.min.js') }}"></script>
+	<script src="{{ asset('/resources/export_js/jszip.min.js') }}"></script>
+	<script src="{{ asset('/resources/export_js/pdfmake.min.js') }}"></script>
+	<script src="{{ asset('/resources/export_js/vfs_fonts.js') }}"></script>
+	<script src="{{ asset('/resources/export_js/buttons.html5.min.js') }}"></script>
+	<script src="{{ asset('/resources/export_js/buttons.print.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+			$('#example1').DataTable( {
+			dom: 'Bfrtip',
+			buttons: [
+				'excel', 'pdf', 'print'
+			]
+			} );
+		} );
+        </script>
 </body>
 </html>

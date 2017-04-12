@@ -1,5 +1,8 @@
 <?php namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
 class HomeController extends Controller {
 
 	/*
@@ -28,12 +31,12 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
 		$reg_s = \DB::table('registrations')->get();
-		$reg_m = \DB::table('group_registrations')->get();
+		$reg_m = \DB::table('registrations')->select('paid')->get();
 		$cnt_single=0;
-		$cnt_multiple=0;
+		$cnt_paid=0;
 		foreach ($reg_s as $s)
 		{
 			$cnt_single=$cnt_single+1;
@@ -41,9 +44,14 @@ class HomeController extends Controller {
 
 		foreach ($reg_m as $m)
 		{
-			$cnt_multiple=$cnt_multiple+1;
+			if($m == '0') {
+				$cnt_paid=$cnt_paid+1;
+			}
 		}
-		return view('home', ['cnt_single' => $cnt_single], ['cnt_multiple' => $cnt_multiple]);
+
+		$items = \DB::table('registrations')->get();
+		return view('home', ['cnt_single' => $cnt_single], ['cnt_paid' => $cnt_paid])
+        ->with(	compact('items'))->with('i', ($request->input('page', 1) - 1) * 5);
 		//return view('home');
 	}
 
