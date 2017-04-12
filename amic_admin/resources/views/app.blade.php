@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
-	<title>Amic Manila 2017 - ADMIN</title>
+	<title>Amic Manila 2017</title>
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
 	<!-- <link href="{{ asset('/css/app.css') }}" rel="stylesheet"> -->
@@ -37,8 +37,8 @@
   <link rel="stylesheet" href="{{ asset('/resources/dist/css/skins/_all-skins.min.css') }}">
   <!-- <link rel="stylesheet" href="{{ asset('/resources/plugins/datatables/dataTables.bootstrap.css') }}"> -->
   
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" href="{{ asset('/resources/dist/table_css/jquery.dataTables.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/resources/dist/table_css/buttons.dataTables.min.css') }}">
  
 
 
@@ -67,7 +67,7 @@
 			</nav>
 		@yield('content')
 	@else
-	<body class="hold-transition skin-blue sidebar-mini">
+	<body class="hold-transition skin-blue fixed sidebar-mini">
 	<header class="main-header">
 
 		<!-- Logo -->
@@ -138,16 +138,16 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="treeview">
+        <li class="active treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <i class="fa fa-dashboard"></i> <span>Control Panel</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href="{{ url('home') }}"><i class="fa fa-circle-o"></i>Dashboard</a></li>
+            
           </ul>
         </li>
         <li class="header">LABELS</li>
@@ -166,7 +166,7 @@
 	<footer class="main-footer">
 		<div class="pull-right hidden-xs">
 		</div>
-		<strong>Copyright &copy; 2017 <a href="http://www.amicmanila2017.net">AmicManila2017</a>.</strong> All rights
+		<strong>Copyright &copy; <a href="http://www.amicmanila2017.net">AmicManila2017</a>.</strong> All rights
 		reserved.
   	</footer>
 
@@ -234,12 +234,14 @@
     <script>
         $(document).ready(function() {
 			$('#example1').DataTable( {
+			scrollX: true,
 			dom: 'Bfrtip',
 			buttons: [
 				'excel', 'pdf', 'print'
 			]
 			} );
 		} );
+		
         </script>
 </body>
 </html>
