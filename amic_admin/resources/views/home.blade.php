@@ -1,20 +1,17 @@
 @extends('app')
 
 @section('content')
-
-
-	
-		<br>
+	<br>
 	<form role="form" class="form-horizontal" method="POST" action="{{ url('/home') }}">
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<section class="content-header">
 			<h1>
-				Dashboard
+				Home
 				<small>Control panel</small>
 			</h1>
 			<ol class="breadcrumb">
 				<li><a href="{{ url('home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-				<li class="active">Dashboard</li>
+				<li class="active">Control Panel</li>
 			</ol>
 			</section>
 
@@ -26,14 +23,13 @@
 									<div class="small-box bg-aqua">
 											<div class="inner">
 												<h3> {{ $cnt_single }} </h3>
-
 												<div>Registration<br>Bank</div>
 											</div>
 										<div class="icon">
 											<i class="fa fa-cog fa-spin fa-1x fa-fw"></i>
 										</div>
-										<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-									</div>
+										<!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
+									</div> 
 								</div>
 								
 								<div class="col-lg-6 col-xs-6">
@@ -47,7 +43,7 @@
 													<div class="icon">
 														<i class="fa fa-cog fa-spin fa-1x fa-fw"></i>
 													</div>
-											<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+										<!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
 										</div>
 								</div>
 							</div>
@@ -62,7 +58,7 @@
 									<table id="example1" class="table table-bordered table-striped">
 										<thead>
 										<tr>
-											<th>id</th>
+											<th>ID</th>
 											<th>First Name</th>
 											<th>Last Name</th>
 											<th>Phone</th>
@@ -78,15 +74,18 @@
 											<td>{{ $item->lastname }}</td>
 											<td>{{ $item->phone }}</td>
 											<td>{{ $item->email }}</td>
-											<td><center><input type="checkbox" class="flat-red" name="paid_{{ $i }}"></center></td>
+											@if($item->paid === 1)
+											<td><center><input type="checkbox" class="flat-red" name="paid[]" value="{{ $i }}" checked></center></td>
+											@else
+											<td><center><input type="checkbox" class="flat-red" name="paid[]" value="{{ $i }}"></center></td>
+											@endif
 											<td><center><input type="checkbox" class="flat-red" name="Attend_{{ $i }}"></center><center></td>	
 										</tr>
 										
 										@endforeach
 										</tbody>
-										
-										
 									</table>
+									<button class="btn btn-sm btn-primary">Update</button>
 								</div>
 							
 						<!-- End Datatable -->

@@ -15,6 +15,10 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+Route::post('home', 'HomeController@update');
+
+Route::get('dash', 'DashController@index');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
@@ -25,6 +29,7 @@ Route::get('/payments/excel',
   'as' => 'admin.invoices.excel',
   'uses' => 'PaymentsController@excel'
 ]);
+
 
 /* Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');

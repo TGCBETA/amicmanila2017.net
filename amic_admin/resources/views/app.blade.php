@@ -57,14 +57,14 @@
 									</button>
 									<a class="navbar-brand" href="{{ url('../public') }}">AMIC Manila 2017</a>
 								</div>
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-								<ul class="nav navbar-nav navbar-right">
+								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+									<ul class="nav navbar-nav navbar-right">
 
-							<li><a href="{{ url('/password/email') }}">Forgot Your Password?</a></li>
-							<!-- <li><a href="{{ url('/auth/register') }}">Register</a></li> -->
-								</ul>
+								<li><a href="{{ url('/password/email') }}">Forgot Your Password?</a></li>
+								<!-- <li><a href="{{ url('/auth/register') }}">Register</a></li> -->
+									</ul>
+								</div>
 							</div>
-						</div>
 			</nav>
 		@yield('content')
 	@else
@@ -147,14 +147,14 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('home') }}"><i class="fa fa-circle-o"></i>Dashboard</a></li>
-            
+            <li><a href="{{ url('home') }}"><i class="fa fa-circle-o"></i>Home</a></li>
+            <li><a href="{{ url('dash') }}"><i class="fa fa-circle-o"></i>Dashboard</a></li>
           </ul>
         </li>
         <li class="header">LABELS</li>
         <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+        <li><a href="{{ url('../public') }}" target="_blank"><i class="fa fa-circle-o text-aqua"></i> <span>Go to amicmanila2017.net</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->

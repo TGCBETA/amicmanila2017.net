@@ -33,6 +33,9 @@ class HomeController extends Controller {
 	 */
 	public function index(Request $request)
 	{
+
+		
+
 		$reg_s = \DB::table('registrations')->get();
 		$reg_m = \DB::table('registrations')->select('paid')->get();
 		$cnt_single=0;
@@ -53,6 +56,9 @@ class HomeController extends Controller {
 		return view('home', ['cnt_single' => $cnt_single], ['cnt_paid' => $cnt_paid])
         ->with(	compact('items'))->with('i', ($request->input('page', 1) - 1) * 5);
 		//return view('home');
+	}
+	public function update(Request $request) {
+		return $request->input('paid');
 	}
 
 }
