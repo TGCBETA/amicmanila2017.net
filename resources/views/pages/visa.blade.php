@@ -10,7 +10,7 @@
 
 @section('content')
 	<div class="bg-white padding page-content">
-		<h4 class="text-center">Guidelines on The Entry of Temporary Visitors to the Phillipines</h4>
+		<h4 class="text-center"><a href="http://www.dfa.gov.ph/guidelines-requirements" target="_blank">DFA</a> Guidelines on The Entry of Temporary Visitors to the Phillipines</h4>
 		<p>Nationals from countries listed below who are traveling to the Philippines for business and tourism purposes are allowed to enter the Philippines without visas for a stay not exceeding thirty (30) days, provided they hold valid tickets for their return journey to port of origin or next port of destination and their passports valid for a period of at least six (6) months beyond the contemplated period of stay.</p>
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">

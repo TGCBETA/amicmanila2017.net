@@ -37,13 +37,17 @@
 				PHILIPPINES
 			</div>
 			<div class="col-md-3">
-				<h5><strong>Asst Prof Pirongrong Ramasoota Rananand PhD</strong></h5>
+				<h5><strong>Asst. Prof. Pirongrong Ramasoota Rananand PhD</strong></h5>
 				Department of Journalism and Information<br />
 				Faculty of Communication Arts<br />
 				Chulalongkorn University<br />
 				Bangkok<br />
 				THAILAND
 			</div>
+			</div>
+			<br />
+			<br />
+			<div class="row">
 			<div class="col-md-3">
 				<h5><strong>Professor Dato' Sri Dr Syed Arabi Bin Syed Abdullah Idid</strong></h5>
 				Professor<br />
@@ -78,8 +82,8 @@
 		<hr />
 		<div class="row">
 			<div class="col-md-4">
-				<h5><strong>Prof. Jose Ma. Carlos</strong></h5>
-				Editorial Officer, CNN Philippines<br />
+				<h5><strong>Asst. Prof. Jose Ma. Carlos</strong></h5>
+				Editorial Director, CNN Philippines<br />
 				Chair, AMIC Board of Management (BOM)
 			</div>
 			<div class="col-md-4">

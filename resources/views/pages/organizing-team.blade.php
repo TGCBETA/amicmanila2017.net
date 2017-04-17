@@ -42,8 +42,8 @@
 				Member, AMIC BOM
 			</div>
 			<div class="col-md-4">
-				<h5><strong>Prof. Jose Ma. Carlos</strong></h5>
-				Editorial Officer, CNN Philippines<br />
+				<h5><strong>Asst. Prof. Jose Ma. Carlos</strong></h5>
+				Editorial Director, CNN Philippines<br />
 				Chair, AMIC Board of Management (BOM)
 			</div>
 			<div class="col-md-4">

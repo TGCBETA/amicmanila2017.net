@@ -36,15 +36,15 @@
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary" href="{{ url('home') }}">
-									Go back
-								</button>
 								<button type="submit" class="btn btn-success">
 									Send Password Reset Link
 								</button>
 							</div>
 						</div>
 					</form>
+					<button type="submit" class="btn btn-primary" href="{{ url('auth/login') }}">
+									Go back
+								</button>
 				</div>
 			</div>
 		</div>
