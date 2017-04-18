@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller {
 
@@ -33,9 +34,6 @@ class HomeController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-
-		
-
 		$reg_s = \DB::table('registrations')->get();
 		$reg_m = \DB::table('registrations')->select('paid')->get();
 		$cnt_single=0;
@@ -58,7 +56,17 @@ class HomeController extends Controller {
 		//return view('home');
 	}
 	public function update(Request $request) {
-		return $request->input('paid');
-	}
+		/*$up = $request->input('checkbox1');
 
+		\DB::table('registrations')->update(['paid' => 0]);
+		if($up === null) return Redirect::back();
+		else foreach($up as $pay){
+			$update = \DB::table('registrations')->where('id', $pay);	
+			$update->update(['paid' => 1]);
+		}
+		return Redirect::back();
+	}*/
+		return ('home');
+
+	}
 }

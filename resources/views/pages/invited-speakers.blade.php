@@ -13,7 +13,7 @@
 <div class="bg-white padding page-content">
 		<h3 class="text-center">Invited Speakers</h3>
 		<hr />
-		<img src="{{ asset('images/invited-speakers.png') }}" class="img-responsive center-block" style="width:75%;" />
+		<img src="{{ asset('images/invited-speakers.png') }}" class="img-responsive center-block" style="width:90%;" />
 		<br />
 
 </div>

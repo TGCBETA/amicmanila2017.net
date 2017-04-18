@@ -50,6 +50,7 @@
 			    <span class="sr-only">Next</span>
 			  </a>
 			</div>
+			<hr />
 		<img src="{{ asset('images/logo_amic_thumb.jpg') }}" class="img-responsive center-block" />
 		<h4 class="text-center">AMIC: Shaping a Resurgent Communication Sector<br />
 		in the Asia Pacific Region</h4>

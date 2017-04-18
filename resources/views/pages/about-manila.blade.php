@@ -130,8 +130,9 @@
 			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="3"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="5"></li>
 			  </ol>
 
 			  <!-- Wrapper for slides -->
@@ -158,12 +159,21 @@
         			<p>QC Memorial Circle Garden, Pinyahan</p>
 			      </div>
 			    </div>
+
+					<div class="item">
+			      <img src="{{ asset('images/miriam-college.jpg') }}" alt="..." class="fullwidth img-responsive">
+			      <div class="carousel-caption">
+			        <h3><font color="white"><b>Miriam College</b></font></h3>
+        			<p>is one of the most renowned and successful schools in the district of Quezon City.</p>
+							<p align="right"><font size="1px">This image is from: https://www.hoppler.com.ph/blog/design-and-architecture/top-10-largest-campuses-in-metro-manila-in-terms-of-land-area</font></p>
+						</div>
+			    </div>
 				<div class="item">
 			      <img src="{{ asset('images/ateneo-gallery.jpg') }}" alt="..." class="fullwidth img-responsive">
 			      <div class="carousel-caption">
 			        <h3><font color="white"><b>Ateneo Art Gallery</b></font></h3>
         			<p>The Gallery is located at the Rizal Library Special Collections Building, <br />Ateneo de Manila University, Katipunan Avenue, Loyola Heights, Quezon City.</p>
-					<p align="center"><font size="1px">This image is from: http://manila-photos.blogspot.com/2010/03/</font></p>
+							<p align="center"><font size="1px">This image is from: http://manila-photos.blogspot.com/2010/03/</font></p>
 			      </div>
 			    </div>
 				<div class="item">

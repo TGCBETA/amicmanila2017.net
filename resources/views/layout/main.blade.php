@@ -43,7 +43,7 @@
 			            <li><a href="{{ route('get-page', ['25th-annual-conference']) }}"><b>25th Annual Conference</b></a></li>
 			            <li><a href="{{ route('get-page', ['nomination']) }}"><b>Nomination for 2017 AMIC Asia Communication Award</b></a></li>
 			            <li><a href="{{ route('get-page', ['about-manila']) }}"><b>About Manila, Philippines</b></a></li>
-			            <li><a href="{{ route('get-page', ['about-the-venue']) }}"><b>About the Venue</b></a></li>
+			            <li><a href="{{ route('get-page', ['about-the-venue']) }}"><b>The Venue</b></a></li>
 			        </ul>
 		        </li>
 		        <li class="separator"><span>|</span></li>

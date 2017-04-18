@@ -11,6 +11,7 @@
 @section('content')
 	<div class="bg-white padding page-content">
 		<h4 class="text-center">AMIC Manila 2017 promises to be a cut above the rest</h4>
+		<hr />
 		<p class="text-center">The 25th AMIC Conference on 27-29 September 2017 will continue to be intellectually stimulating, plus more. </p>
 		<p>As in previous conferences, plenary and parallel sessions will feature debates on current and emerging communication and media issues. There will also be discussions on best practices in communication strategies and tools. </p>
 		<p>This year's sessions are also envisioned to present innovative and thought-provoking topics – "those which disturb." With the theme, Rethinking Communication in a Resurgent Asia, the conference will encourage paper presenters to question traditional standards and mindsets and come up with pioneering, innovative, creative, and disturbing topics including the so-called "new normal."</p>
@@ -32,7 +33,7 @@
 		<div>
 			<br />
 			<img src="{{ asset('images/poster_layout_amic_web.jpg') }}" class="img-responsive pull-right visible-xs visible-sm hidden-md hidden-lg" style="width:100%;" />
-			<img src="{{ asset('images/poster_layout_amic_web.jpg') }}" class="img-responsive pull-right hidden-xs hidden-sm visible-md visible-lg" style="width:70%;margin-bottom:20px" />
+			<img src="{{ asset('images/poster_layout_amic_web.jpg') }}" class="img-responsive pull-right hidden-xs hidden-sm visible-md visible-lg" style="width:70%;margin-bottom:20px;margin-left:10px;" />
 			<p>According to an ancient Chinese <br /> proverb, To forget one’s ancestors is <br /> to be a brook without a source, a tree without root.</p>
 			<p>An old Philippine proverb says, Sino <br /> man ang hindi marunong lumingon sa kanyang pinanggalingan, ay hindi makakarating sa kanyang paroroonan. (He who does not think back on his <br /> past, will not arrive at his destination.)</p>
 			<p>We invoke this ancient Asian wisdom <br /> to warn, as we lunge headlong into today’s fast-changing world, that non-Asian communication theories, sophisticated gadgets and apps are not the panacea to the world’s problems.<br /> The solutions are in us.</p>

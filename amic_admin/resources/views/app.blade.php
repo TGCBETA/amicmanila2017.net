@@ -168,7 +168,7 @@
 		<div class="pull-right hidden-xs">
 		</div>
 		<strong>Copyright &copy; <a href="http://www.amicmanila2017.net">AmicManila2017</a>.</strong> All rights
-		reserved.
+		reserved. 
   	</footer>
 
 	<div class="control-sidebar-bg"></div>
@@ -193,15 +193,56 @@
 	<script src="{{ asset('/resources/bootstrap/js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('/resources/plugins/iCheck/icheck.min.js') }}"></script>
 	<script>
-		$(function () {
+		/*$(function () {
 			$('input').iCheck({
 			checkboxClass: 'icheckbox_square-blue',
 			radioClass: 'iradio_square-blue',
 			increaseArea: '20%' // optional
 			});
-		});
+		});*/
 	</script>
+    <script>
+	
+		$('#checkbox1').click(function(){
+                var value= $(this).is(':checked');
+                $.ajax({
+                    url: '{{ route("home") }}',
+                    type: 'post',
+                    data: {checkbox1:value},
+                    success: function(data){
+                        alert(data);
+                    }
+                });
+            });
 
+
+		/*$('#checkbox1').click(function(){
+			 alert("clicked it");
+			 $.ajax({
+				type: 'post',
+				url: 'home',
+				data: '1',
+				success: function () {
+					//$('#ajax_div').html(data);
+					alert("clicked it");
+				},
+			})
+		});
+
+		
+		$('input[type="checkbox"]').click(function() {
+			var select = document.getElementById('checkbox1');
+				select.onchange = function(){
+				this.form.submit();
+			};
+		});
+
+		$(document).ready(function){
+			$('#checkbox1').click(function(){
+				alert('Click');
+			});
+		}*/
+	</script>
 	
 	<!-- FastClick -->
 	<script src="{{ asset('/resources/plugins/fastclick/fastclick.js') }}"></script>
@@ -233,8 +274,8 @@
 	<script src="{{ asset('/resources/export_js/buttons.html5.min.js') }}"></script>
 	<script src="{{ asset('/resources/export_js/buttons.print.min.js') }}"></script>
 	<script src="{{ asset('/resources/loading/js/pace.min.js') }}"></script>
-    <script>
-        $(document).ready(function() {
+	<script>
+       $(document).ready(function() {
 			$('#example1').DataTable( {
 			scrollX: true,
 			dom: 'Bfrtip',
@@ -242,8 +283,23 @@
 				'excel', 'pdf', 'print'
 			]
 			} );
-		} );
+		});
 		
+
+		function updatePaid(ctrl){
+			alert('test');
+		}
+		
+		/*$(document).ready(function(){
+				$('#checkbox1').change(function() {
+					if($(this).is(":checked")) {
+						alert('Click');
+						return;
+					}
+
+				});
+		});*/
         </script>
+
 </body>
 </html>

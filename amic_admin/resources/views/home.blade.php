@@ -74,12 +74,8 @@
 											<td>{{ $item->lastname }}</td>
 											<td>{{ $item->phone }}</td>
 											<td>{{ $item->email }}</td>
-											@if($item->paid === 1)
-											<td><center><input type="checkbox" class="flat-red" name="paid[]" value="{{ $i }}" checked></center></td>
-											@else
-											<td><center><input type="checkbox" class="flat-red" name="paid[]" value="{{ $i }}"></center></td>
-											@endif
-											<td><center><input type="checkbox" class="flat-red" name="Attend_{{ $i }}"></center><center></td>	
+											<td><center><input type="checkbox" id="checkbox1" name="checkbox1" value="{{ $i }}" {{ ($item->paid == 1) ? 'checked=checked' : '' }} ></center></td>
+											<td><center><input type="checkbox" class="flat-red" name="Attend_{{ $i }}"></center><center></td>
 										</tr>
 										
 										@endforeach
