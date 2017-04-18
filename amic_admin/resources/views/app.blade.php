@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
+	<meta name="csrf-token" content="{{ csrf_token() }}" />
 	<title>Amic Manila 2017</title>
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -202,18 +202,26 @@
 		});*/
 	</script>
     <script>
-	
-		$('#checkbox1').click(function(){
-                var value= $(this).is(':checked');
-                $.ajax({
-                    url: '{{ route("home") }}',
-                    type: 'post',
-                    data: {checkbox1:value},
-                    success: function(data){
-                        alert(data);
-                    }
-                });
-            });
+		$.ajaxSetup({
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			}
+		});
+		
+		$(document).ready(function(){
+			$("#checkbox1").click(function(){
+					var value= $(this).is(':checked');
+					alert(value);
+					$.ajax({
+						url: 'update',
+						type: "POST",
+						data: { 'checkbox1': value },
+						success: function(data){
+							alert(data);
+						}
+				});
+			});
+		});
 
 
 		/*$('#checkbox1').click(function(){

@@ -15,7 +15,7 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-Route::post('home', 'HomeController@update');
+Route::post('update', 'UpdateController@index');
 
 Route::get('dash', 'DashController@index');
 
