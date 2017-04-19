@@ -16,5 +16,10 @@ class VerifyCsrfToken extends BaseVerifier {
 	{
 		return parent::handle($request, $next);
 	}
+	protected function tokensMatch($request)
+	{
+		$token = $request-> ajax() ? $request->header('X-CSRF-Token') : $request->input('_token');
+		return $request->session()->token() == $token;
+	}
 
 }

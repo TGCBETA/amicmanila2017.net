@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
+use Response;
 
 class HomeController extends Controller {
 
@@ -55,18 +56,28 @@ class HomeController extends Controller {
         ->with(	compact('items'))->with('i', ($request->input('page', 1) - 1) * 5);
 		//return view('home');
 	}
-	public function update(Request $request) {
-		/*$up = $request->input('checkbox1');
+	public function update(Request $request) 
+	{
+		if($request->ajax()) {
+			$paid_id = $request->paid_id;
+			if($request->status == "true") $status = 1;
+			else $status = 0;
+			
+			$update = \DB::table('registrations')->where('id', $paid_id);
+			$update->update(['paid' => $status]);
+         }
 
-		\DB::table('registrations')->update(['paid' => 0]);
-		if($up === null) return Redirect::back();
-		else foreach($up as $pay){
-			$update = \DB::table('registrations')->where('id', $pay);	
-			$update->update(['paid' => 1]);
-		}
-		return Redirect::back();
-	}*/
-		return ('home');
+	}
+	public function attendUpdate(Request $request) 
+	{
+		if($request->ajax()) {
+			$attend_id = $request->attend_id;
+			if($request->status == "true") $status = 1;
+			else $status = 0;
+			
+			$update = \DB::table('registrations')->where('id', $attend_id);
+			$update->update(['status' => $status]);
+         }
 
 	}
 }

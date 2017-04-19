@@ -207,21 +207,51 @@
 				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 			}
 		});
-		
+
 		$(document).ready(function(){
+			$(".Paid_up").change(function () {
+			var check = "paid_id="+ this.value + "&status=" + this.checked;
+				$.ajax({
+					type: 'POST',
+					url: './PaidUpdate',
+					data: "paid_id="+ this.value + "&status=" + this.checked,
+					success: function() {
+						console.log(check);
+					}
+				});
+			});
+		});
+
+		$(document).ready(function(){
+			$(".Attend_up").change(function () {
+			var check = "attend_id="+ this.value + "&status=" + this.checked;
+				$.ajax({
+					type: 'POST',
+					url: './AttendUpdate',
+					data: "attend_id="+ this.value + "&status=" + this.checked,
+					success: function() {
+						console.log(check);
+					}
+				});
+			});
+		});
+
+		/*$(document).ready(function(){
 			$("#checkbox1").click(function(){
-					var value= $(this).is(':checked');
-					alert(value);
+					var value[]= $(this).is(':checked');
+					var val=$('#checkbox1').val();
+					//alert(value);
 					$.ajax({
-						url: 'update',
+						url: './home',
 						type: "POST",
-						data: { 'checkbox1': value },
+						data: { checkbox1 : value, checkbox1 : val},
 						success: function(data){
 							alert(data);
 						}
 				});
+				
 			});
-		});
+		});*/
 
 
 		/*$('#checkbox1').click(function(){

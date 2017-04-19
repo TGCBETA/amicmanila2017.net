@@ -28,20 +28,15 @@ class HomeController extends Controller {
 	}
     public function index(Request $request)
 	{
-         if(Request::ajax()) {
-			return Response::json(Request::all());
+        if($request->ajax()) {
+			$attend_id = $request->attend_id;
+			if($request->status == "true") $status = 1;
+			else $status = 0;
+			
+			$update = \DB::table('registrations')->where('id', $attend_id);
+			$update->update(['paid' => $status]);
          }
 
-		/*$up = $request::input('checkbox1');
-
-        
-		\DB::table('registrations')->update(['paid' => 0]);
-		if($up === null) return Redirect::back();
-		else foreach($up as $pay){
-			$update = \DB::table('registrations')->where('id', $pay);	
-			$update->update(['paid' => 1]);
-		}
-		return Redirect::back();*/
-	}
+    }
 
 }

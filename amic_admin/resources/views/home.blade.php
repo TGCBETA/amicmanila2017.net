@@ -2,7 +2,7 @@
 
 @section('content')
 	<br>
-	<form role="form" class="form-horizontal" method="POST" action="{{ url('/home') }}">
+	<form role="form" class="form-horizontal">
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<section class="content-header">
 			<h1>
@@ -74,14 +74,14 @@
 											<td>{{ $item->lastname }}</td>
 											<td>{{ $item->phone }}</td>
 											<td>{{ $item->email }}</td>
-											<td><center><input type="checkbox" id="checkbox1" name="checkbox1[]" value="{{ $i }}" {{ ($item->paid == 1) ? 'checked=checked' : '' }} ></center></td>
-											<td><center><input type="checkbox" class="flat-red" name="Attend_{{ $i }}"></center><center></td>
+											<td align="center"><input type="checkbox" class="Paid_up" name="{{ $i }}" value="{{ $i }}" {{ ($item->paid == 1) ? 'checked=checked' : '' }} ></td>
+											<td align="center"><input type="checkbox" class="Attend_up" name="{{ $i }}" value="{{ $i }}" {{ ($item->status == 1) ? 'checked=checked' : '' }}></td>
 										</tr>
 										
 										@endforeach
 										</tbody>
 									</table>
-									<button class="btn btn-sm btn-primary">Update</button>
+									
 								</div>
 							
 						<!-- End Datatable -->
