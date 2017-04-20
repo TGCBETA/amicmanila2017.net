@@ -54,7 +54,6 @@ class HomeController extends Controller {
 		$items = \DB::table('registrations')->get();
 		return view('home', ['cnt_single' => $cnt_single], ['cnt_paid' => $cnt_paid])
         ->with(	compact('items'))->with('i', ($request->input('page', 1) - 1) * 5);
-		//return view('home');
 	}
 	public function update(Request $request) 
 	{
@@ -65,7 +64,7 @@ class HomeController extends Controller {
 			
 			$update = \DB::table('registrations')->where('id', $paid_id);
 			$update->update(['paid' => $status]);
-         }
+        }
 
 	}
 	public function attendUpdate(Request $request) 
@@ -77,7 +76,7 @@ class HomeController extends Controller {
 			
 			$update = \DB::table('registrations')->where('id', $attend_id);
 			$update->update(['status' => $status]);
-         }
+        }
 
 	}
 }

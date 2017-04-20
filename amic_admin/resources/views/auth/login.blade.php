@@ -24,7 +24,7 @@
 						<div class="col-xs-8">
 						<div class="checkbox icheck">
 							<label>
-							 <input name="remember" type="checkbox" value="Remember Me"> Remember Me
+							 <li overflow:hidden><input name="remember" type="checkbox" value="Remember Me" class="margin-left:10%"> Remember Me </li>
 							</label>
 						</div>
 						</div>

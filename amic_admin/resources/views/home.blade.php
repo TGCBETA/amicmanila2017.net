@@ -74,8 +74,8 @@
 											<td>{{ $item->lastname }}</td>
 											<td>{{ $item->phone }}</td>
 											<td>{{ $item->email }}</td>
-											<td align="center"><input type="checkbox" class="Paid_up" name="{{ $i }}" value="{{ $i }}" {{ ($item->paid == 1) ? 'checked=checked' : '' }} ></td>
-											<td align="center"><input type="checkbox" class="Attend_up" name="{{ $i }}" value="{{ $i }}" {{ ($item->status == 1) ? 'checked=checked' : '' }}></td>
+											<td align="center"><input type="checkbox" name="{{ $i }}" value="{{ $i }}" {{ ($item->paid == 1) ? 'checked=checked' : '' }} onchange="Paid_Up(this);"><br /><b><span id = "response{{ $i }}">{{ ($item->paid == 1) ? 'PAID' : 'NOT PAID' }}</span></b></td>
+											<td align="center"><input type="checkbox" name="{{ $i }}" value="{{ $i }}" {{ ($item->status == 1) ? 'checked=checked' : '' }} onchange="Attend_Up(this);"><br /><b><span id = "attendstat{{ $i }}">{{ ($item->status == 1) ? 'ATTENDED' : 'NOT ATTENDED' }}</span></b></td>
 										</tr>
 										
 										@endforeach

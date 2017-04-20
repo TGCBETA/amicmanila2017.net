@@ -192,15 +192,15 @@
 	<!-- Bootstrap 3.3.6 -->
 	<script src="{{ asset('/resources/bootstrap/js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('/resources/plugins/iCheck/icheck.min.js') }}"></script>
-	<script>
-		/*$(function () {
+	<!-- <script>
+		$(function () {
 			$('input').iCheck({
 			checkboxClass: 'icheckbox_square-blue',
 			radioClass: 'iradio_square-blue',
 			increaseArea: '20%' // optional
 			});
-		});*/
-	</script>
+		});
+	</script> -->
     <script>
 		$.ajaxSetup({
 			headers: {
@@ -208,6 +208,28 @@
 			}
 		});
 
+		$(document).ready(function() {
+			$('#example1').DataTable( {
+			scrollX: true,
+			dom: 'Bfrtip',
+			"buttons": [
+				//'excel', 'pdf', 'print',
+				{
+					extend: 'print',
+					action: function(e, dt, button, config) {
+						
+						// Add code to make changes to table here
+						dt.fnReloadAjax();
+						// Call the original action function afterwards to
+						// continue the action.
+						// Otherwise you're just overriding it completely.
+						$.fn.dataTable.ext.buttons.print.action(e, dt, button, config);
+					}
+				}
+				]
+			} );
+		});
+		/*
 		$(document).ready(function(){
 			$(".Paid_up").change(function () {
 			var check = "paid_id="+ this.value + "&status=" + this.checked;
@@ -221,8 +243,43 @@
 				});
 			});
 		});
+		*/
+		function Paid_Up(ctrl){
+			var check = "paid_id="+ $(ctrl).val() + "&status=" + $(ctrl).is(':checked');
+				$.ajax({
+					type: 'POST',
+					url: './PaidUpdate',
+					data: check,
+					success: function() {
+						if($(ctrl).is(':checked') == true) {
+							$('#response' + $(ctrl).val()).text("PAID");
+						}
+						else {
+							$('#response' + $(ctrl).val()).text("NOT PAID");
+						}
+					}
+				});
+		}
+		
+		function Attend_Up(ctrl){
+			var check = "attend_id="+ $(ctrl).val() + "&status=" + $(ctrl).is(':checked');
+				$.ajax({
+					type: 'POST',
+					url: './AttendUpdate',
+					data: check,
+					success: function() {
+						console.log(check);
+						if($(ctrl).is(':checked') == true) {
+							$('#attendstat' + $(ctrl).val()).text("ATTENDED");
+						}
+						else {
+							$('#attendstat' + $(ctrl).val()).text("NOT ATTENDED");
+						}
+					}
+				});
+		}
 
-		$(document).ready(function(){
+		/* $(document).ready(function(){
 			$(".Attend_up").change(function () {
 			var check = "attend_id="+ this.value + "&status=" + this.checked;
 				$.ajax({
@@ -234,52 +291,8 @@
 					}
 				});
 			});
-		});
+		}); */
 
-		/*$(document).ready(function(){
-			$("#checkbox1").click(function(){
-					var value[]= $(this).is(':checked');
-					var val=$('#checkbox1').val();
-					//alert(value);
-					$.ajax({
-						url: './home',
-						type: "POST",
-						data: { checkbox1 : value, checkbox1 : val},
-						success: function(data){
-							alert(data);
-						}
-				});
-				
-			});
-		});*/
-
-
-		/*$('#checkbox1').click(function(){
-			 alert("clicked it");
-			 $.ajax({
-				type: 'post',
-				url: 'home',
-				data: '1',
-				success: function () {
-					//$('#ajax_div').html(data);
-					alert("clicked it");
-				},
-			})
-		});
-
-		
-		$('input[type="checkbox"]').click(function() {
-			var select = document.getElementById('checkbox1');
-				select.onchange = function(){
-				this.form.submit();
-			};
-		});
-
-		$(document).ready(function){
-			$('#checkbox1').click(function(){
-				alert('Click');
-			});
-		}*/
 	</script>
 	
 	<!-- FastClick -->
@@ -312,32 +325,5 @@
 	<script src="{{ asset('/resources/export_js/buttons.html5.min.js') }}"></script>
 	<script src="{{ asset('/resources/export_js/buttons.print.min.js') }}"></script>
 	<script src="{{ asset('/resources/loading/js/pace.min.js') }}"></script>
-	<script>
-       $(document).ready(function() {
-			$('#example1').DataTable( {
-			scrollX: true,
-			dom: 'Bfrtip',
-			buttons: [
-				'excel', 'pdf', 'print'
-			]
-			} );
-		});
-		
-
-		function updatePaid(ctrl){
-			alert('test');
-		}
-		
-		/*$(document).ready(function(){
-				$('#checkbox1').change(function() {
-					if($(this).is(":checked")) {
-						alert('Click');
-						return;
-					}
-
-				});
-		});*/
-        </script>
-
 </body>
 </html>
