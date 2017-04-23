@@ -107,7 +107,7 @@
 				<!-- Menu Footer-->
 				<li class="user-footer">
 					<div class="pull-left">
-					<a href="#" class="btn btn-default btn-flat">Profile</a>
+					<a href="#" class="btn btn-default btn-flat">Settings</a>
 					</div>
 					<div class="pull-right">
 					<a href="{{ url('/auth/logout') }}" class="btn btn-default btn-flat">Sign out</a>
@@ -139,7 +139,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="active treeview">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Control Panel</span>
             <span class="pull-right-container">
@@ -148,7 +148,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ url('home') }}"><i class="fa fa-circle-o"></i>Home</a></li>
-            <li><a href="{{ url('dash') }}"><i class="fa fa-circle-o"></i>Dashboard</a></li>
+            <li><a href="{{ url('dash') }}"><i class="fa fa-circle-o"></i>Settings</a></li>
           </ul>
         </li>
         <li class="header">LABELS</li>
@@ -294,6 +294,7 @@
 		}); */
 
 	</script>
+
 	
 	<!-- FastClick -->
 	<script src="{{ asset('/resources/plugins/fastclick/fastclick.js') }}"></script>

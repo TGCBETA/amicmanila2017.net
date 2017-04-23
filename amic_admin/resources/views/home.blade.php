@@ -18,7 +18,7 @@
 			<!-- Main content -->
 			<section class="content">
 						<div class="row">
-								<div class="col-lg-6 col-xs-6">
+								<div class="col-lg-4 col-xs-6">
 									<!-- small box -->
 									<div class="small-box bg-aqua">
 											<div class="inner">
@@ -32,11 +32,15 @@
 									</div> 
 								</div>
 								
-								<div class="col-lg-6 col-xs-6">
+								<div class="col-lg-4 col-xs-6" id="refresh">
 									<!-- small box -->
 										<div class="small-box bg-aqua">
 												<div class="inner">
-													<h3> {{ $cnt_paid }} / {{ $cnt_single }} </h3>
+												{{--*/ $j=0 /*--}}
+												@foreach ($items as $key => $item)
+												{{--*/ ($item->paid == 1) ? ++$j : '' /*--}}
+												@endforeach
+													<h3> {{ $j }} / {{ $cnt_single }} </h3>
 												
 													<div>Paid<br>Status</div>
 												</div>
@@ -46,6 +50,25 @@
 										<!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
 										</div>
 								</div>
+								<div class="col-lg-4 col-xs-6" id="refresh">
+									<!-- small box -->
+										<div class="small-box bg-aqua">
+												<div class="inner">
+												{{--*/ $j=0 /*--}}
+												@foreach ($items as $key => $item)
+												{{--*/ ($item->status == 1) ? ++$j : '' /*--}}
+												@endforeach
+													<h3> {{ $j }} / {{ $cnt_single }} </h3>
+												
+													<div>Attended<br>Status</div>
+												</div>
+													<div class="icon">
+														<i class="fa fa-cog fa-spin fa-1x fa-fw"></i>
+													</div>
+										<!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
+										</div>
+								</div>
+
 							</div>
 
 						<!-- Datatable -->
@@ -55,6 +78,7 @@
 							</div>
 							<!-- /.box-header -->
 								<div class="box-body">
+								<b><p><font color="red">*Note: Once you change the Checkbox status for the field "Paid" and Attended, it is necessary that you must wait for the result below. (eg: if PAID or not NOT PAID).</font></p></b>
 									<table id="example1" class="table table-bordered table-striped">
 										<thead>
 										<tr>
