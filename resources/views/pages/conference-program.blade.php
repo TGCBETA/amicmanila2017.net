@@ -10,98 +10,290 @@
 
 @section('content')
 	<div class="bg-white padding page-content">
-		<h4 class="text-center">25TH Annual AMIC Conference</h4>
-		<h4 class="text-center">27-29 September 2017, Manila, Philippines</h4>
+		<h5 class="text-center">ASIAN MEDIA INFORMATION AND COMMUNICATION CENTRE, INC.</h5>
+		<br />
+		<h4 class="text-center"><b>25TH Annual Conference</b></h4>
+		<h4 class="text-center"><b>“RETHINKING COMMUNICATION IN A RESURGENT ASIA”</b></h4>
+		<h6 class="text-center">Miriam College  27-29 September 2017</h6>
 		<br /><br />
-		<h4 class="text-center">Rethinking Communication in a Resurgent Asia</h4>
+
+		<h5><b>September 26, 2017</b></h5>
 		<table class="table table-bordered">
-			<thead>
-				<tr class="info">
-					<th></th>
-					<th class="text-center">Day 0</th>
-					<th class="text-center">Day 1</th>
-					<th class="text-center">Day 2</th>
-					<th class="text-center">Day 3</th>
-				</tr>
-				<tr class="info">
-					<th></th>
-					<th class="text-center">Sept. 26</th>
-					<th class="text-center">Sept. 27</th>
-					<th class="text-center">Sept. 28</th>
-					<th class="text-center">Sept. 29</th>
-				</tr>
-				<tr class="info">
-					<th></th>
-					<th class="text-center">Tuesday</th>
-					<th class="text-center">Wednesday</th>
-					<th class="text-center">Thursday</th>
-					<th class="text-center">Friday</th>
-				</tr>
-			</thead>
 			<tbody>
 				<tr>
-					<td>7:00AM to 8:00AM</td>
-					<td rowspan="2"></td>
-					<td rowspan="2">REGISTRATION</td>
-					<td rowspan="2">REGISTRATION</td>
-					<td rowspan="8" style="vertical-align: middle;">CONFERENCE ORGANIZED DAY TOUR (DETAILS TO FOLLOW)</td>
+					<td>17.00-18.30</td>
+					<td>Arrival of Participants <br />
+					Registration <br />
+					Welcome Canapes and Drinks
+					</td>
 				</tr>
+
 				<tr>
-					<td>8:00AM to 9:00AM</td>
+					<td>18.30-21.00</td>
+					<td>AMIC Got Talent <br />
+					Videoke Night <br />
+					</td>
 				</tr>
+
 				<tr>
-					<td>9:00AM to 10:30AM</td>
-					<td></td>
-					<td>Opening Ceremony</td>
-					<td>Plenary Session 2 <br />(University Presidents' Session)  UNESCO</td>
-				</tr>
-				<tr>
-					<td>10:30AM to 12:30NN</td>
-					<td></td>
-					<td>Plenary Session 1 <br />(AMIC Distinguished Forum)</td>
-					<td>PARALLEL SESSIONS<br /> C1 Communication Education, C2 Communication Media (including Asian Traditional / Folk Media)</td>
-				</tr>
-				<tr>
-					<td>12:30NN to 2:00PM</td>
-					<td></td>
-					<td>Lunch</td>
-					<td>Lunch</td>
-				</tr>
-				<tr>
-					<td>2:00PM to 3:30PM</td>
-					<td></td>
-					<td>PARALLEL SESSIONS <br /> A1 Asian Communication Philosophies, Theories, and Paradigms, A2 Communication and Culture</td>
-					<td>PARALLEL SESSIONS <br /> D1 Communication Strategies and Approaches, <br /> D2 Inclusive Knowledge Societies</td>
-				</tr>
-				<tr>
-					<td>3:30PM to 5:00PM</td>
-					<td></td>
-					<td>PARALLEL SESSIONS <br />B1 Global Communication, B2 Asian Business Communication</td>
-					<td>PLENARY SESSION 3 <br />(Closing Plenary/ Closing Ceremony)</td>
-				</tr>
-				<tr>
-					<td>5:00PM to 6:30PM</td>
-					<td>Arrival of Delegates</td>
-					<td>DINNER</td>
-					<td>AMIC General Meeting / Wellness Sessions</td>
-				</tr>
-				<tr>
-					<td>6:30PM to 9:00PM</td>
-					<td>Videoke Night/ AMIC GOT TALENT</td>
-					<td>AMIC Communications Awards/Cultural Show</td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>9:00PM</td>
-					<td>DAY ENDS</td>
-					<td>DAY ENDS</td>
-					<td></td>
-					<td></td>
+					<td>21.00</td>
+					<td>Day Ends <br />
+					</td>
 				</tr>
 			</tbody>
 		</table>
 
+		<h5><b>September 27, 2017</b></h5>
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<td>07.00-09.00</td>
+					<td>Registration</td>
+				</tr>
+				<tr>
+					<td >09.00-09.30</td>
+					<td><b>Inaugural Ceremony</b> <br />
+					<b>Welcome Remarks:</b> <br />
+						<p style="margin-left: 40px;">(1)	From AMIC: Crispin Maslog (AMIC Board of Directors Chair)</p>
+						<p style="margin-left: 40px;">(2)	From Host-Venue: Rosario O. Lapus (Miriam College President)</p> <br />
+
+					<b>Opening Remarks from the AIJC-AMIC-PWU Consortium:</b>
+						<p style="margin-left: 40px;">(1)	From AIJC-AMIC-PWU Consortium: Francisco Benitez (PWU President)</p>
+						<p style="margin-left: 40px;">(2)	Mel V. Velarde (Chairman and CEO, Asian Institute of Journalism and Communication; <br />
+						&nbsp;&nbsp;&nbsp;&nbsp; CEO, Now Corporation) melvvelarde@gmail.com </p>
+					
+					</td>
+				</tr>
+				<tr>
+					<td >09.30-10.30</td>
+					<td><b>Inaugural Address</b> <br />
+					<b>Welcome Remarks:</b> <br />
+						<p>Maria Leonor “Leni” Robredo <br />
+						Honorable Vice-President of the Republic of the Philippines</p> <br />
+
+					<b>Keynote Address</b>
+						<p>Frank LaRue <br />
+						Assistant Director General for Communication and Information, UNESCO</p>
+					
+					</td>
+				</tr>
+				<tr>
+					<td >10.30-12.30</td>
+					<td><b>Plenary 1: AMIC Distinguished Forum - Rethinking Communication in a Resurgent Asia</b> <br />
+						<p>Florangel Rosario Braid <br />
+						President Emeritus, Senior Adviser & Trustee <br />
+						Asian Institute of Journalism & Communication (AIJC)</p> <br />
+
+						<p>Wimal Dissanayake <br />
+						University of Hawaii in Manoa</p> <br />
+
+						<p>Dhavalasri Shelton A. Gunaratne <br />
+						Professor Emeritus, Minnesota State University</p> <br />
+
+						<p>Ronny Adhikarya <br />
+						Former Founder/Manager of KULT (Knowledge Utilization through Learning Tech.) Program, <br />
+						The World Bank, Washington DC and <br />
+						ex-FAO/United Nations Representative/Ambassador in Pakistan
+						</p> <br />
+
+						<p>John A. Lent <br />
+						Temple University
+						</p> <br />
+
+						<p>Moderator: Arun Mahizhnan <br />
+						Special Research Adviser, Institute of Policy Studies <br />
+						National University of Singapore
+						</p> <br />
+					
+					</td>
+
+				<tr>
+					<td>12.30-14.00</td>
+					<td><p>Lunch</p></td>
+				</tr>
+
+				<tr>
+					<td>14.00-15.30</td>
+						<td><p><b>PARALLEL SESSIONS</b></p>
+							<p>A1 Asian Communication Philosophies, Theories, and Paradigms,</p>
+							<p>A2 Communication and Culture</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>15.30-17.00</td>
+						<td><p><b>PARALLEL SESSIONS</b></p>
+							<p>B1 Global Communication,</p>
+							<p>B2 Asian Business Communication</p>
+					</td>
+				</tr>
+				<tr>
+					<td>17.00-18.30</td>
+					<td><p>Dinner</p></td>
+				</tr>
+				<tr>
+					<td>18.30-21.00</td>
+					<td><p>GALA/CULTURAL NIGHT</p>
+					<p><b>AMIC Communication Awards</b></p>
+					</td>
+				</tr>
+				<tr>
+					<td>21.00</td>
+					<td><p>Day Ends</p></td>
+				</tr>
+				
+			</tbody>
+		</table>
+
+		<h5><b>September 28, 2017</b></h5>
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<td>07.00-09.00</td>
+					<td>Registration</td>
+				</tr>
+
+				<tr>
+					<td>09.00-10.30</td>
+					<td><p><b>Plenary Session 2: UNESCO Emeritus Dialogue  - <br />
+					Asian Philosophies, Religions and Communication</b></p>
+					<p>Dasho Kinley Dorji <br />
+					Former Secretary, Ministry of Information and Communications, Bhutan
+					</p>
+					<p>Franz-Josef Eilers, svd <br />
+					Director, Asian Research Center for Religion and Social Communication (ARC) <br />
+					at St. John's University, Bangkok <br />
+					Program Coordinator for Pastoral Communication, <br />
+					University of Santo Tomas Graduate School/Theological Faculty, Manila
+					</p>
+
+					<p>Imtiyaz Yusuf <br />
+					Lecturer and Director, Center for Buddhist-Muslim Understanding<br />
+					College of Religious Studies, Mahidol University, Thailand <br />
+					Senior Fellow at the Prince Alwaleed Bin Talal Center for Muslim-Christian Understanding (ACMCU)<br />
+					Georgetown University, Washington D.C., USA.
+					</p>
+
+					<p>Su-Kyung Han<br />
+					Founder, My Green News.com <br />
+					</p>
+
+					<p>Lorna Israel<br />
+					Miriam College/ University of the Philippines<br />
+					</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>09.00-10.30</td>
+					<td>Moderator: Binod C. Agrawal <br />
+					AMIC Board of Directors Members <br />
+					Co-founder, Himgiri Zee University, Dehradun <br />
+					Co-founder, Mudra Institute of Communications Ahmedabad (MICA)
+					</td>
+				</tr>
+
+				<tr>
+					<td>10.30-12.30</td>
+					<td><p><b>PARALLEL SESSIONS</b></p>
+					<p>C1 Communication Education,</p>
+					<p>C2 Communication Media (including Asian Traditional / Folk Media)</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>12.30-14.00</td>
+					<td><p>Lunch</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>14.00-15.30</td>
+					<td><p><b>PARALLEL SESSIONS</b></p>
+					<p>D1 Communication Strategies and Approaches, </p>
+					<p>D2 Inclusive Knowledge Societies</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>15.30-17.00</td>
+					<td><p><b>Plenary Session 3: Freedom of Expression in a Post-Truth Era ***</b></p>
+					<p>Monroe E. Price <br />
+					Convenor, 2017 World Trends in Freedom of Expression and Media Development Report <br />
+					Director, Center for Global Communications Studies <br />
+					Annenberg School for Communication, University of Pennsylvania <br />
+					Professor of Law, Benjamin N. Cardozo School of Law
+					</p>
+					<p>Cherian George <br />
+					Professor, Hong Kong Baptist University/ Editor, AMIC Media Asia
+					</p>
+
+					<p>Yuen Ying Chan * <br />
+					Member, Open Society Global Board <br />
+					Professor and Founding Director, Journalism and Media Studies Center University of Hong Kong
+					</p>
+
+					<p>Peixin Cao <br />
+					Professor, Communication University of China<br />
+					</p>
+
+					<p>Maria Ressa *<br />
+					CEO, Rappler.com <br />
+					</p>
+
+					<p>Moderator: Ang Peng Hwa<br />
+					Chairman d’Honneur, AMIC Board of Directors <br />
+					Wee Kim Wee School of Communication and Information <br />
+					Nanyang Technological University, Singapore
+					</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>17.00-17.30</td>
+					<td><p><b>Closing Plenary</b></p>
+					<p><b>Synthesis and Introduction of the Host Institution for the 26th Annual Conference (2018)</b> <br />
+					Crispin Maslog (AMIC Board of Directors Chair)
+					</p>
+					<p><b>Acceptance and Early Welcome</b> <br />
+					Host Institution for the 26th Annual Conference (2018)
+					</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>17.00-18.30</td>
+					<td><p>Dinner</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>18.30-21.00</td>
+					<td><p><b>AMIC Business Meeting</b></p>
+					<p>Wellness Sessions <br />
+					Business Matching Sessions
+					</p>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>21.00</td>
+					<td><p>Day Ends</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>*- For Confirmation</p>
+
+		<h5><b>September 29, 2017</b></h5>
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<td>07.00-09.00</td>
+					<td>Day Tour Commences</td>
+				</tr>
+			</tbody>
+		</table>
 
 		<!--table class="table">
 			<tr>
