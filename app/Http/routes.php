@@ -15,6 +15,10 @@ Route::get('/', 'PageController@loadHome');
 
 ROute::get('/testmail', ['as' => 'testmail', 'uses' => 'PageController@testMail']);
 
+Route::post('/send', 'EmailController@send');
+
+Route::get('/sendermail', 'EmailController@sendermail');
+
 Route::group(['prefix' => 'registration'], function(){
 	Route::get('/', ['as' => 'get-registration', 'uses' => 'RegistrationController@getRegistration']);
 

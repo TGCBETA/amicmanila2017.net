@@ -19,6 +19,8 @@ Route::post('PaidUpdate', 'HomeController@update');
 
 Route::post('AttendUpdate', 'HomeController@attendUpdate');
 
+Route::post('CheckEmail', 'DashController@checkEmail');
+
 Route::get('dash', 'DashController@index');
 
 Route::controllers([

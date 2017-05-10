@@ -229,21 +229,7 @@
 				]
 			} );
 		});
-		/*
-		$(document).ready(function(){
-			$(".Paid_up").change(function () {
-			var check = "paid_id="+ this.value + "&status=" + this.checked;
-				$.ajax({
-					type: 'POST',
-					url: './PaidUpdate',
-					data: "paid_id="+ this.value + "&status=" + this.checked,
-					success: function() {
-						console.log(check);
-					}
-				});
-			});
-		});
-		*/
+
 		function Paid_Up(ctrl){
 			var check = "paid_id="+ $(ctrl).val() + "&status=" + $(ctrl).is(':checked');
 				$.ajax({
@@ -279,20 +265,41 @@
 				});
 		}
 
-		/* $(document).ready(function(){
-			$(".Attend_up").change(function () {
-			var check = "attend_id="+ this.value + "&status=" + this.checked;
-				$.ajax({
-					type: 'POST',
-					url: './AttendUpdate',
-					data: "attend_id="+ this.value + "&status=" + this.checked,
-					success: function() {
-						console.log(check);
-					}
-				});
-			});
-		}); */
-
+	document.getElementById("curpass").disabled = true;
+	document.getElementById("newpass").disabled = true;	
+	document.getElementById("confirmpass").disabled = true;
+	$(document).ready(function(){
+            $("#email").change(function(){
+                 $("#user-result").html("<i class='fa fa-spinner fa-pulse fa-1x fa-fw'></i><span class='sr-only'>Loading...</span>");
+            
+ 
+            var email=$("#email").val();
+ 
+          	  $.ajax({
+         		   	type: "POST",
+         		   	url: "./CheckEmail",
+         		   	data: "email="+email,
+        		    	success:function(data){
+        	    		if(data==0){
+							console.log(data);
+        	    			$("#user-result").html('<i class="fa fa-times" aria-hidden="true"></i>');
+							document.getElementById("curpass").disabled = true;
+							document.getElementById("newpass").disabled = true;	
+							document.getElementById("confirmpass").disabled = true;
+        	    		}
+        	    		else{
+        	    			$("#user-result").html('<i class="fa fa-check" aria-hidden="true"></i>');
+							document.getElementById("curpass").disabled = false;
+							document.getElementById("newpass").disabled = false;	
+							document.getElementById("confirmpass").disabled = false;
+						}
+       		     	}
+       		     });
+ 
+            });
+ 
+         });
+ 
 	</script>
 
 	

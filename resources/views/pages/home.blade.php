@@ -50,7 +50,7 @@
 			      </div>
 			    </div>
 						 <div class="item">
-			      <img src="{{ asset('images/sliders/slider14.jpg') }}" alt="Speakers and Moderators" class="fullwidth img-responsive">
+			      <img src="{{ asset('images/sliders/slider14.png') }}" alt="Speakers and Moderators" class="fullwidth img-responsive">
 			      <div class="carousel-caption">
 			        
 			      </div>

@@ -32,4 +32,22 @@ class DashController extends Controller {
         return view('dash');
     }
 
+	public function checkEmail(Request $request)
+	{
+		if($request->ajax()) {
+			$email = $request->email;
+			$find = \DB::table('users')->where('email', '=', $email)->count();
+			/*$find='0';
+			foreach ($emailSelect as $i)
+			{
+				if($i == $email) {
+					$find='1';
+				}
+			}*/
+			return $find;
+		}
+        //return view('dash');
+    }
+
+
 }

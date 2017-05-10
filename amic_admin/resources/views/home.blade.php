@@ -32,7 +32,7 @@
 									</div> 
 								</div>
 								
-								<div class="col-lg-4 col-xs-6" id="refresh">
+								<div class="col-lg-4 col-xs-6">
 									<!-- small box -->
 										<div class="small-box bg-aqua">
 												<div class="inner">
@@ -41,8 +41,9 @@
 												{{--*/ ($item->paid == 1) ? ++$j : '' /*--}}
 												@endforeach
 													<h3> {{ $j }} / {{ $cnt_single }} </h3>
-												
+
 													<div>Paid<br>Status</div>
+
 												</div>
 													<div class="icon">
 														<i class="fa fa-cog fa-spin fa-1x fa-fw"></i>
@@ -87,6 +88,7 @@
 											<th>Last Name</th>
 											<th>Phone</th>
 											<th>Email</th>
+											<th>Payment Method</th>
 											<th>Paid</th>
 											<th>Attended</th>
 										</tr>
@@ -98,6 +100,7 @@
 											<td>{{ $item->lastname }}</td>
 											<td>{{ $item->phone }}</td>
 											<td>{{ $item->email }}</td>
+											<td>{{ $item->payment_opt }}</td>
 											<td align="center"><input type="checkbox" name="{{ $i }}" value="{{ $i }}" {{ ($item->paid == 1) ? 'checked=checked' : '' }} onchange="Paid_Up(this);"><br /><b><span id = "response{{ $i }}">{{ ($item->paid == 1) ? 'PAID' : 'NOT PAID' }}</span></b></td>
 											<td align="center"><input type="checkbox" name="{{ $i }}" value="{{ $i }}" {{ ($item->status == 1) ? 'checked=checked' : '' }} onchange="Attend_Up(this);"><br /><b><span id = "attendstat{{ $i }}">{{ ($item->status == 1) ? 'ATTENDED' : 'NOT ATTENDED' }}</span></b></td>
 										</tr>
