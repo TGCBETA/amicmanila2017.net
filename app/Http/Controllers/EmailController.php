@@ -1,12 +1,10 @@
 <?php
 namespace App\Http\Controllers;
 
-use Mail;
-use Swift_Transport;
-use Swift_Message;
-use Swift_Mailer;
-use App\Http\Controllers\Controller;
-use App\Http\Requests;
+use Alert;
+use App\Http\Requests\ContactFormRequest;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
 class EmailController extends Controller
 {
@@ -32,62 +30,52 @@ class EmailController extends Controller
 	 * @param  int  $id
 	 * @return Response
 	 */
-    public function send() {
-        return 'asd';
+
+    public function create() {
+        return view('pages.contactus');
     }
-	public function sendermail()
-	{
 
-        	$data_toview = array();
-			$data_toview['bodymessage'] = "Hello send test email";
+	public function store(Request $request) {
+		$validator = Validator::make($request->all(), [
+            'name' 					=> 'required|max:255',
+            'email' 				=> 'max:255|required',
+			'contact' 				=> 'numeric',
+            'message' 				=> 'required',
+			'g-recaptcha-response'  => 'required',
+        ], 
+		[
+		'name.required' 				=> 'Full name is Required!',
+		'email.email' 					=> 'Invalid Email Address!',
+		'email.required'				=> 'Email Address is Required!',
+		'contact.numeric' 				=> 'Invalid Contact Number!',
+		'message.required' 				=> 'Message is Required!',
+		'g-recaptcha-response.required' => 'Captcha is Required!',
+    	]);
 
-			$email_sender 	= 'amic.contactus@gmail.com';
-			$email_pass		= 'amic2017';
-			$email_to 		= 'amic.contactus@gmail.com';
-
-			// Backup your default mailer
-			$backup = \Mail::getSwiftMailer();
-
-			try{
-
-						//https://accounts.google.com/DisplayUnlockCaptcha
-						// Setup your gmail mailer
-						$transport = \Swift_SmtpTransport::newInstance('smtp.gmail.com', 587, 'tls');
-						$transport->setUsername($email_sender);
-						$transport->setPassword($email_pass);
-
-						// Any other mailer configuration stuff needed...
-						$gmail = new Swift_Mailer($transport);
-
-						// Set the mailer as gmail
-						\Mail::setSwiftMailer($gmail);
-
-						$data['emailto'] = $email_sender;
-						$data['sender'] = $email_to;
-						//Sender dan Reply harus sama
-
-						Mail::raw('pages.contactus', $data_toview, function($message) use ($data)
-						{
-
-							$message->from($data['sender'], 'Laravel Mailer');
-							$message->to($data['emailto'])
-							->replyTo($data['sender'], 'Laravel Mailer')
-							->subject('Test Email');
-
-							echo 'The mail has been sent successfully';
-						});
-
-			}catch(\Swift_TransportException $e){
-				$response = $e->getMessage() ;
-				echo $response;
+		if ($validator->fails()) {
+			\Session::flash('errors',$validator->messages());
+			return \Redirect::route('send')->withInput(\Input::old('name'));
+		}
+		else {
+			$data = array(
+				'name' => $request->get('name'),
+				'email' => $request->get('email'),
+				'contact' => $request->get('contact'),
+				'user_message' => $request->get('message'));
+				
+				$Emails = ['conference@amic.asia', 'info@amic.asia', 'amic.contactus@gmail.com', 'canaria97@gmail.com'];
+				
+				\Mail::send('pages.emails', $data, function($message) use ($data, $Emails)
+					{
+						$message->from('no-reply@amicmanila2017.net', 'AMIC 2017');
+						$message->to($Emails);
+						$message->replyTo($data['email'],$data['name'])
+								->subject('AMIC Online Inquiry');
+					});
+				\Session::flash('success_msg','Thank you for Contacting us!');
+				return \Redirect::route('send');
 			}
-
-
-			// Restore your original mailer
-			Mail::setSwiftMailer($backup);
-
-
-	}
+    }
 
 
 

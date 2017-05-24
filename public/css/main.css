@@ -45,7 +45,7 @@ body{
 	background: -moz-linear-gradient(top, #F8951E, #fff); /* IE 10 */ 
 	background: -ms-linear-gradient(top, #F8951E, #fff); /* Opera 11.10+ */ 
 	background: -o-linear-gradient(top, #F8951E, #fff);
-	border-color: #080808;/
+	border-color: #080808;
   	height: 40vh;
 }
 
@@ -66,9 +66,9 @@ body{
 }
 
 #rightpanel{
-	height: 187.7vh;
 	padding: 10px;
-	background-color: #A6C4D7;
+	/*background-color: #A6C4D7;*/
+	background: transparent;
 	color: #000;
 }
 

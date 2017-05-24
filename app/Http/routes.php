@@ -15,7 +15,13 @@ Route::get('/', 'PageController@loadHome');
 
 ROute::get('/testmail', ['as' => 'testmail', 'uses' => 'PageController@testMail']);
 
-Route::post('/send', 'EmailController@send');
+Route::get('/send', 'EmailController@send');
+
+Route::get('send', 
+  ['as' => 'send', 'uses' => 'EmailController@create']);
+
+Route::post('send', 
+  ['as' => 'send_store', 'uses' => 'EmailController@store']);
 
 Route::get('/sendermail', 'EmailController@sendermail');
 

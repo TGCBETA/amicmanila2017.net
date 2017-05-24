@@ -11,9 +11,12 @@
 @section('content')
 
 <div class="bg-white padding page-content">
-		<h3 class="text-center">Invited Speakers</h3>
-		<hr />
-		<img src="{{ asset('images/invited-speakers.png') }}" class="img-responsive center-block" style="width:90%;" />
+		<br />
+		<img id="speakers-zoom" src="{{ asset('images/invited-speakers-p1.jpg') }}" class="img-responsive center-block" style="width:95%;" />
+		<br />
+		<img id="speakers-zoom" src="{{ asset('images/invited-speakers-p2.jpg') }}" class="img-responsive center-block" style="width:95%;" />
+		<br />
+		<img id="speakers-zoom" src="{{ asset('images/invited-speakers-p3.jpg') }}" class="img-responsive center-block" style="width:95%;" />
 		<br />
 
 </div>

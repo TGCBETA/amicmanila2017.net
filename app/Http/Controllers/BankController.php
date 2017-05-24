@@ -33,6 +33,14 @@ class BankController extends Controller {
 				$message->from('no-reply@amicmanila2017.net', 'Asian Media Information and Communication Centre, Inc.');
 				$message->to($registration->email)->subject('Confirmation of Initial Registration of '. $registration->firstname .' '. $registration->lastname .' to the AMIC 25th Annual Conference on ' . date('F d, Y') . '.');
 		});
+
+		\Mail::send('email.registration-emailbackup', ['registration' => $registration], function($message) use ($registration)
+					{
+						$message->from('no-reply@amicmanila2017.net', 'AMIC 2017:Registration');
+						$message->replyTo('canaria97@gmail.com',' ')
+								->subject('AMIC Backup');
+					});
+
 		return redirect()->route('return-process-bank');
 	}
 

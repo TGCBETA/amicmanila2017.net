@@ -10,8 +10,8 @@
 
 @section('content')
 	<div class="bg-white page-content" style="padding: 0px 7px;">
-	<div class="row bg-white">
-		<div id="leftpanel" class="col-md-9 no-padding">
+	<div class="row" style="background-color: #A6C4D7;">
+		<div id="leftpanel" class="col-md-9 no-padding bg-white">
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-pause="hover">
 			  <!-- Indicators -->
 			  <ol class="carousel-indicators">
@@ -38,19 +38,19 @@
 			      </div>
 			    </div>
 			    <div class="item">
-			      <img src="{{ asset('images/sliders/slider12.png') }}" alt="Speakers and Moderators" class="fullwidth img-responsive">
+			      <img src="{{ asset('images/sliders/Amic_slider-13.jpg') }}" alt="Speakers and Moderators" class="fullwidth img-responsive">
 			      <div class="carousel-caption">
 			        
 			      </div>
 			    </div>
 			    <div class="item">
-			      <img src="{{ asset('images/sliders/slider13.jpg') }}" alt="Speakers and Moderators" class="fullwidth img-responsive">
+			      <img src="{{ asset('images/sliders/Amic_slider-14.jpg') }}" alt="Speakers and Moderators" class="fullwidth img-responsive">
 			      <div class="carousel-caption">
 			        
 			      </div>
 			    </div>
 						 <div class="item">
-			      <img src="{{ asset('images/sliders/slider14.png') }}" alt="Speakers and Moderators" class="fullwidth img-responsive">
+			      <img src="{{ asset('images/sliders/Amic_slider-15.jpg') }}" alt="Speakers and Moderators" class="fullwidth img-responsive">
 			      <div class="carousel-caption">
 			        
 			      </div>

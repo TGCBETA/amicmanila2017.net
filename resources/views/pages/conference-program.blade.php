@@ -30,7 +30,7 @@
 
 				<tr>
 					<td>18.30-21.00</td>
-					<td>AMIC Got Talent <br />
+					<td><b>AMIC Got Talent</b><br />
 					Videoke Night <br />
 					</td>
 				</tr>
@@ -52,39 +52,41 @@
 				</tr>
 				<tr>
 					<td >09.00-09.30</td>
-					<td><b>Inaugural Ceremony</b> <br />
-					<b>Welcome Remarks:</b> <br />
+					<td><b>Inaugural Ceremony</b> <br /><br />
+					<b>Welcome</b> <br />
 						<p style="margin-left: 40px;">(1)	From AMIC: Crispin Maslog (AMIC Board of Directors Chair)</p>
 						<p style="margin-left: 40px;">(2)	From Host-Venue: Rosario O. Lapus (Miriam College President)</p> <br />
 
-					<b>Opening Remarks from the AIJC-AMIC-PWU Consortium:</b>
+					<b>Opening Remarks from the AIJC-AMIC-PWU Consortium</b>
 						<p style="margin-left: 40px;">(1)	From AIJC-AMIC-PWU Consortium: Francisco Benitez (PWU President)</p>
 						<p style="margin-left: 40px;">(2)	Mel V. Velarde (Chairman and CEO, Asian Institute of Journalism and Communication; <br />
-						&nbsp;&nbsp;&nbsp;&nbsp; CEO, Now Corporation) melvvelarde@gmail.com </p>
+						&nbsp;&nbsp;&nbsp;&nbsp; CEO, Now Corporation)</p>
 					
 					</td>
 				</tr>
 				<tr>
 					<td >09.30-10.30</td>
-					<td><b>Inaugural Address</b> <br />
-					<b>Welcome Remarks:</b> <br />
-						<p>Maria Leonor “Leni” Robredo <br />
-						Honorable Vice-President of the Republic of the Philippines</p> <br />
-
+					<td>
 					<b>Keynote Address</b>
 						<p>Frank LaRue <br />
-						Assistant Director General for Communication and Information, UNESCO</p>
+						Assistant Director General for Communication and Information, UNESCO</p> <br />
+					<b>Inaugural Address</b> <br />
+					<p>Maria Leonor “Leni” Robredo <br />
+						Honorable Vice-President of the Republic of the Philippines</p> <br />
+
+					
 					
 					</td>
 				</tr>
 				<tr>
 					<td >10.30-12.30</td>
-					<td><b>Plenary 1: AMIC Distinguished Forum - Rethinking Communication in a Resurgent Asia</b> <br />
+					<td><b>Plenary 1: AMIC Distinguished Forum - Rethinking Communication in a Resurgent Asia</b> <br /> <br />
 						<p>Florangel Rosario Braid <br />
 						President Emeritus, Senior Adviser & Trustee <br />
 						Asian Institute of Journalism & Communication (AIJC)</p> <br />
 
 						<p>Wimal Dissanayake <br />
+						Academy of Creative Media<br />
 						University of Hawaii in Manoa</p> <br />
 
 						<p>Dhavalasri Shelton A. Gunaratne <br />
@@ -97,7 +99,8 @@
 						</p> <br />
 
 						<p>John A. Lent <br />
-						Temple University
+						School of Communication &amp; Theatre<br />
+						Temple University Philadelphia
 						</p> <br />
 
 						<p>Moderator: Arun Mahizhnan <br />
@@ -179,17 +182,14 @@
 					</p>
 
 					<p>Lorna Israel<br />
-					Miriam College/ University of the Philippines<br />
+					Professor, Miriam College/ University of the Philippines<br />
 					</p>
-					</td>
-				</tr>
 
-				<tr>
-					<td>09.00-10.30</td>
-					<td>Moderator: Binod C. Agrawal <br />
+					<p>Moderator: Binod C. Agrawal <br />
 					AMIC Board of Directors Members <br />
 					Co-founder, Himgiri Zee University, Dehradun <br />
-					Co-founder, Mudra Institute of Communications Ahmedabad (MICA)
+					Co-founder, Mudra Institute of Communications Ahmedabad (MICA) <br />
+					</p>
 					</td>
 				</tr>
 
@@ -218,27 +218,24 @@
 				<tr>
 					<td>15.30-17.00</td>
 					<td><p><b>Plenary Session 3: Freedom of Expression in a Post-Truth Era ***</b></p>
-					<p>Monroe E. Price <br />
-					Convenor, 2017 World Trends in Freedom of Expression and Media Development Report <br />
-					Director, Center for Global Communications Studies <br />
-					Annenberg School for Communication, University of Pennsylvania <br />
-					Professor of Law, Benjamin N. Cardozo School of Law
-					</p>
-					<p>Cherian George <br />
-					Professor, Hong Kong Baptist University/ Editor, AMIC Media Asia
+					<p>Cherian George<br />
+					Professor, Hong Kong Baptist University/<br />
+					Director, Center for Media and Communication Research<br />
+					Hong Kong Baptist University/<br />
+					Editor, AMIC Media Asia
 					</p>
 
-					<p>Yuen Ying Chan * <br />
-					Member, Open Society Global Board <br />
-					Professor and Founding Director, Journalism and Media Studies Center University of Hong Kong
+					<p>Lars Bestle<br />
+					Head, Department of Asia<br />
+					International Media Support
 					</p>
 
-					<p>Peixin Cao <br />
+					<p>Peixin Cao<br />
 					Professor, Communication University of China<br />
 					</p>
 
-					<p>Maria Ressa *<br />
-					CEO, Rappler.com <br />
+					<p>Malou C. Mangahas<br />
+					Executive Director, Philippine Center for Investigative Journalism (PCIJ)<br />
 					</p>
 
 					<p>Moderator: Ang Peng Hwa<br />
@@ -283,14 +280,13 @@
 				</tr>
 			</tbody>
 		</table>
-		<p>*- For Confirmation</p>
 
 		<h5><b>September 29, 2017</b></h5>
 		<table class="table table-bordered">
 			<tbody>
 				<tr>
 					<td>07.00-09.00</td>
-					<td>Day Tour Commences</td>
+					<td><b>Day Tour Commences</b></td>
 				</tr>
 			</tbody>
 		</table>
