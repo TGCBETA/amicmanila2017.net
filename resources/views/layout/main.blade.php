@@ -71,7 +71,7 @@
 								<a class="dropdown dropdown-submenu" href="#">Sponsors and Trade Expo</a>
 								<ul class="dropdown-menu">
 									<li>
-										<a href="{{ route('get-page', ['sponsorship1']) }}"><b>Sponsors</b></a>
+										<a href="{{ route('get-page', ['mediapartners']) }}"><b>Sponsors</b></a>
 									</li>
 									<li>
 										<a href="{{ route('get-page', ['sponsorship']) }}"><b>Sponsorship Proposal</b></a>
