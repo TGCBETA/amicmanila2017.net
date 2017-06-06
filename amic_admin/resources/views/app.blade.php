@@ -213,19 +213,7 @@
 			scrollX: true,
 			dom: 'Bfrtip',
 			"buttons": [
-				//'excel', 'pdf', 'print',
-				{
-					extend: 'print',
-					action: function(e, dt, button, config) {
-						
-						// Add code to make changes to table here
-						dt.fnReloadAjax();
-						// Call the original action function afterwards to
-						// continue the action.
-						// Otherwise you're just overriding it completely.
-						$.fn.dataTable.ext.buttons.print.action(e, dt, button, config);
-					}
-				}
+				'excel', 'pdf', 'print',
 				]
 			} );
 		});
@@ -265,7 +253,7 @@
 				});
 		}
 
-	document.getElementById("curpass").disabled = true;
+	/*document.getElementById("curpass").disabled = true;
 	document.getElementById("newpass").disabled = true;	
 	document.getElementById("confirmpass").disabled = true;
 	$(document).ready(function(){
@@ -298,7 +286,7 @@
  
             });
  
-         });
+         });*/
  
 	</script>
 

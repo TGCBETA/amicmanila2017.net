@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('title')
-	Sponsorship and Trade Expo | 
+	Sponsorship Proposal | 
 @stop
 
 @section('head')

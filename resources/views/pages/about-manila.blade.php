@@ -13,8 +13,6 @@
 	<br />
 	<h3 class="text-center">About the Philippines</h3>
 		<hr />
-		<img src="" class="img-responsive center-block">
-
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 			  <!-- Indicators -->
 			  <ol class="carousel-indicators">

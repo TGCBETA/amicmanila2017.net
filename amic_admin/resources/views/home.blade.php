@@ -26,7 +26,7 @@
 												<div>Registration<br>Bank</div>
 											</div>
 										<div class="icon">
-											<i class="fa fa-cog fa-spin fa-1x fa-fw"></i>
+											<i class="fa fa-cog fa-1x fa-fw"></i>
 										</div>
 										<!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
 									</div> 
@@ -46,7 +46,7 @@
 
 												</div>
 													<div class="icon">
-														<i class="fa fa-cog fa-spin fa-1x fa-fw"></i>
+														<i class="fa fa-cog fa-1x fa-fw"></i>
 													</div>
 										<!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
 										</div>
@@ -64,7 +64,7 @@
 													<div>Attended<br>Status</div>
 												</div>
 													<div class="icon">
-														<i class="fa fa-cog fa-spin fa-1x fa-fw"></i>
+														<i class="fa fa-cog fa-1x fa-fw"></i>
 													</div>
 										<!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
 										</div>
@@ -79,16 +79,17 @@
 							</div>
 							<!-- /.box-header -->
 								<div class="box-body">
-								<b><p><font color="red">*Note: Once you change the Checkbox status for the field "Paid" and Attended, it is necessary that you must wait for the result below. (eg: if PAID or not NOT PAID).</font></p></b>
 									<table id="example1" class="table table-bordered table-striped">
 										<thead>
 										<tr>
-											<th>ID</th>
+											<th>No</th>
 											<th>First Name</th>
 											<th>Last Name</th>
 											<th>Phone</th>
 											<th>Email</th>
 											<th>Payment Method</th>
+											<th>Fee</th>
+											<th>Date/Time</th>
 											<th>Paid</th>
 											<th>Attended</th>
 										</tr>
@@ -101,6 +102,8 @@
 											<td>{{ $item->phone }}</td>
 											<td>{{ $item->email }}</td>
 											<td>{{ $item->payment_opt }}</td>
+											<td>{{ $item->reg_rate }}</td>
+											<td>{{ $item->created_at }}</td>
 											<td align="center"><input type="checkbox" name="{{ $i }}" value="{{ $i }}" {{ ($item->paid == 1) ? 'checked=checked' : '' }} onchange="Paid_Up(this);"><br /><b><span id = "response{{ $i }}">{{ ($item->paid == 1) ? 'PAID' : 'NOT PAID' }}</span></b></td>
 											<td align="center"><input type="checkbox" name="{{ $i }}" value="{{ $i }}" {{ ($item->status == 1) ? 'checked=checked' : '' }} onchange="Attend_Up(this);"><br /><b><span id = "attendstat{{ $i }}">{{ ($item->status == 1) ? 'ATTENDED' : 'NOT ATTENDED' }}</span></b></td>
 										</tr>

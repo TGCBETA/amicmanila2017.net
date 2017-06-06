@@ -87,10 +87,10 @@
 			</div>
 		</div>
 		<hr />
-		<div class="row">
-			<div class="col-md-15">
-				<h4>MAP: Philippine Women's University</h4>
-				<hr />
+		<h4>MAP: Philippine Women's University</h4>
+		<hr />
+		<div class="exrow">
+			<div class="col-md-15">			
 				<div class="embed-responsive embed-responsive-16by9">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1930.711082272365!2d120.98830512786046!3d14.57500395114654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9873d0752fb%3A0xae3a5e3e91cc2356!2sPhilippine+Women&#39;s+University+(Manila+Campus)+-+School+of+Nursing!5e0!3m2!1sen!2sph!4v1486622250390" allowfullscreen></iframe>
 				</div>

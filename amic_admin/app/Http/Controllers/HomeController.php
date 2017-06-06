@@ -53,7 +53,7 @@ class HomeController extends Controller {
 		
 		$items = \DB::table('registrations')->get();
 		return view('home', ['cnt_single' => $cnt_single], ['cnt_paid' => $cnt_paid])
-        ->with(	compact('items'))->with('i', ($request->input('page', 1) - 1) * 5);
+        ->with(compact('items'))->with('i', ($request->input('page', 1) - 1) * 5);
 	}
 	public function update(Request $request) 
 	{

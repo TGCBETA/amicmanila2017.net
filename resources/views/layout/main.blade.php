@@ -67,7 +67,18 @@
 		        <li class="separator"><span>|</span></li>
 		        <li><a href="{{ route('get-page', ['visa']) }}">Visa</a></li>
 		        <li class="separator"><span>|</span></li>
-		        <li><a href="{{ route('get-page', ['sponsorship']) }}">Sponsors and Trade Expo</a></li>
+		        <li>
+								<a class="dropdown dropdown-submenu" href="#">Sponsors and Trade Expo</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="{{ route('get-page', ['sponsorship1']) }}"><b>Sponsors</b></a>
+									</li>
+									<li>
+										<a href="{{ route('get-page', ['sponsorship']) }}"><b>Sponsorship Proposal</b></a>
+									</li>
+								</ul>
+						</li>
+						
 		        <li class="separator"><span>|</span></li>
 		        <li><a href="{{ route('get-page', ['contactus']) }}">Contact Us</a></li>
 		      </ul>
