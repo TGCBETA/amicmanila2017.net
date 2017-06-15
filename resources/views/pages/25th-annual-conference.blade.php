@@ -23,20 +23,25 @@
 		<p>The Philippine tourism campaign has adopted the slogan, It's more fun in the Philippines.</p>
 		<p>AMIC Manila 2017 intends to keep this promise. Enjoy AMIC Manila 2017!</p>
 		<br />
-			<img src="{{ asset('images/poster_layout_amic_web.jpg') }}" class="img-responsive center-block" style="width:75%;" />
- 		<br />
-		<h4 class="text-center">Theme for AMIC 2017 Manila Conference</h4>
-		<h4 class="text-center">Rethinking Communication in a Resurgent Asia</h4>
-		<br />
-		<p>According to an ancient Chinese proverb, To forget one’s ancestors is to be a brook without a source, a tree without root.</p>
-		<p>An old Philippine proverb says, Sino man ang hindi marunong lumingon sa kanyang pinanggalingan, ay hindi makakarating sa kanyang paroroonan. (He who does not think back on his past, will not arrive at his destination.)</p>
-		<p>We invoke this ancient Asian wisdom to warn, as we lunge headlong into today’s fast-changing world, that non-Asian communication theories, sophisticated gadgets and apps are not the panacea to the world’s problems. The solutions are in us.</p>
-		<p>We in AMIC and in Asia need to rediscover our roots, somehow buried under our feet as we run mindlessly forward. We have imbibed non-Asian ways, and adopted foreign communication theories, methodologies and practices as we studied abroad, and brought them back to Asia to teach to our young students who would one day become our disciples.</p>
-		<p>We preach that communication and culture are inextricably linked. But have we studied or developed Asian theories of communication based on Asian culture? Very little. In this coming 2017 AMIC annual conference we suggest that we pause and look back to where we came from.</p>
-		<p>We need to rediscover our "Asianess” amidst a resurging Asia. The Asian Development Bank has reported that if Asia continues its current growth trajectory, by 2050 it will regain the dominant economic position it held some 300 years ago, before the industrial revolution. In this scenario Asia’s gross domestic product (GDP) will reach $174 trillion (or half of the global GDP) from $17 trillion in 2010.</p>
-		<p>A resurging Asia must also be seen in terms of new challenges characterized by inequalities, conflicts, climate change, unsustainable practices, and corruption. Beyond the tools of mass communication, are there distinct Asian communication strategies which can effectively address these challenges that threaten the resurgence of Asia?</p>
-		<p>Let us rediscover our Asian past so that we can confidently move into our future. </p>
 
+		<hr />
+			<h4 class="text-center">Theme for AMIC 2017 Manila Conference</h4>
+			<h4 class="text-center">Rethinking Communication in a Resurgent Asia</h4>
+			<hr />
+			<br />
+		<div>
+			<br />
+			<img src="{{ asset('images/poster_layout_amic_web.jpg') }}" class="img-responsive pull-right visible-xs visible-sm hidden-md hidden-lg" style="width:100%;" />
+			<img src="{{ asset('images/poster_layout_amic_web.jpg') }}" class="img-responsive pull-right hidden-xs hidden-sm visible-md visible-lg" style="width:70%;margin-bottom:20px" />
+			<p>According to an ancient Chinese <br /> proverb, To forget one’s ancestors is <br /> to be a brook without a source, a tree without root.</p>
+			<p>An old Philippine proverb says, Sino <br /> man ang hindi marunong lumingon sa kanyang pinanggalingan, ay hindi makakarating sa kanyang paroroonan. (He who does not think back on his <br /> past, will not arrive at his destination.)</p>
+			<p>We invoke this ancient Asian wisdom <br /> to warn, as we lunge headlong into today’s fast-changing world, that non-Asian communication theories, sophisticated gadgets and apps are not the panacea to the world’s problems.<br /> The solutions are in us.</p>
+			<p>We in AMIC and in Asia need to rediscover our roots, somehow buried under our feet as we run mindlessly forward. We have imbibed non-Asian ways, and adopted foreign communication theories, <br /> methodologies and practices as we studied abroad, and brought them back to Asia to teach to our young students who would one day become our disciples.</p>
+			<p>We preach that communication and culture are inextricably linked. But <br /> have we studied or developed Asian theories of communication based on Asian culture? Very little. <br /> In this coming 2017 AMIC annual conference we suggest that we pause and look back to where we came from.</p>
+			<p>We need to rediscover our "Asianess” amidst a resurging Asia. The Asian Development Bank has reported that if Asia continues its current growth trajectory, by 2050 it will regain the dominant economic position it held <br /> some 300 years ago, before the industrial revolution. In this scenario Asia’s gross domestic product (GDP) <br /> will reach $174 trillion (or half of the global GDP) from $17 trillion in 2010.</p>
+			<p>A resurging Asia must also be seen in terms of new challenges characterized by inequalities, conflicts, climate change, unsustainable practices, and corruption. Beyond the tools of mass communication, are there distinct Asian communication strategies which can effectively address these challenges that threaten the resurgence of Asia?</p>
+			<p>Let us rediscover our Asian past so that we can confidently move into our future. </p>
+		</div>
 	</div>
 @stop
 
