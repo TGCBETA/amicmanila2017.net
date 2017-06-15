@@ -117,9 +117,31 @@
 		<hr />
 		<h4>PAYMENT OPTIONS</h4>
 
-		<strong>CREDIT CARD/PAYPAL.</strong> Pay through Paypal account or credit card (Visa, MasterCard, or American Express).<br /><br />
-		<strong>BANK DEPOSIT.</strong> Pay through bank deposit. As proof of payment, scan and email deposit slip to conference@amic.asia. Registrants will receive Registration Payment Confirmation through email. Print a copy of emailed Registration Confirmation Payment and present it to the Secretariat on the day of the event.<br /><br />
-		<strong>ONSITE REGISTRATION.</strong> Registrants may download, print, and fill-out registration form from the website, submit accomplished form to the Secretariat on event day, and pay corresponding conference fees at the Cashier onsite. <br /><br />
+		<strong>DIRECT BANK DEPOSIT.</strong><br /><br />
+		<p><b>1. Peso Payments for Local Delegates:</b><br />
+		Bank of the Philippine Islands (BPI)<br />
+		Savings Account Number <b>0183 374 869</b></p>
+
+		<p><b>2. Foreign Currency Payments for Foreign Delegates:</b><br />
+		Bank of the Philippine Islands (BPI) <br />
+		Savings Account Number <b>0184 030 594</b><br />
+		Swift Code: <b>BOPIPHMM</b></p>
+
+		<i>As proof of payment, scan and email deposit slip to conference@amic.asia. Registrants will receive Registration Payment Confirmation through email. Print a copy of emailed Registration Confirmation Payment and present it to the Secretariat on the day of the event.</i>
+		<br /><br />
+
+		<strong>CHECK PAYMENTS.</strong><br /><br />
+		<p><u>Make check payable to:</u> <b>ASIAN MEDIA INFORMATION AND COMMUNICATION CENTRE, INC.</b></p>
+		
+		<p><u>Send check to:</u><br /> 
+		Asian Media Information and Communication Centre, Inc.<br />
+		2nd Floor, Philippine Women's University<br />
+		1743 Taft Avenue, Manila 1004<br />
+		Philippines.</p>
+		<br />
+
+		<strong>ONSITE REGISTRATION.</strong> Registrants may download, print, and fill-out registration form from the website, submit accomplished form to the Secretariat on event day, and pay corresponding conference fees at the Cashier onsite. 
+		<br /><br />
 		<strong class="text-danger">Note:</strong> Conference Registration fee is based on the actual date of payment, with corresponding applicable penalty for late registrants.
 		<p>&nbsp;</p>
 	</div>

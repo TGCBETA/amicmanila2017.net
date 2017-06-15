@@ -285,7 +285,7 @@ class RegistrationController extends Controller {
 				$registration->save();
 			}
 		}
-		else{
+		else {
 			$registration = Registration::create([
 				'firstname'			=> session('single_reg.reg_info')['firstname'], 
 				'lastname'			=> session('single_reg.reg_info')['lastname'], 
@@ -317,8 +317,8 @@ class RegistrationController extends Controller {
 
 		if($registration){
 			session(['single_reg.id' => $registration->id]);
-			if(session('single_reg.reg_info')['payment_opt'] == 'creditcard')
-				return redirect()->route('process-paypal');
+			if(session('single_reg.reg_info')['payment_opt'] == 'check')
+				return redirect()->route('process-check');
 			else if(session('single_reg.reg_info')['payment_opt'] == 'bank')
 				return redirect()->route('process-bank');
 		}
@@ -645,8 +645,8 @@ class RegistrationController extends Controller {
 
 			if($registration){
 				session(['group_reg.id' => $group_reg->id]);
-				if(session('group_reg.payment_opt') == 'creditcard')
-					return redirect()->route('process-paypal-group');
+				if(session('group_reg.payment_opt') == 'check')
+					return redirect()->route('process-check-group');
 				else if(session('group_reg.payment_opt') == 'bank')
 					return redirect()->route('process-bank-group');
 			}

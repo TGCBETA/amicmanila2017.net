@@ -134,7 +134,7 @@
 					<label>
 						Payment Option:
 					</label>
-					{{ (session('group_reg.payment_opt') == 'bank') ? 'Bank Deposit' : 'Credit Card' }}
+					{{ (session('group_reg.payment_opt') == 'bank') ? 'Direct Bank Deposit' : 'Check Payment' }}
 				</div>
 			</div>
 			{!! Form::open(['route' => 'save-group', 'id' => 'formconfirm']) !!}

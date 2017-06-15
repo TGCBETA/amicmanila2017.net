@@ -37,7 +37,7 @@
 										<div class="small-box bg-aqua">
 												<div class="inner">
 												{{--*/ $j=0 /*--}}
-												@foreach ($items as $key => $item)
+												@foreach ($items as $item)
 												{{--*/ ($item->paid == 1) ? ++$j : '' /*--}}
 												@endforeach
 													<h3> {{ $j }} / {{ $cnt_single }} </h3>
@@ -56,7 +56,7 @@
 										<div class="small-box bg-aqua">
 												<div class="inner">
 												{{--*/ $j=0 /*--}}
-												@foreach ($items as $key => $item)
+												@foreach ($items as $item)
 												{{--*/ ($item->status == 1) ? ++$j : '' /*--}}
 												@endforeach
 													<h3> {{ $j }} / {{ $cnt_single }} </h3>
@@ -87,22 +87,32 @@
 											<th>Last Name</th>
 											<th>Phone</th>
 											<th>Email</th>
+											<th>Country</th>
 											<th>Payment Method</th>
-											<th>Fee</th>
+											<th>Registration Rate</th>
 											<th>Date/Time</th>
 											<th>Paid</th>
 											<th>Attended</th>
 										</tr>
 										<tbody>
-										@foreach ($items as $key => $item)
+										@foreach ($items as $item)
 										<tr>
 											<td>{{ ++$i }}</td>
 											<td>{{ $item->firstname }}</td>
 											<td>{{ $item->lastname }}</td>
 											<td>{{ $item->phone }}</td>
 											<td>{{ $item->email }}</td>
+											<td>{{ call_user_func_array($getCountry, [$item->country]) }}</td>
+											{{--
+											@foreach($countries as $key => $code )
+											@if($code->code == $item->country)
+												<td>{{ $code->name }}</td>
+											@endif
+											@endforeach
+											--}}
+
 											<td>{{ $item->payment_opt }}</td>
-											<td>{{ $item->reg_rate }}</td>
+											<td>{{ $item->reg_rate }} {{ ($item->currency == 'U') ? 'USD' : 'PHP' }}</td>
 											<td>{{ $item->created_at }}</td>
 											<td align="center"><input type="checkbox" name="{{ $i }}" value="{{ $i }}" {{ ($item->paid == 1) ? 'checked=checked' : '' }} onchange="Paid_Up(this);"><br /><b><span id = "response{{ $i }}">{{ ($item->paid == 1) ? 'PAID' : 'NOT PAID' }}</span></b></td>
 											<td align="center"><input type="checkbox" name="{{ $i }}" value="{{ $i }}" {{ ($item->status == 1) ? 'checked=checked' : '' }} onchange="Attend_Up(this);"><br /><b><span id = "attendstat{{ $i }}">{{ ($item->status == 1) ? 'ATTENDED' : 'NOT ATTENDED' }}</span></b></td>

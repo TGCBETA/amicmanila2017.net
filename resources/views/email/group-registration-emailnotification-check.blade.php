@@ -153,16 +153,11 @@
 						</label>
 						{{ ($group_registration->payment_opt == 'bank') ? 'Direct Bank Deposit' : 'Check Payment' }}
 					</p>
-					<p>BANK PAYMENT DETAILS</p><br />
+					<p>CHECK PAYMENT DETAILS</p><br />
 					<table class="table">
 						<tr>
-					    	<td colspan="2">
-					        	<strong>For Foreign Transfers (Dollar Account):</strong>
-					        </td>
-					    </tr>
-						<tr>
 					    	<td>
-					        	Account Name:
+					        	Pay to:
 					        </td>
 					        <td>
 					        	<strong>ASIAN MEDIA INFORMATION AND COMMUNICATION CENTRE, INC.</strong>
@@ -170,66 +165,14 @@
 					    </tr>
 					    <tr>
 					    	<td>
-					        	Account No:
+					        	Send to:
 					        </td>
 					        <td>
-					        	<strong>0184-0305-94</strong>
-					        </td>
-					    </tr>
-					    <tr>
-					    	<td>
-					        	Bank Name:
-					        </td>
-					        <td>
-					        	<strong>Bank of the Philippine Islands</strong>
-					        </td>
-					    </tr>
-					    <tr>
-					    	<td>
-					        	Swift Code/ BIC Code:
-					        </td>
-					        <td>
-					        	<strong>BOPIPHMM</strong>
-					        </td>
-					    </tr>
-					</table>
-					<br />
-					<table class="table">
-						<tr>
-					    	<td colspan="2">
-					        	<strong>For Local Peso Deposit (Peso Account):</strong>
-					        </td>
-					    </tr>
-						<tr>
-					    	<td>
-					        	Account Name:
-					        </td>
-					        <td>
-					        	<strong>ASIAN MEDIA INFORMATION AND COMMUNICATION CENTRE, INC.</strong>
-					        </td>
-					    </tr>
-					    <tr>
-					    	<td>
-					        	Account No:
-					        </td>
-					        <td>
-					        	<strong>0183-3748-69</strong>
-					        </td>
-					    </tr>
-					    <tr>
-					    	<td>
-					        	Bank Name:
-					        </td>
-					        <td>
-					        	<strong>Bank of the Philippine Islands</strong>
-					        </td>
-					    </tr>
-					    <tr>
-					    	<td>
-					        	Swift code:
-					        </td>
-					        <td>
-					        	<strong>BOPIPHMM</strong>
+					        	<br />
+					        	<strong>Asian Media Information and Communication Centre, Inc. <br />
+								2nd Floor, Philippine Women's University <br />
+								1743 Taft Avenue, Manila 1004 <br />
+								Philippines.</strong>
 					        </td>
 					    </tr>
 					</table>

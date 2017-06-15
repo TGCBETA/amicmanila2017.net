@@ -28,11 +28,6 @@ Route::get('/sendermail', 'EmailController@sendermail');
 Route::group(['prefix' => 'registration'], function(){
 	Route::get('/', ['as' => 'get-registration', 'uses' => 'RegistrationController@getRegistration']);
 
-
-
-
-
-
 	Route::get('/single', ['as' => 'get-single-registration', 'uses' => 'RegistrationController@getSingleRegistration']);
 	Route::post('/', ['as' => 'save-registration', 'uses' => 'RegistrationController@saveRegistration']);
 
@@ -41,12 +36,17 @@ Route::group(['prefix' => 'registration'], function(){
 
 	Route::get('/confirm-registration', ['as' => 'confirm-registration', 'uses' => 'RegistrationController@confirmRegistration']);
 
-	Route::get('/paypal', ['as' => 'process-paypal', 'uses' => 'PaypalController@processPaypal']);
+	/*Route::get('/paypal', ['as' => 'process-paypal', 'uses' => 'PaypalController@processPaypal']);
 	Route::post('/paypal-postback', ['as' => 'paypal-postback', 'uses' => 'PaypalController@postback']);
 	Route::get('/paypal/cancel', ['as' => 'cancel-process-paypal', 'uses' => 'PaypalController@cancel']);
-	Route::get('/paypal/return', ['as' => 'return-process-paypal', 'uses' => 'PaypalController@paypalReturn']);
+	Route::get('/paypal/return', ['as' => 'return-process-paypal', 'uses' => 'PaypalController@paypalReturn']);*/
+	
+	/* Bank Deposit */
 	Route::get('/bank', ['as' => 'process-bank', 'uses' => 'BankController@processBank']);
 	Route::get('/bank/return', ['as' => 'return-process-bank', 'uses' => 'BankController@bankReturn']);
+	/* Check Payment */
+	Route::get('/check', ['as' => 'process-check', 'uses' => 'CheckController@processCheck']);
+	Route::get('/check/return', ['as' => 'return-process-check', 'uses' => 'CheckController@checkReturn']);
 
 	/*
 		Group Registration
@@ -65,10 +65,10 @@ Route::group(['prefix' => 'registration'], function(){
 
 	Route::post('/group/save', ['as' => 'save-group', 'uses' => 'RegistrationController@saveGroup']);
 	Route::get('/group/bank', ['as' => 'process-bank-group', 'uses' => 'BankController@processBankGroup']);
+	Route::get('/group/check', ['as' => 'process-check-group', 'uses' => 'CheckController@processCheckGroup']);
 
-
-	Route::get('/group/paypal', ['as' => 'process-paypal-group', 'uses' => 'PaypalController@processPaypalGroup']);
-	Route::post('/group/paypal-postback', ['as' => 'paypal-postback-group', 'uses' => 'PaypalController@postbackGroup']);
+	/*Route::get('/group/paypal', ['as' => 'process-paypal-group', 'uses' => 'PaypalController@processPaypalGroup']);
+	Route::post('/group/paypal-postback', ['as' => 'paypal-postback-group', 'uses' => 'PaypalController@postbackGroup']);*/
 
 		
 });

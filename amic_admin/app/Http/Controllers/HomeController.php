@@ -35,26 +35,25 @@ class HomeController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-		$cnt_single=0;
-		$cnt_paid=0;
 		$reg_s = \DB::table('registrations')->get();
 		$reg_m = \DB::table('registrations')->select('paid')->get();
-		foreach ($reg_s as $s)
-		{
-			$cnt_single=$cnt_single+1;
-		}
-
-		foreach ($reg_m as $m)
-		{
-			if($m == '0') {
-				$cnt_paid=$cnt_paid+1;
-			}
-		}
+		
+		$cnt_single = count($reg_s);
+		$cnt_paid = count($reg_m);
 		
 		$items = \DB::table('registrations')->get();
-		return view('home', ['cnt_single' => $cnt_single], ['cnt_paid' => $cnt_paid])
-        ->with(compact('items'))->with('i', ($request->input('page', 1) - 1) * 5);
+		$countries = \DB::table('countries')->get();
+
+		return view('home', ['cnt_single' => $cnt_single, 'getCountry' => function($code){
+			$country = \DB::table('countries')->where('code', '=', $code);
+			if($country->count()){
+				$country = $country->first();
+				return $country->name;
+			}
+			return '';
+		}, 'cnt_paid' => $cnt_paid, 'items' => $items, 'countries' => $countries])->with('i', ($request->input('page', 1) - 1) * 5);
 	}
+
 	public function update(Request $request) 
 	{
 		if($request->ajax()) {

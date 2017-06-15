@@ -8,15 +8,15 @@ use Illuminate\Http\Request;
 use App\Registration;
 use App\GroupRegistration;
 
-class BankController extends Controller {
+class CheckController extends Controller {
 
-	public function processBank(){
+	public function processCheck(){
 		//send notification
 		Registration::generateConfirmationNo(session('single_reg.id'));
 		$registration = Registration::find(session('single_reg.id'));
 
 
-		\Mail::send('email.registration-emailnotification-bank', ['registration' => $registration, 
+		\Mail::send('email.registration-emailnotification-check', ['registration' => $registration, 
 			'getRate' => function($name){
 				$rate = \DB::table('rates')->where('rate_name', '=', $name);
 				if($rate->count()){
@@ -42,15 +42,15 @@ class BankController extends Controller {
 								->subject($registration->firstname . ' ' . $registration->lastname . ' has registered to AMIC Manila 2017 at ' . date_format($registration->created_at, 'g:ia \o\n l jS F Y'));
 					});
 
-		return redirect()->route('return-process-bank');
+		return redirect()->route('return-process-check');
 	}
 
-	public function bankReturn(){
+	public function checkReturn(){
 		\Session::flush();
-		return view('bank.bank-return');
+		return view('check.check-return');
 	}
 
-	public function processBankGroup(){
+	public function processCheckGroup(){
 		if(session('group_reg') == '')
 			return redirect()->route('get-registration');
 
@@ -67,7 +67,7 @@ class BankController extends Controller {
 		$registrations = \DB::table('registrations')->where('group', '=', $group_registration->id);
 
 		//send mail to group representative
-		\Mail::send('email.group-registration-emailnotification-bank', [
+		\Mail::send('email.group-registration-emailnotification-check', [
 			'group_registration' => $group_registration, 
 			'registrations' => $registrations,
 			'getRate' => function($name){
@@ -96,7 +96,7 @@ class BankController extends Controller {
 		foreach($registrations->get() as $registration){
 			//Registration::generateConfirmationNo($registration->id);
 			//$registration = Registration::find($registration->id);
-			\Mail::send('email.registration-emailnotification-bank', ['registration' => $registration, 
+			\Mail::send('email.registration-emailnotification-check', ['registration' => $registration, 
 				'getRate' => function($name){
 					$rate = \DB::table('rates')->where('rate_name', '=', $name);
 					if($rate->count()){
@@ -122,7 +122,7 @@ class BankController extends Controller {
 									->subject($registration->firstname . ' ' . $registration->lastname . ' has registered to AMIC Manila 2017 at ' . $registration->created_at);
 						});
 		}
-		return redirect()->route('return-process-bank');
+		return redirect()->route('return-process-check');
 		
 	}
 

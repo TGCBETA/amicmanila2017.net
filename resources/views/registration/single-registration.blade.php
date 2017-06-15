@@ -571,23 +571,34 @@
 								<tr>
 									<td style="width: 25%;">
 										<input type="radio" name="payment_opt" id="bank" value="bank" {{ (session('single_reg.reg_info')['payment_opt'] == 'bank') ? 'checked' : ''  }} />
-										Bank Deposit
+										DIRECT BANK DEPOSIT
 									</td>
 									<td>
-										Pay through bank deposit. As proof of payment, scan and email deposit slip to <strong>conference@amic.asia</strong>. Registrants will receive Registration Payment Confirmation through email. Print a copy of emailed Registration Confirmation Payment and present it to the Secretariat on the day of the event.
+										<p><b>1. Peso Payments for Local Delegates:</b><br />
+										Bank of the Philippine Islands (BPI)<br />
+										Savings Account Number <b>0183 374 869</b></p>
+
+										<p><b>2. Foreign Currency Payments for Foreign Delegates:</b><br />
+										Bank of the Philippine Islands (BPI) <br />
+										Savings Account Number <b>0184 030 594</b><br />
+										Swift Code: <b>BOPIPHMM</b></p>
+
+										<p><i>As proof of payment, scan and email deposit slip to <strong>conference@amic.asia</strong>. Registrants will receive Registration Payment Confirmation through email. Print a copy of emailed Registration Confirmation Payment and present it to the Secretariat on the day of the event.</i></p>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<input type="radio" name="payment_opt" id="creditcard" value="creditcard" {{ (session('single_reg.reg_info')['payment_opt'] == 'creditcard') ? 'checked' : ''  }} />
-																			
-		                  				<span class="strong">Credit Card</span> 
+										<input type="radio" name="payment_opt" id="check" value="check" {{ (session('single_reg.reg_info')['payment_opt'] == 'check') ? 'checked' : ''  }} />								
+		                  				CHECK PAYMENT
 		                  				</td>
 		                				<td>
-		                					<!--h4 class="text-danger">Will be available soon!</h4-->
-					                		Payment can be made via AMIC's paypal account using a credit card (VISA, MASTERCARD, or AMERICAN EXPRESS). You do not need a paypal account to use your credit card for this purpose.
-					                    	<br />
-					                    	<img src="{{ asset('images/creditcards.jpg') }}" width="150px" />
+					                		<p><u>Make check payable to:</u> <b>ASIAN MEDIA INFORMATION AND COMMUNICATION CENTRE, INC.</b></p>
+					                		<u>Send check to:</u>
+					                		<p>Asian Media Information and Communication Centre, Inc.<br />
+											2nd Floor, Philippine Women's University<br />
+											1743 Taft Avenue, Manila 1004<br />
+											Philippines.</p>
+
 									</td>
 								</tr>
 							</tbody>

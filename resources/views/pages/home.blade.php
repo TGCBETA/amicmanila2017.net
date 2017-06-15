@@ -26,7 +26,7 @@
 			    <li data-target="#carousel-example-generic" data-slide-to="8"></li>
 			    <li data-target="#carousel-example-generic" data-slide-to="9"></li>
 			    <li data-target="#carousel-example-generic" data-slide-to="10"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="11"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="11"></li>
 			  </ol>
 
 			  <!-- Wrapper for slides -->
@@ -68,7 +68,7 @@
 			        
 			      </div>
 			    </div>
-			    <div class="item">
+			   <div class="item">
 			      <a href="{{ route('get-registration') }}"><img src="{{ asset('images/sliders/slider9.jpg') }}" alt="" class="fullwidth img-responsive"></a>
 			      <div class="carousel-caption">
 			        
