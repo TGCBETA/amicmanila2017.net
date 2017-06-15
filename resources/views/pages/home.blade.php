@@ -26,6 +26,7 @@
 			    <li data-target="#carousel-example-generic" data-slide-to="8"></li>
 			    <li data-target="#carousel-example-generic" data-slide-to="9"></li>
 			    <li data-target="#carousel-example-generic" data-slide-to="10"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="11"></li>
 			  </ol>
 
 			  <!-- Wrapper for slides -->
@@ -48,6 +49,13 @@
 			        
 			      </div>
 			    </div>
+						 <div class="item">
+			      <img src="{{ asset('images/sliders/slider14.jpg') }}" alt="Speakers and Moderators" class="fullwidth img-responsive">
+			      <div class="carousel-caption">
+			        
+			      </div>
+			    </div>
+
 			  	<div class="item">
 			      <a href="{{ route('get-registration') }}"><img src="{{ asset('images/sliders/slider7.jpg') }}" alt="" class="fullwidth img-responsive"></a>
 			      <div class="carousel-caption">
@@ -131,16 +139,13 @@
 				<p>Cras sit amet velit a ipsum ultrices volutpat. Nunc vestibulum tempus justo, et malesuada elit varius ut. Mauris velit felis, interdum id mattis sit amet, iaculis sed eros. Morbi eget vestibulum leo. Suspendisse et dui mattis dolor tincidunt vestibulum accumsan ac orci. Phasellus sit amet nibh auctor, efficitur nisi quis, venenatis eros. Integer porta vel diam vel ornare. Ut vehicula orci ut dolor fermentum, vel faucibus lacus mattis. Aliquam ut ligula vel dolor dapibus egestas. Nulla facilisi. Donec euismod luctus nisl, id mattis elit vulputate eu. Nulla facilisi. </p-->
 			</div>
 			<div class="bg-parallax1 padding">
-					<h2 class="text-danger"><i class="fa fa-warning"></i> ATTENTION!!</h2>
-					<p><strong>To All Who Submitted Their Abstract(s),</strong></p>
+					<h3 class="text-danger"><i class="fa fa-warning"></i> ATTENTION!!</h3>
+					<p><strong><h2>AMIC 25th Conference Call for Papers</h2></strong></p>
 
-					<p>AMIC is now preparing for the 25th AMIC International Conference to be held in Manila on 27-29 September 2017. We are readopting our 2016 conference theme, Rethinking Communication in a Resurgent Asia.</p>
+					<p>AMIC is now preparing for the 25th AMIC International Conference to be held in Manila on <br> 27-29 September 2017. We are readopting our 2016 conference theme,<i> Rethinking Communication in a Resurgent Asia.</i></p>
 
-					<p>Please confirm if you want the abstract(s) you submitted for the cancelled 2016 conference to be considered for peer review for the 2017 Manila conference.  We will appreciate it if you can inform the Conference Secretariat (via e-mail at conference@amic.asia) of your decision on or before 28 February 2017. </p>
-					<p>We have also attached the Call for Papers for the AMIC Manila 2017 Conference. Please invite your colleagues to submit abstracts of conference papers if they are interested to present. Deadline for submission of new abstracts to our Conference Secretariat is on 30 April 2017.</p>
+					<p>We have attached the Call for Papers for the AMIC Manila 2017 Conference. Please invite your colleagues to submit abstracts of conference papers if they are interested to present. Deadline for submission of new abstracts to our Conference Secretariat is on<font color="red"> 31 May 2017.</font></p>
 					<p>Please click <a href="{{ route('get-page', ['call-for-papers']) }}">here</a> for more details.</p>
-
-					<p>Thank you very much. We shall keep you posted on conference updates.</p>
 
 					<p>Very truly yours,</p>
 
@@ -154,7 +159,7 @@
 		<div id="rightpanel" class="col-md-3 no-padding text-center">
 			<h4 class=""><strong>Important Dates</strong></h4>
 			<hr style="border:2px solid #064C7D;" />
-			<h5><strong>April 30, 2017</strong></h5>
+			<h5><strong>May 31, 2017</strong></h5>
 			Deadline for <br />Abstract Submission
 			<h5><strong>July 2017</strong></h5>
 			Deadline for Full <br />Paper Submission

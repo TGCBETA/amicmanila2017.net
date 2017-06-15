@@ -14,8 +14,8 @@
 </head>
 <body>
 	<div class="container">
-		<img src="{{ asset('images/header_web.png') }}?{{ time() }}" class="img-responsive hidden-xs hidden-sm" />
-		<img src="{{ asset('images/header_mobile_amicbanner_event.png') }}?{{ time() }}" class="img-responsive hidden-lg hidden-md" />
+		<a href="{{ url('/') }}"><img src="{{ asset('images/header_web.png') }}?{{ time() }}" class="img-responsive hidden-xs hidden-sm" /></a>
+		<a href="{{ url('/') }}"><img src="{{ asset('images/header_mobile_amicbanner_event.png') }}?{{ time() }}" class="img-responsive hidden-lg hidden-md" /></a>
 		<nav class="navbar navbar-inverse-blue">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -36,36 +36,36 @@
 		        <li>
 		        	<a href="#" class="dropdown dropdown-submenu">Information</a>
 		        	<ul class="dropdown-menu">
-			            <li><a href="{{ route('get-page', ['message-from-the-chairman']) }}">Message from the BOD Chairman</a></li>
-			            <li><a href="{{ route('get-page', ['board-members']) }}">AMIC Board Members</a></li>
-			            <li><a href="{{ route('get-page', ['organizing-team']) }}">Organizing Team</a></li>
-			            <li><a href="{{ route('get-page', ['about-amic']) }}">About AMIC</a></li>
-			            <li><a href="{{ route('get-page', ['25th-annual-conference']) }}">25th Annual Conference</a></li>
-			            <li><a href="{{ route('get-page', ['nomination']) }}">Nomination for 2017 AMIC Asia Communication Award</a></li>
-			            <li><a href="{{ route('get-page', ['about-manila']) }}">About Manila</a></li>
-			            <li><a href="{{ route('get-page', ['about-the-venue']) }}">About the Venue</a></li>
+			            <li><a href="{{ route('get-page', ['message-from-the-chairman']) }}"><b>Message from the BOD Chairman</b></a></li>
+			            <li><a href="{{ route('get-page', ['board-members']) }}"><b>AMIC Board Members</b></a></li>
+			            <li><a href="{{ route('get-page', ['organizing-team']) }}"><b>Organizing Team</b></a></li>
+			            <li><a href="{{ route('get-page', ['about-amic']) }}"><b>About AMIC</b></a></li>
+			            <li><a href="{{ route('get-page', ['25th-annual-conference']) }}"><b>25th Annual Conference</b></a></li>
+			            <li><a href="{{ route('get-page', ['nomination']) }}"><b>Nomination for 2017 AMIC Asia Communication Award</b></a></li>
+			            <li><a href="{{ route('get-page', ['about-manila']) }}"><b>About Manila, Philippines</b></a></li>
+			            <li><a href="{{ route('get-page', ['about-the-venue']) }}"><b>About the Venue</b></a></li>
 			        </ul>
 		        </li>
 		        <li class="separator"><span>|</span></li>
 		        <li>
 		        	<a href="#" class="dropdown dropdown-submenu">Program</a>
 		        	<ul class="dropdown-menu">
-			            <li><a href="{{ route('get-page', ['conference-program']) }}">Conference Program</a></li>
-			            <li><a href="#">Invited Speakers</a></li>
-			            <li><a href="{{ route('get-page', ['call-for-papers']) }}">Call for Papers</a></li>
+			            <li><a href="{{ route('get-page', ['conference-program']) }}"><b>Conference Program</b></a></li>
+			            <li><a href="{{ route('get-page', ['invited-speakers']) }}"><b>Invited Speakers</b></a></li>
+			            <li><a href="{{ route('get-page', ['call-for-papers']) }}"><b>Call for Papers</b></a></li>
 			        </ul>
 		        </li>
 		        <li class="separator"><span>|</span></li>
 		        <li>
 		        	<a href="#" class="dropdown dropdown-submenu">Registration and Accomodation</a>
 		        	<ul class="dropdown-menu">
-		        		<li><a href="{{ route('get-page', ['registration-categories-and-fees']) }}">Registration Categories and Fees</a></li>
-			            <li><a href="{{ route('get-registration') }}">Registration</a></li>
-			            <li><a href="{{ route('get-page', ['hotel-accomodation']) }}">Hotel Accomodation</a></li>
+		        		<li><a href="{{ route('get-page', ['registration-categories-and-fees']) }}"><b>Registration Categories and Fees</b></a></li>
+			            <li><a href="{{ route('get-registration') }}"><b>Registration</b></a></li>
+			            <li><a href="{{ route('get-page', ['hotel-accomodation']) }}"><b>Hotel Accomodation</b></a></li>
 			        </ul>
 		        </li>
 		        <li class="separator"><span>|</span></li>
-		        <li><a href="{{ route('get-page', ['visa']) }}">Visa and Social Program</a></li>
+		        <li><a href="{{ route('get-page', ['visa']) }}">Visa</a></li>
 		        <li class="separator"><span>|</span></li>
 		        <li><a href="#">Sponsors and Trade Expo</a></li>
 		        <li class="separator"><span>|</span></li>

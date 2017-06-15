@@ -21,19 +21,19 @@
 		<h4 class="text-center">CALL FOR PAPERS</h4>
 
 
-		<p>According to an ancient Chinese proverb, To forget one's ancestors is to be a brook without a source, a tree without root.</p>
+		<p>According to an ancient Chinese proverb, To forget one’s ancestors is to be a brook without a source, a tree without roots</p>
 		<p>
-			An old Philippine proverb says, Sino man ang hindi marunong lumingon sa kanyang pinang-galingan, ay hindi makakarating sa kanyang paroroonan. (He who does not think back on his past, will not arrive at his destination.)
+			An old Philippine proverb says,<i> Sino man ang hindi marunong lumingon sa kanyang pinanggalingan, ay hindi makakarating sa kanyang paroroonan.</i> (He who does not think back on his past, will not arrive at his destination.)
 		</p>
-		<p>We invoke this ancient Asian wisdom to warn, as we lunge headlong into today's fast-changing world, that non-Asian communication theories, sophisticated gadgets and apps are not the panacea to the world's problems. The solutions are in us.</p>
-		<p>We in AMIC and in Asia need to rediscover our roots, somehow buried under our feet as we run mindlessly forward. We have imbibed non-Asian ways, and adopted foreign communication theories, methodologies and practices as we studied abroad, and brought them back to Asia to teach to our young students who would one day become our disciples.</p>
-		<p>We preach that communication and culture are inextricably linked. But have we studied or developed Asian theories of communication based on Asian culture? Very little.  In this coming 2017 AMIC annual conference, we pause and look back to where we came from. </p>
-		<p>We need to rediscover our "Asianess" amidst a resurging Asia. The Asian Development Bank has reported that if Asia continues its current growth trajectory, by 2050 it will regain the dominant economic position it held some 300 years ago, before the industrial revolution. In this scenario Asia's gross domestic product (GDP) will reach $174 trillion (or half of the global GDP) from $17 trillion in 2010.</p>
+		<p>We invoke this ancient Asian wisdom to warn, as we lunge headlong into today’s fast-changing world, that non-Asian communication theories, sophisticated gadgets and apps are not the panacea to the world’s problems. The solutions are in us. </p>
+		<p>We in AMIC and in Asia need to rediscover our roots, somehow buried under our feet as we run mindlessly forward. We have imbibed non-Asian ways, and adopted foreign communication theories, methodologies and practices as we studied abroad, and brought them back to Asia to teach to our young students who would one day become our disciples. </p>
+		<p>We preach that communication and culture are inextricably linked. But have we studied or developed Asian theories of communication based on Asian culture? Very little. In this coming 2017 AMIC annual conference, we pause and look back to where we came from. </p>
+		<p>We need to rediscover our “Asianess” amidst a resurging Asia. The Asian Development Bank has reported that if Asia continues its current growth trajectory, by 2050 it will regain the dominant economic position it held some 300 years ago, before the industrial revolution. In this scenario Asia’s gross domestic product (GDP) will reach $174 trillion (or half of the global GDP) from $17 trillion in 2010. </p>
 		<p>A resurging Asia must also be seen in terms of new challenges characterized by inequalities, conflicts, climate change, unsustainable practices, and corruption. Beyond the tools of mass communication, are there distinct Asian communication strategies which can effectively address these challenges that threaten the resurgence of Asia? </p>
 		<p>Let us rediscover our Asian past so that we can confidently move into our future. </p>
-
+		<br>
 		<h4>CONFERENCE CLUSTERS AND STREAMS</h4>
-		<p><i>Cluster on Philosophies, Theories, and Paradigms</i></p>
+		<p><i>Cluster on Asian Philosophies, Theories, and Paradigms</i></p>
 		<ul>
 			<li>How Asian Philosophies and Religion Influence Communication Paradigms </li>
 			<li>Asian (Indigenous) Communication Theories, Paradigms, and Models</li>
@@ -59,7 +59,7 @@
 			<li>Revival (or Rediscovery) of Asian Traditional (Folk) Media</li>
 			<li>Asian Films, Directors, and Performers in the Global Cinema</li>
 		</ul>
-		<p><i>Cluster on Communication Strategies and Approaches</i></p>
+		<p><i>	Cluster on Communication Strategies and Approaches</i></p>
 		<ul>
 			<li>Asian Conflict Resolution Styles and Communication</li>
 			<li>Good Governance and Communication (including Poverty Alleviation, Fighting Corruption)</li>
@@ -79,7 +79,6 @@
 			<li>Asia-Africa Dialogue on Commonalities and Divergences in Communication </li>
 		</ul>
 
-
 		<p><i>Cluster on Asian Business Communication</i></p>
 		<ul>	
 			<li>Branding Asia/Branding in Asia</li>
@@ -95,16 +94,17 @@
 		<strong>Full papers due:</strong> July 2017</p-->
 
 		<ul>
-			<li><strong>Abstracts due:</strong> 30 April 2017</li>
+			<li><strong>Abstracts due:</strong> 31 March 2017 (for resubmissions)
+			<style>p.indent{ padding-left: 8.5em }</style>
+			</br> <p class="indent" style="display:inline">31 May 2017 (for new abstracts)</p></li>
 			<li><strong>Notification of acceptance:</strong> May 2017</li>
 			<li><strong>Full papers due:</strong> July 2017</li>
 		</ul>
 
-		<p>Abstracts and papers should be submitted via e-mail (conference@amic.asia).</p>
-		<p>Please do not send abstracts/papers to the personal e-mail addresses of conference organizers.</p>
-
+		<p>Abstracts and papers should be submitted via e-mail (<font color="blue"><u>conference@amic.asia</u></font>). <br> Please do not send abstracts/papers to the personal e-mail addresses of conference organizers.</p>
+		<br>
 		<h4>ABSTRACTS SUBMITTED FOR THE CANCELLED 2016 CONFERENCE</h4>
-		<p>Abstracts submitted in the cancelled 2016 conference can be considered submitted for review and possible presentation in the 2017 conference but a letter of intent from the abstract writer is needed. The letter should be emailed to conference organizers (conference@amic.asia) on or before 28 February 2017.</p>
+		<p>Abstracts submitted in the cancelled 2016 conference can be considered submitted for review and possible presentation in the 2017 conference, but a letter of intent from the abstract writer is needed. The letter should be emailed to conference organizers (<font color="blue"><u>conference@amic.asia</u></font>) on or before <u>31 March 2017.</u> </p>
 
 
 		<h4>FORMAT FOR ABSTRACTS</h4>
@@ -118,14 +118,14 @@
 			<li>paper abstract (500 words)</li>
 		</ul>
 		<h4>FORMAT FOR PAPERS</h4>
-		If your abstract is approved for presentation, you will be required to submit the full paper prior to the conference. The full paper should adhere to the following requirements:
+		<p>If your abstract is approved for presentation, you will be required to submit the full paper prior to the conference. The full paper should adhere to the following requirements:</p>
 		<ul>
 		<li>should be written in English.</li>
 		<li>be of 5,000-8,000 words in length.</li>
 		<li>have citation in APA style.</li>
 		<li>should be Microsoft Word or RTF document. Font should be Times New Roman, 12 pts. Please use plain text and not formatting.</li>
 		</ul>
-		<p>For more information, please contact Mr. Ramon R. Tuazon (r.tuazon@amic.asia or rrtuazon722@yahoo.com)</p>
+		<p>For more information, please contact Mr. Ramon R. Tuazon (<font color="blue"><u>r.tuazon@amic.asia</u></font> or <font color="blue"><u>rrtuazon722@yahoo.com</u></font>)</p>
 
 		<p><strong><i>Note to all authors: By submitting your paper, you agree that if your paper is selected, you will register for the conference and present the paper. All co-authors attending and/or presenting at the conference must register too.</i></strong></p>
 
