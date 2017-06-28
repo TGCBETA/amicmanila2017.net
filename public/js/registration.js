@@ -135,6 +135,10 @@ var Registration = function(){
             		alert('Please select conference fee.');
             		return false;
             	}
+                if(!$('input[name="payment_opt"]:checked').val()){
+                    alert('Please select payment option.');
+                    return false;
+                }
                 $('#btnsubmit').attr('disabled', 'disabled');
                 form.submit();
             }
