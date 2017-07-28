@@ -34,7 +34,7 @@ class CheckController extends Controller {
 				$message->to($registration->email)->subject('Confirmation of Initial Registration of '. $registration->firstname .' '. $registration->lastname .' to the AMIC 25th Annual Conference on ' . date('F d, Y') . '.');
 		});
 		
-		$Emails = ['conference@amic.asia', 'info@amic.asia', 'amic.contactus@gmail.com', 'canaria97@gmail.com', 'anthonygalapiaroman@gmail.com'];
+		$Emails = ['conference@amic.asia', 'info@amic.asia', 'amic.contactus@gmail.com', 'canaria97@gmail.com', 'anthonygalapiaroman@gmail.com', 'secretariat@amicmanila2017.net'];
 		\Mail::send('email.registration-emailbackup', ['registration' => $registration], function($message) use ($registration, $Emails)
 					{
 						$message->from('no-reply@amicmanila2017.net', 'AMIC MANILA 2017 REGISTRATION');
@@ -114,7 +114,7 @@ class CheckController extends Controller {
 					$message->to($registration->email)->subject('Confirmation of Initial Registration of '. $registration->firstname .' '. $registration->lastname .' to the AMIC 25th Annual Conference on ' . date('F d, Y') . '.');
 			});
 
-			$Emails = ['conference@amic.asia', 'info@amic.asia', 'amic.contactus@gmail.com', 'canaria97@gmail.com', 'anthonygalapiaroman@gmail.com'];
+			$Emails = ['conference@amic.asia', 'info@amic.asia', 'amic.contactus@gmail.com', 'canaria97@gmail.com', 'anthonygalapiaroman@gmail.com', 'secretariat@amicmanila2017.net'];
 			\Mail::send('email.registration-emailbackup', ['registration' => $registration], function($message) use ($registration, $Emails)
 						{
 							$message->from('no-reply@amicmanila2017.net', 'AMIC MANILA 2017 REGISTRATION');

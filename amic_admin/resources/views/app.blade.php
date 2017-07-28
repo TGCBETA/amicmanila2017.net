@@ -7,24 +7,6 @@
 	<title>Amic Manila 2017</title>
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-	<!-- <link href="{{ asset('/css/app.css') }}" rel="stylesheet"> -->
-
-	<!-- Fonts 
-	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'> -->
-
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-
-	<!--! Old
-	<link href="{{ asset('/resources/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('/resources/vendor/metisMenu/metisMenu.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('/resources/dist/css/sb-admin-2.css') }}" rel="stylesheet">
-    <link href="{{ asset('/resources/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"> -->
-
   <link rel="stylesheet" href="{{ asset('/resources/bootstrap/css/bootstrap.min.css') }}">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -45,28 +27,38 @@
 
 </head>
 	@if (Auth::guest())
-	<body class="hold-transition login-page">
-		<nav class="navbar navbar-default">
-							<div class="container-fluid">
-								<div class="navbar-header">
-									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-										<span class="sr-only">Toggle Navigation</span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-									<a class="navbar-brand" href="{{ url('../public') }}">AMIC Manila 2017</a>
-								</div>
-								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-									<ul class="nav navbar-nav navbar-right">
+	<body class="hold-transition login-page fixed">
+		<div class="content">
+			<nav class="navbar navbar-default">
+								<div class="container-fluid">
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+											<span class="sr-only">Toggle Navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+										<a class="navbar-brand" href="admin.amicmanila2017.net">AMIC Manila 2017</a>
+									</div>
+									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+										<ul class="nav navbar-nav navbar-right">
 
-								<li><a href="{{ url('/password/email') }}">Forgot Your Password?</a></li>
-								<!-- <li><a href="{{ url('/auth/register') }}">Register</a></li> -->
-									</ul>
+									<li><a href="{{ url('/password/email') }}">Forgot Your Password?</a></li>
+									<!-- <li><a href="{{ url('/auth/register') }}">Register</a></li> -->
+										</ul>
+									</div>
 								</div>
-							</div>
 			</nav>
 		@yield('content')
+		<nav class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-footer">
+				<p align="center"><a href="{{ url('../public') }}"><img src="{{ asset('resources/img/header_web.png')}}" class="img-responsive hidden-xs hidden-sm"></a></p>
+				</div>
+			</div>
+		</nav>
+		</div>
+		
 	@else
 	<body class="hold-transition skin-blue fixed sidebar-mini">
 	<header class="main-header">
@@ -101,7 +93,7 @@
 				<img src="{{ asset('\resources\dist\img\avatar5.png') }}" class="img-circle" alt="User Image">
 					<p>
 					<font color="black"> {{ Auth::user()->name }} <br>
-					<small>Administrator</small> </font>
+					<small>{{ Auth::user()->type }}</small> </font>
 					</p>
 				</li>
 				<!-- Menu Footer-->
@@ -133,7 +125,7 @@
         </div>
         <div class="pull-left info">
           <p>{{ Auth::user()->name }}</p>
-          <i class="fa fa-wrench" aria-hidden="true"></i> Administrator
+          <i class="fa fa-wrench" aria-hidden="true"></i> {{ Auth::user()->type }}
         </div>
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -149,6 +141,9 @@
           <ul class="treeview-menu">
             <li><a href="{{ url('home') }}"><i class="fa fa-circle-o"></i>Home</a></li>
             <li><a href="{{ url('dash') }}"><i class="fa fa-circle-o"></i>Settings</a></li>
+            @if($user->type == 'SUPERUSER')
+            <li><a href="{{ url('user') }}"><i class="fa fa-circle-o"></i>Users</a></li>
+            @endif
           </ul>
         </li>
         <li class="header">LABELS</li>
@@ -161,7 +156,13 @@
   </aside>
 
   	<div class="content-wrapper">
+  	@if($user->type != 'REQUEST')
 		@yield('content')
+	@else
+		<div class="col-md-16">
+			<h2 align="center"><b>PLEASE WAIT THE ADMINISTRATOR <br />TO ACTIVATE YOUR ACCOUNT!</b></h2><br />
+		</div>
+	@endif
 		</div>
 	
 	<footer class="main-footer">
@@ -175,32 +176,14 @@
 
 	</div>
 	@endif
-	
-	<!-- Scripts old
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<script src="{{ asset('/resources/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('/resources/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('/resources/vendor/metisMenu/metisMenu.min.js') }}"></script>
-    <script src="{{ asset('/resources/vendor/raphael/raphael.min.js') }}"></script>
-    <script src="{{ asset('/resources/vendor/morrisjs/morris.min.js') }}"></script>
-    <script src="{{ asset('/resources/dist/js/sb-admin-2.js') }}"></script>  -->
-
-	<!-- iCheck -->
 
 	<script src="{{ asset('/resources/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
 	<!-- Bootstrap 3.3.6 -->
 	<script src="{{ asset('/resources/bootstrap/js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('/resources/plugins/iCheck/icheck.min.js') }}"></script>
-	<!-- <script>
-		$(function () {
-			$('input').iCheck({
-			checkboxClass: 'icheckbox_square-blue',
-			radioClass: 'iradio_square-blue',
-			increaseArea: '20%' // optional
-			});
-		});
-	</script> -->
+	
+	@yield('script')
+
     <script>
 		$.ajaxSetup({
 			headers: {
@@ -211,10 +194,10 @@
 		$(document).ready(function() {
 			$('#example1').DataTable( {
 			scrollX: true,
-			dom: 'Bfrtip',
+			/* dom: 'Bfrtip',
 			"buttons": [
 				'excel', 'pdf', 'print',
-				]
+				] */
 			} );
 		});
 
@@ -231,6 +214,10 @@
 						else {
 							$('#response' + $(ctrl).val()).text("NOT PAID");
 						}
+
+						$('#check_'+$(ctrl).val()).prop('checked', $(ctrl).is(':checked'));
+						$('#myModal').modal('hide');
+
 					}
 				});
 		}
@@ -244,50 +231,17 @@
 					success: function() {
 						console.log(check);
 						if($(ctrl).is(':checked') == true) {
-							$('#attendstat' + $(ctrl).val()).text("ATTENDED");
+							$('#attendstat' + $(ctrl).val()).text("YES");
 						}
 						else {
-							$('#attendstat' + $(ctrl).val()).text("NOT ATTENDED");
+							$('#attendstat' + $(ctrl).val()).text("NO");
 						}
+						$('#attendCheck_'+$(ctrl).val()).prop('checked', $(ctrl).is(':checked'));
+						$('#myModal').modal('hide');
 					}
 				});
 		}
 
-	/*document.getElementById("curpass").disabled = true;
-	document.getElementById("newpass").disabled = true;	
-	document.getElementById("confirmpass").disabled = true;
-	$(document).ready(function(){
-            $("#email").change(function(){
-                 $("#user-result").html("<i class='fa fa-spinner fa-pulse fa-1x fa-fw'></i><span class='sr-only'>Loading...</span>");
-            
- 
-            var email=$("#email").val();
- 
-          	  $.ajax({
-         		   	type: "POST",
-         		   	url: "./CheckEmail",
-         		   	data: "email="+email,
-        		    	success:function(data){
-        	    		if(data==0){
-							console.log(data);
-        	    			$("#user-result").html('<i class="fa fa-times" aria-hidden="true"></i>');
-							document.getElementById("curpass").disabled = true;
-							document.getElementById("newpass").disabled = true;	
-							document.getElementById("confirmpass").disabled = true;
-        	    		}
-        	    		else{
-        	    			$("#user-result").html('<i class="fa fa-check" aria-hidden="true"></i>');
-							document.getElementById("curpass").disabled = false;
-							document.getElementById("newpass").disabled = false;	
-							document.getElementById("confirmpass").disabled = false;
-						}
-       		     	}
-       		     });
- 
-            });
- 
-         });*/
- 
 	</script>
 
 	
@@ -321,5 +275,6 @@
 	<script src="{{ asset('/resources/export_js/buttons.html5.min.js') }}"></script>
 	<script src="{{ asset('/resources/export_js/buttons.print.min.js') }}"></script>
 	<script src="{{ asset('/resources/loading/js/pace.min.js') }}"></script>
+
 </body>
 </html>

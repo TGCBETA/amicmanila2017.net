@@ -1,0 +1,402 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"defa",
+				"navbar-default"
+			],
+			[
+				"attend",
+				"attendstatid"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "amic_admin/resources/views/home.blade.php",
+			"settings":
+			{
+				"buffer_size": 11166,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "amic_admin/resources/views/app.blade.php",
+			"settings":
+			{
+				"buffer_size": 11259,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "config/database.php",
+			"settings":
+			{
+				"buffer_size": 3578,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "amic_admin/config/database.php",
+			"settings":
+			{
+				"buffer_size": 3523,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 150.0,
+		"last_filter": "Package Control: Ins",
+		"selected_items":
+		[
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/xampp/htdocs/amicmanila2017.net",
+		"/C/xampp/htdocs/amicmanila2017.net/amic_admin",
+		"/C/xampp/htdocs/amicmanila2017.net/amic_admin/resources",
+		"/C/xampp/htdocs/amicmanila2017.net/amic_admin/resources/views",
+		"/C/xampp/htdocs/amicmanila2017.net/resources",
+		"/C/xampp/htdocs/amicmanila2017.net/resources/views",
+		"/C/xampp/htdocs/amicmanila2017.net/resources/views/pages"
+	],
+	"file_history":
+	[
+		"/C/xampp/htdocs/amicmanila2017.net/amic_admin/config/app.php",
+		"/C/xampp/htdocs/amicmanila2017.net/amic_admin/config/database.php",
+		"/C/xampp/htdocs/amicmanila2017.net/amic_admin/resources/views/emails/password.blade.php",
+		"/C/xampp/htdocs/amicmanila2017.net/amic_admin/resources/views/auth/login.blade.php",
+		"/C/xampp/htdocs/amicmanila2017.net/amic_admin/resources/views/welcome.blade.php",
+		"/C/xampp/htdocs/amicmanila2017.net/resources/views/layout/main.blade.php",
+		"/C/xampp/htdocs/amicmanila2017.net/resources/views/pages/hotel-accomodation.blade.php",
+		"/C/xampp/htdocs/amicmanila2017.net/vendor/compiled.php",
+		"/C/Users/MASTERON/Desktop/laravel-2017-07-03.log",
+		"/C/xampp/htdocs/amicmanila2017.net/amic_admin/resources/views/app.blade.php",
+		"/C/xampp/htdocs/amicmanila2017.net/amic_admin/resources/views/home.blade.php",
+		"/C/Users/MASTERON/Desktop/ExcelServiceProvider.php",
+		"/C/xampp/htdocs/amicmanila2017.net/amic_admin/composer.json",
+		"/C/xampp/htdocs/amicmanila2017.net/public/index.php",
+		"/C/Users/MASTERON/Desktop/composer.json",
+		"/C/Users/MASTERON/Desktop/.env",
+		"/C/xampp/htdocs/amicmanila2017.net/composer.json",
+		"/C/xampp/htdocs/amicmanila2017.net/amic_admin/app/Http/Controllers/Auth/PasswordController.php",
+		"/C/xampp/htdocs/amicmanila2017.net/resources/views/pages/home.blade.php",
+		"/C/xampp/htdocs/amicmanila2017.net/amicmanila2017.sublime-project",
+		"/C/Users/MASTERON/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/C/xampp/htdocs/mvr4.reg/app/DataTables/UsersDataTable.php",
+		"/C/xampp/htdocs/mvr4.reg/resources/views/layouts/app.blade.php",
+		"/C/xampp/htdocs/mvr4.reg/config/app.php",
+		"/C/xampp/htdocs/mvr4.reg/resources/views/welcome.blade.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/app/DataTables/PostsDataTable.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/app/Post.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/app/DataTables/Scopes/UserDataTableScope.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/resources/views/datatables/template.blade.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/resources/views/service/view.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/app/Transformers/UserTransformer.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/app/Tag.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/app/User.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/resources/views/users.blade.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/config/app.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/resources/views/app.blade.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/app/Http/Controllers/UsersController.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/app/Http/Controllers/ButtonsController.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/app/Http/Controllers/HtmlBuilderController.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/vendor/yajra/laravel-datatables-oracle/src/Engines/BaseEngine.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/app/DataTables/UsersDataTable.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/resources/views/print-users-table.blade.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/resources/views/home.blade.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/resources/views/datatables/eloquent/basic-object.blade.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/resources/views/datatables/collection/basic.blade.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/.env",
+		"/C/xampp/htdocs/laravel-datatables-demo/app/Http/Controllers/EloquentController.php",
+		"/C/xampp/htdocs/laravel-datatables-demo/app/Http/Controllers/HomeController.php",
+		"/C/xampp/htdocs/mvr4.reg/.env.example"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"html",
+			"border",
+			"h1",
+			"basic",
+			"-data",
+			"basic-data"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "amic_admin/resources/views/home.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								964,
+								964
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1577.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "amic_admin/resources/views/app.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11259,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config/database.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3578,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1813,
+								1813
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 581.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "amic_admin/config/database.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 630.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "amicmanila2017.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				".env.example"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 207.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

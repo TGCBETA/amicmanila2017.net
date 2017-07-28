@@ -42,9 +42,6 @@
 							</div>
 						</div>
 					</form>
-					<button type="submit" class="btn btn-primary" href="{{ url('auth/login') }}">
-									Go back
-								</button>
 				</div>
 			</div>
 		</div>

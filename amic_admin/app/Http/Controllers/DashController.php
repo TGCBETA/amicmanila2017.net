@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class DashController extends Controller {
 
@@ -29,24 +30,8 @@ class DashController extends Controller {
 
     public function index()
 	{
-        return view('dash');
-    }
-
-	public function checkEmail(Request $request)
-	{
-		if($request->ajax()) {
-			$email = $request->email;
-			$find = \DB::table('users')->where('email', '=', $email)->count();
-			/*$find='0';
-			foreach ($emailSelect as $i)
-			{
-				if($i == $email) {
-					$find='1';
-				}
-			}*/
-			return $find;
-		}
-        //return view('dash');
+		$user = Auth::user();
+        return view('dash')->with(array('user' => $user));
     }
 
 

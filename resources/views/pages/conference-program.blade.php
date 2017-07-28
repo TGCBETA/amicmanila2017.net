@@ -17,7 +17,7 @@
 		<h6 class="text-center">Miriam College  27-29 September 2017</h6>
 		<br /><br />
 
-		<h5><b>September 26, 2017</b></h5>
+		<h5><b>September 26, 2017, Novotel Manila Araneta Center, Quezon City</b></h5>
 		<table class="table table-bordered">
 			<tbody>
 				<tr>
@@ -43,7 +43,7 @@
 			</tbody>
 		</table>
 
-		<h5><b>September 27, 2017</b></h5>
+		<h5><b>September 27, 2017, Miriam College, Quezon City</b></h5>
 		<table class="table table-bordered">
 			<tbody>
 				<tr>
@@ -85,9 +85,9 @@
 						President Emeritus, Senior Adviser & Trustee <br />
 						Asian Institute of Journalism & Communication (AIJC)</p> <br />
 
-						<p>Wimal Dissanayake <br />
-						Academy of Creative Media<br />
-						University of Hawaii in Manoa</p> <br />
+						<p>Wimal Dissanayake Academy <br />
+						of Creative Media University <br />
+						of Hawaii in Manoa</p> <br />
 
 						<p>Dhavalasri Shelton A. Gunaratne <br />
 						Professor Emeritus, Minnesota State University</p> <br />
@@ -120,6 +120,7 @@
 						<td><p><b>PARALLEL SESSIONS</b></p>
 							<p>A1 Asian Communication Philosophies, Theories, and Paradigms,</p>
 							<p>A2 Communication and Culture</p>
+							<p>A3 Media and Information Literacy: Principles and Practices</p>
 					</td>
 				</tr>
 
@@ -130,10 +131,12 @@
 							<p>B2 Asian Business Communication</p>
 					</td>
 				</tr>
+
 				<tr>
 					<td>17.00-18.30</td>
 					<td><p>Dinner</p></td>
 				</tr>
+
 				<tr>
 					<td>18.30-21.00</td>
 					<td><p>GALA/CULTURAL NIGHT</p>
@@ -148,7 +151,7 @@
 			</tbody>
 		</table>
 
-		<h5><b>September 28, 2017</b></h5>
+		<h5><b>September 28, 2017, Miriam College, Quezon City</b></h5>
 		<table class="table table-bordered">
 			<tbody>
 				<tr>
@@ -212,6 +215,7 @@
 					<td><p><b>PARALLEL SESSIONS</b></p>
 					<p>D1 Communication Strategies and Approaches, </p>
 					<p>D2 Inclusive Knowledge Societies</p>
+					<p>D3 Media and Information Literacy Teaching Methods and Tools</p>
 					</td>
 				</tr>
 
@@ -263,7 +267,6 @@
 					<td><p>Dinner</p>
 					</td>
 				</tr>
-
 				<tr>
 					<td>18.30-21.00</td>
 					<td><p><b>AMIC Business Meeting</b></p>
@@ -281,7 +284,7 @@
 			</tbody>
 		</table>
 
-		<h5><b>September 29, 2017</b></h5>
+		<h5><b>September 29, 2017, Novotel Manila Araneta Center, Quezon City (Pick Up/Drop Off)</b></h5>
 		<table class="table table-bordered">
 			<tbody>
 				<tr>

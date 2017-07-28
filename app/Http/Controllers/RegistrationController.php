@@ -49,6 +49,8 @@ class RegistrationController extends Controller {
 		$l_conference_day = $request->get('l_conference_day');
 
 		$total_fee = 0;
+		$PHP = 0;
+		$USD = 0;
 		$l_city_tour = 0;
 		$l_tour_rate = 0;
 		$currency = '';
@@ -83,6 +85,14 @@ class RegistrationController extends Controller {
 
 
 		$total_fee += $reg_rate;
+
+		if($currency == 'P') {
+			$PHP = $total_fee;
+		}
+		else{
+			$USD = $total_fee;
+		}
+
 
 		if($l_conference_day > 1){
 			$total_fee = $total_fee * 2;
@@ -157,6 +167,8 @@ class RegistrationController extends Controller {
 					'reg_category'		=> $reg_category, 
 					'payment_opt'		=> $payment_opt, 
 					'total_fee'			=> $total_fee, 
+					'PHP'				=> $PHP,
+					'USD'				=> $USD,
 					'f_city_tour'		=> $f_city_tour, 
 					'l_city_tour'		=> $l_city_tour,
 					'l_city_tour_rate'	=> $l_tour_rate,
@@ -276,6 +288,8 @@ class RegistrationController extends Controller {
 				$registration->payment_opt		= session('single_reg.reg_info')['payment_opt'];
 				$registration->reg_rate			= session('single_reg.reg_info')['reg_rate'];
 				$registration->total_fee		= session('single_reg.reg_info')['total_fee'];
+				$registration->PHP              = session('single_reg.reg_info')['PHP'];
+				$registration->USD              = session('single_reg.reg_info')['USD'];
 				$registration->f_city_tour		= session('single_reg.reg_info')['f_city_tour'];
 				$registration->l_city_tour		= session('single_reg.reg_info')['l_city_tour'];
 				$registration->l_city_tour_rate	= session('single_reg.reg_info')['l_city_tour_rate'];
@@ -304,6 +318,8 @@ class RegistrationController extends Controller {
 				'payment_opt'		=> session('single_reg.reg_info')['payment_opt'], 
 				'reg_rate'			=> session('single_reg.reg_info')['reg_rate'],
 				'total_fee'			=> session('single_reg.reg_info')['total_fee'], 
+				'PHP'				=> session('single_reg.reg_info')['PHP'], 
+				'USD'				=> session('single_reg.reg_info')['USD'], 
 				'f_city_tour'		=> session('single_reg.reg_info')['f_city_tour'], 
 				'l_city_tour'		=> session('single_reg.reg_info')['l_city_tour'],
 				'l_city_tour_rate'	=> session('single_reg.reg_info')['l_city_tour_rate'],
@@ -446,6 +462,8 @@ class RegistrationController extends Controller {
 		$l_conference_day = $request->get('l_conference_day');
 
 		$total_fee = 0;
+		$PHP = 0;
+		$USD = 0;
 		$l_city_tour = 0;
 		$l_tour_rate = 0;
 		$currency = '';
@@ -483,6 +501,13 @@ class RegistrationController extends Controller {
 			$total_fee += $reg_rate * session('group_reg.no_of_registrants');
 		else
 			$total_fee += $reg_rate * 5;
+
+		if($currency == 'P'){
+			$PHP = $total_fee;
+		}
+		else {
+			$USD = $total_fee;
+		}
 
 		if($l_conference_day > 1){
 			$total_fee = $total_fee * 2;
@@ -599,6 +624,8 @@ class RegistrationController extends Controller {
 			'payment_opt'			=> session('group_reg.payment_opt'), 
 			'reg_rate'				=> session('group_reg.reg_rate'), 
 			'total_fee'				=> session('group_reg.total_fee'), 
+			'PHP'					=> session('group_reg.PHP'), 
+			'USD'					=> session('group_reg.USD'), 
 			'currency'				=> session('group_reg.currency'), 
 			'f_city_tour'			=> session('group_reg.f_city_tour'), 
 			'l_city_tour'			=> session('group_reg.l_city_tour'), 

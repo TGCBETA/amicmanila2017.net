@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => null, 'name' => null],
+	'from' => ['address' => 'no-reply@amicmanila2017.net', 'name' => 'Asian Media Information and Communication Centre, Inc.'],
 
 	/*
 	|--------------------------------------------------------------------------

@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Registration extends Model {
 
 	protected $table = 'registrations';
-	protected $fillable = ['firstname', 'lastname', 'organization', 'nationality', 'profession', 'gender', 'phone', 'email', 'address1', 'address2', 'city', 'province', 'country', 'zipcode', 'reg_category', 'payment_opt', 'status', 'paid', 'payment_date', 'payment_status', 'txn_id', 'txn_type', 'address_status', 'payer_id', 'ipn_track_id', 'receipt_id', 'mc_fee', 'confirmation_no', 'reg_rate', 'total_fee', 'currency', 'f_city_tour', 'l_city_tour', 'l_city_tour_rate', 'l_conference_day', 'reg_type', 'group'];
+	protected $fillable = ['firstname', 'lastname', 'organization', 'nationality', 'profession', 'gender', 'phone', 'email', 'address1', 'address2', 'city', 'province', 'country', 'zipcode', 'reg_category', 'payment_opt', 'status', 'paid', 'payment_date', 'payment_status', 'txn_id', 'txn_type', 'address_status', 'payer_id', 'ipn_track_id', 'receipt_id', 'mc_fee', 'confirmation_no', 'reg_rate', 'total_fee', 'PHP', 'USD', 'currency', 'f_city_tour', 'l_city_tour', 'l_city_tour_rate', 'l_conference_day', 'reg_type', 'group'];
 
 	/*
 	public static function generateConfirmationNo($id){

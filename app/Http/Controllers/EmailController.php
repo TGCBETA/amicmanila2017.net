@@ -63,7 +63,7 @@ class EmailController extends Controller
 				'contact' => $request->get('contact'),
 				'user_message' => $request->get('message'));
 				
-				$Emails = ['conference@amic.asia', 'info@amic.asia', 'amic.contactus@gmail.com', 'canaria97@gmail.com'];
+				$Emails = ['conference@amic.asia', 'info@amic.asia', 'amic.contactus@gmail.com', 'canaria97@gmail.com', 'secretariat@amicmanila2017.net'];
 				
 				\Mail::send('pages.emails', $data, function($message) use ($data, $Emails)
 					{

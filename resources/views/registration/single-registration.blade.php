@@ -583,6 +583,8 @@
 										Savings Account Number <b>0184 030 594</b><br />
 										Swift Code: <b>BOPIPHMM</b></p>
 
+										<p><u>Make payments to:</u> <b>ASIAN MEDIA INFORMATION AND COMMUNICATION CENTRE, INC.</b></p>
+
 										<p><i>As proof of payment, scan and email deposit slip to <strong>conference@amic.asia</strong>. Registrants will receive Registration Payment Confirmation through email. Print a copy of emailed Registration Confirmation Payment and present it to the Secretariat on the day of the event.</i></p>
 									</td>
 								</tr>

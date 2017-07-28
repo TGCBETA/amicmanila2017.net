@@ -4,6 +4,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Response;
+use Excel;
+use DB;
+use App\Registration;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller {
 
@@ -35,14 +39,15 @@ class HomeController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-		$reg_s = \DB::table('registrations')->get();
-		$reg_m = \DB::table('registrations')->select('paid')->get();
+		$reg_s = Registration::get();
+		$reg_m = Registration::where('paid', '1')->get();
 		
 		$cnt_single = count($reg_s);
 		$cnt_paid = count($reg_m);
 		
-		$items = \DB::table('registrations')->get();
+		$items = Registration::withTrashed()->get();
 		$countries = \DB::table('countries')->get();
+		$user = Auth::user();
 
 		return view('home', ['cnt_single' => $cnt_single, 'getCountry' => function($code){
 			$country = \DB::table('countries')->where('code', '=', $code);
@@ -51,7 +56,7 @@ class HomeController extends Controller {
 				return $country->name;
 			}
 			return '';
-		}, 'cnt_paid' => $cnt_paid, 'items' => $items, 'countries' => $countries])->with('i', ($request->input('page', 1) - 1) * 5);
+		}, 'cnt_paid' => $cnt_paid, 'items' => $items, 'countries' => $countries, 'user' => $user])->with('i', ($request->input('page', 1) - 1) * 5);
 	}
 
 	public function update(Request $request) 
@@ -77,5 +82,23 @@ class HomeController extends Controller {
 			$update->update(['status' => $status]);
         }
 
+	}
+	public function CheckInfo(Request $request){
+
+		if($request->ajax()){
+			$id = $request->id;
+			$reg_s = \DB::table('registrations')->where('id', $id)->first();
+
+			return response()->json($reg_s);
+		}
+	}
+	public function destroy($id){
+		$model = Registration::findOrfail($id);
+
+		$model->delete();
+
+		\Session::flash('flash_message', 'Successfully Removed!');
+
+		return back();
 	}
 }

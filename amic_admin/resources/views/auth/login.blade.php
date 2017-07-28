@@ -3,7 +3,8 @@
 @section('content')
 <div class="login-box">
 	<div class="login-logo">
-		<a href="{{ url('home') }}"><b>AMIC</b><br>ADMINISTRATOR</a>
+		<img src="{{ asset('resources/img/amicpng_2.png')}}">
+		<a href="{{ url('home') }}"><br><b>ADMINISTRATOR</b></a>
 	</div>
 	<!-- /.login-logo -->
 	<div class="login-box-body">
@@ -24,7 +25,7 @@
 						<div class="col-xs-8">
 						<div class="checkbox icheck">
 							<label>
-							 <li overflow:hidden><input name="remember" type="checkbox" value="Remember Me" class="margin-left:10%"> Remember Me </li>
+							 <li overflow:hidden><input class="icheckbox_square-blue checked" name="remember" type="checkbox" class="margin-left:10%" value="remember"> &nbsp;&nbsp;<small>Remember Me </small></li>
 							</label>
 						</div>
 						</div>
@@ -34,55 +35,6 @@
 						</div>
 						<!-- /.col -->
 					</div>
-
-
-						<!-- <div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-							</div>
-						</div> -->
-
-						<!-- <div class="form-group">
-							<label class="col-md-4 control-label">Password</label>
-							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
-							</div>
-						</div> -->
-
-						<!-- <div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="remember"> Remember Me
-									</label>
-								</div>
-							</div>
-						</div> -->
-
-						<!-- <div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">Login</button>
-
-								<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
-							</div>
-						</div> -->
-
-						<!-- <fieldset>
-                                <div class="form-group input-group">
-                                    <span class="input-group-addon">@</span><input class="form-control" placeholder="Email" name="email" type="text" autofocus>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
-                                    </label>
-                                </div>
-								<button type="submit" class="btn btn-lg btn-success btn-block">Login</button>
-                       </fieldset> -->
-
       
     </form>
 

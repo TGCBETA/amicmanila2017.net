@@ -10,9 +10,9 @@
 
 @section('content')
 	<div class="bg-white padding page-content">
-		<h3 class="text-center">Official Hotel Partner: Novotel Manila <br />
+		<h3 class="text-center">AMIC Manila 2017 Official Hotel Partner<br />
 		<small>In view of Amic Manila 2017’s newly forged exclusive accommodation partnership with Novotel Manila, 
-		<br /> hotel and transfer rates will be significantly lowered. <br /><br /> Please come back for booking and reservation details and updates.</small></h3>
+		<br /> hotel and transfer rates will be significantly lowered. </small></h3>
 		<hr />
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
@@ -67,8 +67,32 @@
 						<tr>
 					</tbody>
 				</table>
+				<div>
+					<h2 align="center">Exclusive Hotel Deal</h2>
+					<br />
+					<p>AMIC Manila 2017 lets you experience authentic Filipino hospitality with the exquisite hotel and transfer services exclusively provided by Novotel Manila Araneta Center Hotel to AMIC Manila delegates!</p>
+					<br />
+					<p>Four-star Novotel Hotel offers super affordable and specially arranged room rates, from USD 240 for a one-night stay to USD 500 for a three-night stay, inclusive of the the following:</p>
+					<br />
+					<ul>
+						<li>Buffet breakfast</li>
+						<li>Wi-Fi guest room connection</li>
+						<li>Two-day round trip drop-off and pick-up shuttle service from hotel to AMIC Conference’s venue on September 27-28, 2017 only</li>
+						<li>And round trip airport transfers.</li>
+					</ul>
+					<br />
+					<p>And if you want a total steal on the deal, share a room with a friend or colleague to split the room bill in half! Now, you can’t have it any better than that.</p>
+					<br />
+					<p>HURRY!  Hotel reservation is valid until 10 September 2017 only. For reservation or details, accomplish the exclusive AMIC- Novotel Hotel Reservation form and email to <a href="">H7090@accor.com.</a></p>
+					<br />
+					<p align="center"><a href="{{ asset('downloads/AMIC_Novotel_Reservations_Form.pdf') }}" target="_blank" class="btn btn-primary btn-lg">Click Here to Download Reservation Form</a></p>
+					<br />
+				</div>
 			</div>
+
 		</div>
+
+
 	</div>
 @stop
 

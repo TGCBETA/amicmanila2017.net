@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => 'no-reply@amicmanila2017.net', 'name' => 'Asian Media Information and Communication Centre, Inc.'],
+	'from' => ['address' => 'no-reply@amicmanila2017.net', 'name' => 'AMIC Manila: Reset Password'],
 
 	/*
 	|--------------------------------------------------------------------------

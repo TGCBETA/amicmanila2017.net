@@ -107,7 +107,7 @@
 				</tbody>
 			</table>
 		</div>
-		<strong class="text-danger">Note:</strong> Conference Organized City Tour is not included in the Local Delegates Package. However, delegates who are interested in the said tour may directly contact the travel agency through this <a href="http://www.sharptravelservice.com/contact-us" target="_blank">link</a>.
+		<strong class="text-danger">Note:</strong> Conference Organized City Tour is not included in the Local Delegates Package{{--. However, delegates who are interested in the said tour may directly contact the travel agency through this <a href="http://www.sharptravelservice.com/contact-us" target="_blank">link --}}</a>.
 		<br /><br />
 		Inclusions:
 		<ul>
@@ -126,6 +126,8 @@
 		Bank of the Philippine Islands (BPI) <br />
 		Savings Account Number <b>0184 030 594</b><br />
 		Swift Code: <b>BOPIPHMM</b></p>
+
+		<p><u>Make payments to:</u> <b>ASIAN MEDIA INFORMATION AND COMMUNICATION CENTRE, INC.</b></p>
 
 		<i>As proof of payment, scan and email deposit slip to conference@amic.asia. Registrants will receive Registration Payment Confirmation through email. Print a copy of emailed Registration Confirmation Payment and present it to the Secretariat on the day of the event.</i>
 		<br /><br />
