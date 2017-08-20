@@ -210,7 +210,8 @@
 					    </tr>
 					</table>
 					<br />
-					<br />
+					<p>To ensure confirmation of your registration:</p>
+    				<p>Please e-mail a scanned copy of your deposit slip as proof of payment to amicmanila2017@gmail.com.</p>
 					<p>We look forward to welcoming you in Manila.</p>
 					<p></p><br />
 					<p>Sincerely,</p><br />

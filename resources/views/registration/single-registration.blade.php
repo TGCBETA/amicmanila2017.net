@@ -203,7 +203,7 @@
 												Inclusions:
 												<ul>
 													<li>Conference Kit</li>
-													<li>Meals Per Day (Except Local Student Observer)</li>
+													<li>Meals Per Day <b>(Except where indicated)</b></li>
 												</ul>
 											</th>
 											<th style="vertical-align: top; text-align: center;">LOCAL RATE PER DAY UNTIL AUGUST 31, 2017</th>
@@ -229,14 +229,26 @@
 											<td>PHP 6,000.00</td>
 										</tr>
 										<tr>
-											<td><input type="radio" name="reg_category" id="f_amic_member" value="l_student" /></td>
-											<td>Local Student</td>
+											<td><input type="radio" name="reg_category" id="f_amic_member" value="l_graduate" /></td>
+											<td>Graduate Student</td>
+											<td>PHP 1,500.00</td>
+											<td>PHP </td>
+										</tr>
+										<tr>
+											<td><input type="radio" name="reg_category" id="f_amic_member" value="l_graduate_nom" /></td>
+											<td>Graduate Student (No Meals Included)</td>
+											<td>PHP 1000.00</td>
+											<td>PHP </td>
+										</tr>
+										<tr>
+											<td><input type="radio" name="reg_category" id="f_amic_member" value="l_undergraduate" /></td>
+											<td>Undergraduate Student</td>
 											<td>PHP 800.00</td>
 											<td>PHP 1,000.00</td>
 										</tr>
 										<tr>
-											<td><input type="radio" name="reg_category" id="f_amic_member" value="l_student_observer" /></td>
-											<td>Local Student Observer (No Meals Included)</td>
+											<td><input type="radio" name="reg_category" id="f_amic_member" value="l_undergraduate_nom" /></td>
+											<td>Undergraduate Student (No Meals Included)</td>
 											<td>PHP 500.00</td>
 											<td>PHP 500.00</td>
 										</tr>
@@ -490,15 +502,15 @@
 												Inclusions:
 												<ul>
 													<li>Conference Kit</li>
-													<li>Meals Per Day (Except Local Student Observer)</li>
+													<li>Meals Per Day <b>(Except where indicated)</b></li>
 												</ul>
 											</th>
 											<th style="vertical-align: top; text-align: center;">LOCAL RATE PER DAY UNTIL AUGUST 31, 2017</th>
 											<th style="vertical-align: top; text-align: center;">
 												LOCAL RATE PER DAY SEPTEMBER 1 - 28, 2017<br />
-												<span class="text-danger">PENALTY FEES (Except Local Student Observer):</span><br />
+												{{-- <span class="text-danger">PENALTY FEES (Except Local Student Observer):</span><br />
 												PHP 1,000.00 <small>(AMIC and Non-AMIC Members)</small><br />
-												PHP 200.00 <small>(Local Student)</small>
+												PHP 200.00 <small>(Local Student)</small> --}}
 											</th>
 										</tr>
 									</thead>
@@ -506,27 +518,40 @@
 										<tr>
 											<td><input type="radio" name="reg_category" id="l_amic_member" value="l_amic_member" {{ (session('single_reg.reg_info')['reg_category'] == 'l_amic_member') ? 'checked=checked' : ''  }} /></td>
 											<td>AMIC Member</td>
-											<td>PHP 5,000.00</td>
-											<td>PHP 6,000.00</td>
+											<td>PHP 3,000.00</td>
+											<td>PHP 4,000.00</td>
 										</tr>
 										<tr>
 											<td><input type="radio" name="reg_category" id="l_non_amic_member" value="l_non_amic_member" {{ (session('single_reg.reg_info')['reg_category'] == 'l_non_amic_member') ? 'checked=checked' : ''  }} /></td>
 											<td>Non-AMIC Member (Inclusive of 1 Year AMIC Membership Fee)</td>
-											<td>PHP 7,500.00</td>
-											<td>PHP 8,500.00</td>
+											<td>PHP 5,000.00</td>
+											<td>PHP 6,000.00</td>
 										</tr>
 										<tr>
-											<td><input type="radio" name="reg_category" id="l_student" value="l_student" {{ (session('single_reg.reg_info')['reg_category'] == 'l_student') ? 'checked=checked' : ''  }} /></td>
-											<td>Local Student</td>
+											<td><input type="radio" name="reg_category" id="l_graduate" value="l_graduate" {{ (session('single_reg.reg_info')['reg_category'] == 'l_student') ? 'checked=checked' : ''  }} /></td>
+											<td>Graduate Student (Inclusive of Meals, Except Gala Dinner)</td>
+											<td>PHP 1,500.00</td>
+											<td>PHP 2,500.00</td>
+										</tr>
+										<tr>
+											<td><input type="radio" name="reg_category" id="l_graduate_nom" value="l_graduate_nom" {{ (session('single_reg.reg_info')['reg_category'] == 'l_student') ? 'checked=checked' : ''  }} /></td>
+											<td>Graduate Student (No Meals Included)</td>
+											<td>PHP 1,000.00</td>
+											<td>PHP 2,000.00</td>
+										</tr>
+										<tr>
+											<td><input type="radio" name="reg_category" id="l_undergraduate" value="l_undergraduate" {{ (session('single_reg.reg_info')['reg_category'] == 'l_student') ? 'checked=checked' : ''  }} /></td>
+											<td>Undergraduate Student (Inclusive of Meals, Except Gala Dinner)</td>
 											<td>PHP 800.00</td>
 											<td>PHP 1,000.00</td>
 										</tr>
 										<tr>
-											<td><input type="radio" name="reg_category" id="l_student_observer" value="l_student_observer" {{ (session('single_reg.reg_info')['reg_category'] == 'l_student_observer') ? 'checked=checked' : ''  }} /></td>
-											<td>Local Student Observer (No Meals Included)</td>
+											<td><input type="radio" name="reg_category" id="l_undergraduate_nom" value="l_undergraduate_nom" {{ (session('single_reg.reg_info')['reg_category'] == 'l_student_observer') ? 'checked=checked' : ''  }} /></td>
+											<td>Undergraduate Student (No Meals Included)</td>
 											<td>PHP 500.00</td>
 											<td>PHP 500.00</td>
 										</tr>
+
 										<tr>
 											<td colspan="4" class="active">&nbsp;</td>
 										</tr>
@@ -540,9 +565,6 @@
 											<td>Conference Organized City Tour (Inclusive of Round Trip Transfers and Lunch)</td>
 											<td>PHP 1,000.00</td>
 											<td>PHP 1,500.00</td>
-										</tr>
-										<tr>
-											<td colspan="4"><small><i>Deadline of Full Payment of Conference Fee is on August 31, 2017. Late payment penalty of PHP 1,000.00 applies.</i></small></td>
 										</tr>
 									</tbody>
 								</table>

@@ -101,4 +101,136 @@ class HomeController extends Controller {
 
 		return back();
 	}
+	public function RefreshDB(){
+		$reg = \DB::table('registrations')->get();
+
+		foreach($reg as $item){
+			if(($item->PHP == null) or ($item->USD == null)){
+				if($item->currency == 'P'){
+					\DB::table('registrations')->where('id', $item->id)->update(['PHP' => $item->total_fee]);
+					\DB::table('registrations')->where('id', $item->id)->update(['USD' => '0']);
+				}
+				else{
+					\DB::table('registrations')->where('id', $item->id)->update(['USD' => $item->total_fee]);
+					\DB::table('registrations')->where('id', $item->id)->update(['PHP' => '0']);
+				}
+			}
+		}
+		
+
+
+		return back();
+	}
+	public function chart(){
+		$user = Auth::user();
+		$rates = \DB::table('new_rates')->get();
+		$fchart = \DB::table('tb_fchart')->get();
+
+		echo "<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>";
+		echo "<script type='text/javascript'> google.charts.load('current', {'packages':['bar']}); google.charts.setOnLoadCallback(drawChart);
+
+	      function drawChart() {
+	        var data = google.visualization.arrayToDataTable([
+	          ['REGISTRATION TYPE: FOREIGN DELEGATES', 'TARGET PARTICIPANTS',";
+	           foreach($fchart as $i){
+	           	echo "'";
+	          	echo date('d/m/Y', strtotime($i->date));
+	          	echo "',";
+	          }
+	          echo "],
+	          ['AMIC MEMBER', '50',";
+	          foreach($fchart as $j){
+	          	echo "'";
+	          	echo $j->fmember;
+				echo "',";
+	          }
+	          echo "],
+	          ['NON AMIC MEMBER', '50',";
+	          foreach($fchart as $k){
+	          	echo "'";
+	          	echo $k->fnonmember;
+				echo "',";
+	          }
+	          echo "],
+	          ['FOREIGN STUDENT', '10',";
+	          foreach($fchart as $l){
+	          	echo "'";
+	          	echo $l->fstud;
+				echo "',";
+	          }
+	        echo "],]);
+	        
+	        var options = {
+	          chart: {
+	            title: 'FOREIGN DELEGATES',
+	            subtitle: '',
+	          }
+	        };
+
+	        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+	        chart.draw(data, google.charts.Bar.convertOptions(options));
+	      }
+    </script>";
+
+
+    	echo "<script type='text/javascript'> google.charts.load('current', {'packages':['bar']}); google.charts.setOnLoadCallback(drawChart);
+
+	      function drawChart() {
+	        var data = google.visualization.arrayToDataTable([
+	          ['REGISTRATION TYPE: FOREIGN DELEGATES', 'TARGET PARTICIPANTS',";
+	           foreach($fchart as $i){
+	           	echo "'";
+	          	echo date('d/m/Y', strtotime($i->date));
+	          	echo "',";
+	          }
+	          echo "],
+	          ['AMIC MEMBER', '50',";
+	          foreach($fchart as $j){
+	          	echo "'";
+	          	echo $j->fmember;
+				echo "',";
+	          }
+	          echo "],
+	          ['NON AMIC MEMBER', '50',";
+	          foreach($fchart as $k){
+	          	echo "'";
+	          	echo $k->fnonmember;
+				echo "',";
+	          }
+	          echo "],
+	          ['FOREIGN STUDENT', '10',";
+	          foreach($fchart as $l){
+	          	echo "'";
+	          	echo $l->fstud;
+				echo "',";
+	          }
+	        echo "],]);
+	        
+	        var options = {
+	          chart: {
+	            title: 'FOREIGN DELEGATES',
+	            subtitle: '',
+	          }
+	        };
+
+	        var chart = new google.charts.Bar(document.getElementById('columnchart_material1'));
+
+	        chart.draw(data, google.charts.Bar.convertOptions(options));
+	      }
+    </script>";
+		return view('chart')->with(['user' => $user, 'rates' => $rates]);
+	}
+	public function AddFdata(Request $request) {
+		$user = Auth::user();
+		$fchart = \DB::table('tb_fchart')->get();
+
+		$date = $request->date;
+		$fmember = $request->fmember;
+		$fnonmember = $request->fnonmember;
+		$fstud = $request->fstud;
+
+		\DB::table('tb_fchart')->insert(['date' => $date, 'fmember' => $fmember, 'fnonmember' => $fnonmember, 'fstud' => $fstud]);
+		return back()->with(['user' => $user, 'fchart' => $fchart]);
+	}
 }

@@ -69,30 +69,36 @@ class RegistrationController extends Controller {
 		$reg_rate = $reg_rate->first();
 		$currency = $reg_rate->currency;
 
-
-		if($current_date <= 20170731){
+		if($country == 'PH') {
+			if($current_date <= 20170815){
+				$reg_rate = $reg_rate->early_bird_rate;
+			}
+			elseif($current_date <= 20170831){
+				$reg_rate = $reg_rate->rate;
+			}
+			elseif($current_date <= 20170928){
+				$reg_rate = $reg_rate->walkin_rate;
+			}
+			else{
+				abort(500);
+			}
+		}
+		else {
+			if($current_date <= 20170831){
 			$reg_rate = $reg_rate->early_bird_rate;
+			}
+			elseif($current_date <= 20170831){
+				$reg_rate = $reg_rate->rate;
+			}
+			elseif($current_date <= 20170928){
+				$reg_rate = $reg_rate->walkin_rate;
+			}
+			else{
+				abort(500);
+			}
 		}
-		elseif($current_date <= 20170831){
-			$reg_rate = $reg_rate->rate;
-		}
-		elseif($current_date <= 20170928){
-			$reg_rate = $reg_rate->walkin_rate;
-		}
-		else{
-			abort(500);
-		}
-
 
 		$total_fee += $reg_rate;
-
-		if($currency == 'P') {
-			$PHP = $total_fee;
-		}
-		else{
-			$USD = $total_fee;
-		}
-
 
 		if($l_conference_day > 1){
 			$total_fee = $total_fee * 2;
@@ -109,6 +115,14 @@ class RegistrationController extends Controller {
 			}
 
 			$total_fee += $l_tour_rate;
+		}
+
+
+		if($currency == 'P') {
+			$PHP = $total_fee;
+		}
+		else{
+			$USD = $total_fee;
 		}
 		
 
@@ -502,18 +516,6 @@ class RegistrationController extends Controller {
 		else
 			$total_fee += $reg_rate * 5;
 
-		if($currency == 'P'){
-			$PHP = $total_fee;
-		}
-		else {
-			$USD = $total_fee;
-		}
-
-		if($l_conference_day > 1){
-			$total_fee = $total_fee * 2;
-		}
-
-
 		//Local Delegate City Tour
 		
 		if(\Input::has('l_city_tour')){
@@ -529,12 +531,40 @@ class RegistrationController extends Controller {
 				$total_fee += $l_tour_rate * 5;
 		}
 
+		if($l_conference_day > 1){
+			$total_fee = $total_fee * 2;
+		}
 
-
+		if($currency == 'P'){
+			$PHP = $reg_rate + $l_tour_rate;
+			if($l_conference_day == '0'){
+				$PHP = $PHP * 1;
+			}
+			else if($l_conference_day == '1'){
+				$PHP = $PHP * 1;
+			}
+			else {
+				$PHP = $PHP * 2;
+			}
+		}
+		else {
+			$USD = $reg_rate + $l_tour_rate;
+			if($l_conference_day == '0'){
+				$USD = $USD * 1;
+			}
+			else if($l_conference_day == '1') {
+				$USD = $USD * 1;
+			}
+			else {
+				$USD = $USD * 2;
+			}
+		}
 
 		session(['group_reg.reg_category' => $reg_category]); 
 		session(['group_reg.payment_opt' => $payment_opt]);
 		session(['group_reg.total_fee' => $total_fee]);
+		session(['group_reg.PHP' => $PHP]);
+		session(['group.reg.USD' => $USD]);
 		session(['group_reg.f_city_tour' => $f_city_tour]);
 		session(['group_reg.l_city_tour' => $l_city_tour]);
 		session(['group_reg.l_city_tour_rate' => $l_tour_rate]);
@@ -663,6 +693,9 @@ class RegistrationController extends Controller {
 					'reg_category'		=> session('group_reg.reg_category'), 
 					'payment_opt'		=> session('group_reg.payment_opt'), 
 					'reg_rate'			=> session('group_reg.reg_rate'), 
+					'total_fee'			=> session('group_reg.total_fee'),
+					'PHP'				=> session('group_reg.PHP'),
+					'USD'				=> session('group_reg.USD'),
 				]);
 			}
 

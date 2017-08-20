@@ -201,6 +201,16 @@
 			} );
 		});
 
+		$(document).ready(function() {
+			$('#example2').DataTable( {
+			scrollX: true,
+			/* dom: 'Bfrtip',
+			"buttons": [
+				'excel', 'pdf', 'print',
+				] */
+			} );
+		});
+
 		function Paid_Up(ctrl){
 			var check = "paid_id="+ $(ctrl).val() + "&status=" + $(ctrl).is(':checked');
 				$.ajax({

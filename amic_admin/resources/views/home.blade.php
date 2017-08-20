@@ -73,14 +73,31 @@
 						@if(Session::has('flash_message'))
 						    <div class="alert alert-danger"><em> {!! session('flash_message') !!}</em></div>
 						@endif
-						<!-- Datatable -->
-						 <div class="box">
-							<div class="box-header">
-								<h3 class="box-title">Registration Table</h3>
-							</div>
+						<div class="box">
+							<ul class="nav nav-tabs" role="tablist">
+							  <li class="nav-item">
+							    <a class="nav-link active" data-toggle="tab" href="#registered" role="tab"><b>Registered Delegates</b></a>
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link" data-toggle="tab" href="#profile" role="tab"><b>Deleted</b></a>
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link" data-toggle="tab" href="#messages" role="tab"><b>EXPORT REPORT</b></a>
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link" data-toggle="tab" href="#settings" role="tab"><b>Settings</b></a>
+							  </li>
+							</ul>
+
+							<div class="tab-content">
+							  <div class="tab-pane active" id="registered" role="tabpanel">
+							  	<div class="box-header">
+									<h3 class="box-title">Registered Delegates</h3>
+								</div>
 							<!-- /.box-header -->
 								<div class="box-body">
 								<a href="{{ url('/downloadExcel') }}" class="btn btn-primary"><h5><b>EXCEL EXPORT</b></h5></a>
+								<a href="{{ url('/refreshDB') }}" class="btn btn-primary"><h5><b>REFRESH DATABASE</b></h5></a>
 								<br /><br />
 									<table id="example1" class="table table-bordered table-hover">
 										<thead>
@@ -101,6 +118,7 @@
 											<th>Action</th>
 											@endif
 										</tr>
+										</thead>
 										<tbody>
 											@foreach ($items as $item)
 
@@ -146,11 +164,175 @@
 					  						@endforeach
 										</tbody>
 									</table>
+								</div>
+
+							  </div>
+							  <div class="tab-pane" id="profile" role="tabpanel">
+							  	<div class="box-header">
+									<h3 class="box-title">Deleted Table</h3>
+								</div>
+							  	<div class="box-body">
+							  		<table id="example2" class="table table-bordered table-hover">
+										<thead>
+										<tr>
+											<th>No</th>
+											<th>First Name</th>
+											<th>Last Name</th>
+											<th>Phone</th>
+											<th>Email</th>
+											<th>Country</th>
+											<th>Payment Method</th>
+											<th>Registration Rate</th>
+											<th>Currency</th>
+											<th>Date/Time</th>
+											<th>Paid</th>
+											<th>Attendance</th>
+											@if($user->email == 'canaria97@gmail.com')
+											<th>Action</th>
+											@endif
+										</tr>
+										</thead>
+										<tbody>
+										<?php $l=''; ?>
+											@foreach ($items as $item)
+											@if($item->trashed())
+											<tr data-id="{{ $item->id }}">
+												<td>{{ ++$l }}</td>
+												<td>{{ $item->firstname }}</td>
+												<td>{{ $item->lastname }}</td>
+												<td>{{ $item->phone }}</td>
+												<td>{{ $item->email }}</td>
+												<td>{{ call_user_func_array($getCountry, [$item->country]) }}</td>
+												{{--
+											@foreach($countries as $key => $code )
+												@if($code->code == $item->country)
+													<td>{{ $code->name }}</td>
+												@endif
+											@endforeach
+												--}}
+
+												<td>{{ ($item->payment_opt == 'bank') ? 'DIRECT BANK DEPOSIT' : 'CHECK PAYMENT'}}</td>
+												<td>{{ $item->reg_rate }}</td>
+												<td>{{ ($item->currency == 'U') ? 'USD' : 'PHP' }}</td>
+												<td>{{ $item->created_at }}</td>
+												<td align="center"><input type="checkbox" class="icheckbox_square-blue checked" id="check_{{ $item->id }}" name="{{ $item->id }}" value="{{ $item->id }}" {{ ($item->paid == 1) ? 'checked=checked' : '' }} onchange="Paid_Up(this);"><br /><b>
+												<span id = "response{{ $item->id }}">{{ ($item->paid == 1) ? 'PAID' : 'NOT PAID' }}</span></b></td>
+												<td align="center">
+													<input type="checkbox" class="icheckbox_square-blue checked" id="attendCheck_{{ $item->id }}" name="{{ $item->id }}" value="{{ $item->id }}" {{ ($item->status == 1) ? 'checked=checked' : '' }} onchange="Attend_Up(this);">
+												<br /><b>
+												<span id = "attendstat{{ $item->id }}">{{ ($item->status == 1) ? 'YES' : 'NO' }}</span></b>
+												</td>
+												@if($user->type == 'SUPERUSER')
+													<td>
+														<form class="delete" action="destroy/{{$item->id}}" method="get">
+															 <input type="hidden" name="_method" value="DELETE">
+													        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+													        <input type="submit" value="Delete" class="btn btn-danger">	
+												        </form>
+													</td>
+												@endif
+											</tr>
+											@endif
+					  						@endforeach
+										</tbody>
+									</table>
+								</div>
+							  </div>
+							  <div class="tab-pane" id="messages" role="tabpanel">
+							  <br />
+							  	<div class="box-body">
+							  		<div class="box-title"><h4>FOREIGN DELEGATES</h4></div>
+							  		<br />
+							  		<div class="col-md-16">
+							  			<a href="{{ url('/f_excelAmic') }}" class="btn btn-primary"><h5><b>AMIC MEMBER</b></h5></a>
+							  			<a href="{{ url('/f_excelNonAmic') }}" class="btn btn-primary"><h5><b>NON-AMIC MEMBER</b></h5></a>
+							  			<a href="{{ url('/f_excelStudent') }}" class="btn btn-primary"><h5><b>FOREIGN STUDENT</b></h5></a>
+							  		</div>
+							  		<br />
+							  		<div class="box-title"><h4>FOREIGN DELEGATES</h4></div>
+							  		<br />
+							  		<div class="col-md-4">
+							  			<a href="{{ url('/l_excelAmic') }}" class="btn btn-primary"><h5><b>AMIC MEMBER</b></h5></a>
+							  			<a href="{{ url('/l_excelNonAmic') }}" class="btn btn-primary"><h5><b>NON-AMIC MEMBER</b></h5></a>
+							  		</div>
+							  		<div class="col-md-8">
+							  			<a href="{{ url('/l_excelGrad') }}" class="btn btn-primary"><h5><b>GRADUATE STUDENT</b></h5></a>
+							  			<a href="{{ url('/l_excelGrad_nom') }}" class="btn btn-primary"><h5><b>GRADUATE STUDENT (No Meals)</b></h5></a>
+							  		</div>
+							  		<div class="col-md-8" style="padding-top: 10px">
+							  			<a href="{{ url('/l_excelUnder') }}" class="btn btn-primary"><h5><b>UNDERGRADUATE STUDENT</b></h5></a>
+							  			<a href="{{ url('/l_excelUnder_nom') }}" class="btn btn-primary"><h5><b>UNDERGRADUATE STUDENT (No Meals)</b></h5></a>
+							  		</div>
+							  	</div>
+							  </div>
+							  <div class="tab-pane" id="settings" role="tabpanel">...</div>
+							</div>
+						</div>
+
+						<!-- Datatable -->
+						 <div class="box">
+							<div class="box-header">
+								<h3 class="box-title">Foreign Delegates Table</h3>
+							</div>
+							<!-- /.box-header -->
+								<div class="box-body">
+								<a href="{{ url('/downloadExcel1') }}" class="btn btn-primary"><h5><b>EXCEL EXPORT</b></h5></a>
+								<br /><br />
+									<table id="example3" class="table table-bordered table-hover">
+										<thead>
+										<tr>
+											<th>No</th>
+											<th>First Name</th>
+											<th>Last Name</th>
+											<th>Middle Name</th>
+											<th>Phone</th>
+											<th>Email</th>
+											<th>Country</th>
+											<th>Payment Method</th>
+											<th>Registration Rate</th>
+											<th>Currency</th>
+											<th>Date/Time</th>
+										</tr>
+										</thead>
+										<tbody>
+										<?php $k=''; ?>
+										@foreach ($items as $item)
+											@if($item->trashed())
+											@else
+												@if($item->currency == 'U')
+													<tr data-id="{{ $item->id }}">
+														<td>{{ ++$k }}</td>
+														<td>{{ $item->firstname }}</td>
+														<td>{{ $item->lastname }}</td>
+														<td>{{ $item->middlename }}</td>
+														<td>{{ $item->phone }}</td>
+														<td>{{ $item->email }}</td>
+														<td>{{ call_user_func_array($getCountry, [$item->country]) }}</td>
+														{{--
+													@foreach($countries as $key => $code )
+														@if($code->code == $item->country)
+															<td>{{ $code->name }}</td>
+														@endif
+													@endforeach
+														--}}
+
+														<td>{{ ($item->payment_opt == 'bank') ? 'DIRECT BANK DEPOSIT' : 'CHECK PAYMENT'}}</td>
+														<td>{{ $item->reg_rate }}</td>
+														<td>{{ ($item->currency == 'U') ? 'USD' : 'PHP' }}</td>
+														<td>{{ $item->created_at }}</td>
+													</tr>
+												@endif
+											@endif
+										@endforeach
+										</tbody>
+									</table>
 									
 								</div>
 							
 						<!-- End Datatable -->
 						</div>
+
+
 					</div>
 			</section>
 		</form>
@@ -274,6 +456,95 @@
 @section('script')
 	<script>
 		$('#example1 tbody').on( 'click', 'tr', function () {
+			var check = "id="+ $(this).data('id');
+			$.ajax({
+					type: 'POST',
+					url: './CheckInfo',
+					data: check,
+					success: function(data) {
+						console.log(data);
+						var res = "response"+data.id;
+						$('#info_firstname').html(data.firstname);
+						$('#info_lastname').html(data.lastname);
+						$('#info_organization').html(data.organization);
+						$('#info_nationality').html(data.nationality);
+						$('#info_profession').html(data.profession);
+						$('#info_gender').html(data.gender);
+						$('#info_phone').html(data.phone);
+						$('#info_email').html(data.email);
+
+						$('#info_address').html(data.address1);
+						$('#info_city').html(data.city);
+						$('#info_province').html(data.province);
+						$('#info_country').html(data.country);
+						$('#info_zip').html(data.zipcode);
+
+						if(data.country == 'PH') {
+							if(data.l_city_tour == '1') {
+								var tour = 'YES';
+							}
+							else {
+								var tour = 'NO';
+							}
+						}
+						else {
+							if(data.f_city_tour == '1') {
+								var tour = 'YES';
+							}
+							else {
+								var tour = 'NO';
+							}
+						}
+
+						$('#info_conference').html(tour);
+
+						if(data.currency == 'U') {
+							var currency = 'USD';
+						}
+						else {
+							var currency = 'PHP';
+						}
+						$('#info_category').html(currency + " " + data.reg_rate);
+						
+						if(data.l_conference_day == '0') {
+							var days = '1st Day';
+						}
+						else if(data.l_conference_day == '1') {
+							var days = '2nd Day';
+						}
+						else {
+							var days = '1st and 2nd Day';
+						}
+						$('#info_days').html(days);
+
+						if(data.payment_opt == 'bank') {
+							var payment = 'DIRECT BANK DEPOSIT';
+						}
+						else {
+							var payment = 'CHECK PAYMENT';
+						}
+
+						$('#info_payment').html(payment);
+						document.getElementById('Paidid').value = data.id;
+						document.getElementById('Attendid').value = data.id;
+						
+						$( "#Paidid" ).prop( "checked", false );
+						$( "#Attendid" ).prop( "checked", false );
+						$( "#responseid" ).html('NOT YET PAID');
+						$( "#attendstatid" ).html('NO');
+						if(data.paid == '1'){
+							$( "#Paidid" ).prop( "checked", true );
+							$( "#responseid" ).html('PAID');
+						}
+						if(data.status == '1'){
+							$( "#Attendid" ).prop( "checked", true );
+							$( "#attendstatid" ).html('YES');
+						}
+					}
+				});
+	       $('#myModal').modal('show')
+	    } );
+	    $('#example2 tbody').on( 'click', 'tr', function () {
 			var check = "id="+ $(this).data('id');
 			$.ajax({
 					type: 'POST',

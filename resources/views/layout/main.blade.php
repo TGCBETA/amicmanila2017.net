@@ -57,11 +57,29 @@
 		        </li>
 		        <li class="separator"><span>|</span></li>
 		        <li>
+		        	<a href="#" class="dropdown dropdown-submenu">Events</a>
+		        	<ul class="dropdown-menu">
+			            <li><a href="{{ route('get-page', ['essay-contest']) }}"><b>Essay Contest</b></a></li>
+			        </ul>
+		        </li>
+		        <li class="separator"><span>|</span></li>
+		        <li>
 		        	<a href="#" class="dropdown dropdown-submenu">Registration and Accomodation</a>
 		        	<ul class="dropdown-menu">
+		        		<li><a href="{{ route('get-page', ['pre-conference-guidelines']) }}"><b>Pre-Conference Guidelines</b></a></li>
 		        		<li><a href="{{ route('get-page', ['registration-categories-and-fees']) }}"><b>Registration Categories and Fees</b></a></li>
-			            <li><a href="{{ route('get-registration') }}"><b>Registration</b></a></li>
+			            <li><a href="{{ route('get-page', ['registration']) }}"><b>Registration</b></a></li>
 			            <li><a href="{{ route('get-page', ['hotel-accomodation']) }}"><b>Hotel Accomodation</b></a></li>
+			            <li><a href="{{ route('get-page', ['transfers']) }}"><b>Transfers</b></a></li>
+			            <li><a href="{{ route('get-page', ['flight-booking']) }}"><b>Flight Booking</b></a></li>
+			            <li class="dropdown-submenu">
+			            	<a href="#" class="dropdown dropdown-submenu"><b>Forms</b></a>
+			            	<ul class="dropdown-menu">
+			            		<li><a href="{{ route('get-page', ['summary-flight']) }}"><b>Flight Information Summary Form</b></a></li>
+			            		<li><a href="{{ route('get-page', ['u-hop-form']) }}"><b>U-HOP Booking Form</b></a></li>
+			            		<li><a href="{{ route('get-page', ['novotel-form']) }}"><b>Novotel Reservation Form</b></a></li>
+			            	</ul>
+			            </li>
 			        </ul>
 		        </li>
 		        <li class="separator"><span>|</span></li>
@@ -71,7 +89,7 @@
 								<a class="dropdown dropdown-submenu" href="#">Sponsors and Trade Expo</a>
 								<ul class="dropdown-menu">
 									<li>
-										<a href="{{ route('get-page', ['mediapartners']) }}"><b>Sponsors</b></a>
+										<a href="{{ route('get-page', ['sponsors']) }}"><b>Sponsors</b></a>
 									</li>
 									<li>
 										<a href="{{ route('get-page', ['sponsorship']) }}"><b>Sponsorship Proposal</b></a>
@@ -81,6 +99,8 @@
 						
 		        <li class="separator"><span>|</span></li>
 		        <li><a href="{{ route('get-page', ['contactus']) }}">Contact Us</a></li>
+		        <li class="separator"><span>|</span></li>
+		        <li><a href="{{ route('get-page', ['registration']) }}" class="btn btn-default"><font style="color: blue;"><b>Register Now</b></font></a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->

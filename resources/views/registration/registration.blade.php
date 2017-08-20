@@ -19,12 +19,12 @@
 		@endif
 		<h3 class="text-center">
 			Registration<br />
-			<small>Please select between "Single Registration" or "Group Registration" to start.</small>
+			<small>Please select between "Online Payment" or "Bank Deposit" to start.</small>
 		</h3>
 		<hr />
 		<div class="text-center">
-			<a href="{{ route('get-single-registration') }}" class="btn btn-lg btn-primary">Single Registration</a>
-			<a href="{{ route('get-group-registration') }}" class="btn btn-lg btn-primary">Group Registration</a>
+			<a href="https://www.gavagives.com/event/registration/amicmanila2017" class="btn btn-lg btn-primary">Online Payment</a>
+			<a href="{{ route('get-single-registration') }}" class="btn btn-lg btn-primary">Bank Deposit</a>
 		</div>
 	</div>
 

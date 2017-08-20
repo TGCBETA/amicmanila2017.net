@@ -24,9 +24,8 @@
 			    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
 			    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
 			    <li data-target="#carousel-example-generic" data-slide-to="8"></li>
-			    <li data-target="#carousel-example-generic" data-slide-to="9"></li>
-			    <li data-target="#carousel-example-generic" data-slide-to="10"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="11"></li>
+			    {{-- <li data-target="#carousel-example-generic" data-slide-to="9"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="10"></li> --}}
 			  </ol>
 
 			  <!-- Wrapper for slides -->
@@ -68,7 +67,7 @@
 			        
 			      </div>
 			    </div>
-			   <div class="item">
+			   {{-- <div class="item">
 			      <a href="{{ route('get-registration') }}"><img src="{{ asset('images/sliders/slider9.jpg') }}" alt="" class="fullwidth img-responsive"></a>
 			      <div class="carousel-caption">
 			        
@@ -78,14 +77,8 @@
 			      <a href="{{ route('get-registration') }}"><img src="{{ asset('images/sliders/slider10.jpg') }}" alt="" class="fullwidth img-responsive"></a>
 			      <div class="carousel-caption">
 			        
-			      </div>
-			    </div>
-			  	<div class="item">
-			      <a href="{{ route('get-page', ['call-for-papers']) }}#abstract"><img src="{{ asset('images/sliders/slider2.jpg') }}" alt="..." class="fullwidth img-responsive"></a>
-			      <div class="carousel-caption">
-			        
-			      </div>
-			    </div>
+			      </div> 
+			    </div> --}}
 			    <div class="item">
 			      <img src="{{ asset('images/sliders/slider3.jpg') }}" alt="..." class="fullwidth img-responsive">
 			      <div class="carousel-caption">
@@ -133,42 +126,38 @@
 					</div>
 				</div>
 				
-				<!--p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium ipsum vitae iaculis luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque in nibh massa. Donec neque ex, egestas nec ornare vel, posuere sit amet eros. Etiam auctor pretium dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce bibendum elementum neque, ut porttitor nulla porta ut. Donec nibh eros, volutpat sed lobortis nec, eleifend quis purus. Sed facilisis vitae lectus vitae hendrerit. Aenean sed leo ac tortor vestibulum faucibus. Fusce volutpat rutrum lacus, tempus lacinia dolor accumsan aliquam.</p>
-				<p>Suspendisse mollis turpis in pulvinar ultricies. Sed quis tincidunt ex. Curabitur pharetra scelerisque laoreet. Cras elit nunc, varius nec orci non, scelerisque vestibulum mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent suscipit justo in dignissim bibendum. Aliquam erat volutpat. Praesent enim ex, maximus nec nisl sit amet, tempus dictum diam. Cras sit amet nunc in magna feugiat hendrerit. Donec lobortis pellentesque lectus, in feugiat dui. Suspendisse varius eros ac felis tempus pretium. Vivamus nec quam vitae erat pulvinar lobortis.</p>
-				<p>Donec ligula ante, viverra at lectus ac, aliquet commodo dui. Cras vel molestie orci, imperdiet blandit felis. Sed laoreet turpis lacus, quis varius massa semper vel. Sed eu convallis diam. Etiam sed neque eget lectus posuere imperdiet. Aliquam sit amet erat tortor. Nunc fringilla, nunc at euismod lobortis, elit tellus rhoncus nunc, nec varius leo erat ac velit.</p>
-				<p>Cras sit amet velit a ipsum ultrices volutpat. Nunc vestibulum tempus justo, et malesuada elit varius ut. Mauris velit felis, interdum id mattis sit amet, iaculis sed eros. Morbi eget vestibulum leo. Suspendisse et dui mattis dolor tincidunt vestibulum accumsan ac orci. Phasellus sit amet nibh auctor, efficitur nisi quis, venenatis eros. Integer porta vel diam vel ornare. Ut vehicula orci ut dolor fermentum, vel faucibus lacus mattis. Aliquam ut ligula vel dolor dapibus egestas. Nulla facilisi. Donec euismod luctus nisl, id mattis elit vulputate eu. Nulla facilisi. </p-->
 			</div>
 			<div class="bg-parallax1 padding">
-					<h3 class="text-danger"><i class="fa fa-warning"></i> ATTENTION!!</h3>
-					<p><strong><h2>AMIC 25th Conference Call for Papers</h2></strong></p>
-
-					<p>AMIC is now preparing for the 25th AMIC International Conference to be held in Manila on <br> 27-29 September 2017. We are readopting our 2016 conference theme,<i> Rethinking Communication in a Resurgent Asia.</i></p>
-
-					<p>We have attached the Call for Papers for the AMIC Manila 2017 Conference. Please invite your colleagues to submit abstracts of conference papers if they are interested to present. Deadline for submission of new abstracts to our Conference Secretariat is on<font color="red"> 31 May 2017.</font></p>
-					<p>Please click <a href="{{ route('get-page', ['call-for-papers']) }}">here</a> for more details.</p>
-
-					<p>Very truly yours,</p>
-
-					<p>
-					<strong>Ramon R. Tuazon</strong><br />
-					Secretary General
-					</p>
+					<p><strong><h3 class="text-center">Join AMIC Manila 2017’s Essay-Writing Contest 
+					and Win Cash and Exciting Prizes!</h3></strong></p>
+					<a href="{{ route('get-page', ['essay-contest']) }}"><img src="{{ asset('images/essay-writing.jpg') }}" class="img-responsive center-block"></a>
 
 				</div>
 		</div>
 		<div id="rightpanel" class="col-md-3 no-padding text-center">
+			<h4 class=""><strong>ANNOUNCEMENTS</strong></h4>
+			<hr style="border:2px solid #064C7D;" />
+			<h5 align="left"><strong>PHILIPPINE AIRLINES SPECIAL ONLINE DISCOUNT (LIMITED OFFER)</strong><p align="left"><i>Posted August 18, 2017</i></p></h5><p align="left">Are you flying in to Manila for the AMIC 25th Annual Conference 2017?  We have great news for you!... <a href="{{ route('get-page', ['flight-booking']) }}">more</a><p>
+			<br />
+
+
 			<h4 class=""><strong>Important Dates</strong></h4>
 			<hr style="border:2px solid #064C7D;" />
 			<h5><strong>May 31, 2017</strong></h5>
 			Deadline for <br />Abstract Submission
 			<h5><strong>July 2017</strong></h5>
 			Deadline for Full <br />Paper Submission
-			<h5><strong>July 31, 2017</strong></h5>
+			<h5><strong>August 15, 2017</strong></h5>
 			Deadline for <br />Early Rate Registration for <br />Foreign Delegates
 			<h5><strong>August 31, 2017</strong></h5>
+			Deadline for <br />Early Rate Registration for <br />local Delegates
+			<h5><strong>August 31, 2017</strong></h5>
 			Deadline for Regular Rate Registration
-			<h5><strong>September 27-29, 2017</strong></h5>
-			Conference
+			<h5><strong>September 27-28, 2017</strong></h5>
+			Conference Dates
+			<h5><strong>September 29, 2017</strong></h5>
+			Day Tour*<br />
+			<p><small>*For those who availed the tour packages</small></p>
 			<!--img src="{{ asset('images/twitter_block.png') }}" class="img-responsive" />
 			<h4 class="text-white"><strong>Sponsors</strong></h4>
 			<div class="row sponsors">
@@ -194,8 +183,55 @@
 		</div>
 	</div>
 	</div>
+
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="AMIC_ANNOUNCE" id="AMIC_ANNOUNCE">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		    	<div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <br />
+		      </div>
+			      <div class="modal-body">
+			      	<h1 align="center">ANNOUNCEMENT</h1>
+			      	<h4 align="center">Are you flying in to Manila for the AMIC 25th Annual Conference 2017? <br />We have great news for you!</h4>
+			      	<br />
+			      	<p>We are pleased to inform all AMIC Manila 2017 foreign and local registered delegates that the Philippine Airlines offers you a special online airfare discount, with the following conditions:<p>
+			      	<br />
+
+			      	<table class="table table-responsive">
+			      		<tr>
+			      			<td>Travel Period&nbsp;:&nbsp;</td>
+			      			<td>September 20, 2017 to September 30, 2017</td>
+			      		</tr>
+			      		<tr>
+			      			<td>Selling Period&nbsp;:&nbsp;</td>
+			      			<td>August 16, 2017 to September 7, 2017</td>
+			      		</tr>
+			      		<tr>
+			      			<td>Booking and Ticketing&nbsp;:&nbsp;</td>
+			      			<td>Online via <a href="http://www.philippineairlines.com" taget="_blank">www.philippineairlines.com</a></td>
+			      		</tr>
+			      		<tr>
+			      			<td>Promo Code&nbsp;:&nbsp;</td>
+			      			<td>To be provided upon request by emailing <a href="mailto:amicmanila2017@gmail.com">amicmanila2017@gmail.com</a></td>
+			      		</tr>
+			      		<tr>
+			      			<td></td>
+			      			<td></td>
+			      		</tr>
+			      	</table>
+
+			      	<p>For your travel booking inquiries, please contact the Conference’s official travel agency, Sharp Travel Services.  Visit <a href="http://www.sharptravelservices.com" taget="_blank">www.sharptravelservices.com</a>	, call +63 (2) 817 0071 to 74, or email <a href="mailto:ststours.inbound@cfsharp.com">ststours.inbound@cfsharp.com</a> and <a href="mailto:stssales@cfsharp.com">stssales@cfsharp.com</a>. </p>
+			      </div>
+		    </div>
+		  </div>
+		</div>
 @stop
 
 @section('script')
-
+<script type="text/javascript">
+		$(function(){
+			$('#AMIC_ANNOUNCE').modal('show')
+		});
+	</script>
 @stop
